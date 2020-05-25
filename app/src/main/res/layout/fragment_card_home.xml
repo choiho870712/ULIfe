@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/button_collection_fragment_card_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2_fragment_card_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="活動簡章"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:background="@color/colorWhiteSmoke" />
+
+        <Button
+            android:id="@+id/button1_fragment_card_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最新資訊"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:background="@color/colorWhiteSmoke" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_card_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_collection_fragment_card_home"/>
+
+</RelativeLayout>

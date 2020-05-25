@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_upload_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#444444"
+    android:padding="25dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#6dffbf"
+        android:padding="30dp"
+        android:text="請填以下資訊"/>
+
+    <ImageView
+        android:id="@+id/image_photoshot_edit_person"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_changeIcon_edit_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上傳頭貼"
+        android:textColor="#6dffbf"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/edit_username_upload_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="暱稱"
+        android:textColor="#6bfff7"
+        android:textColorHint="#52afaa"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_submit_upload_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="送出"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

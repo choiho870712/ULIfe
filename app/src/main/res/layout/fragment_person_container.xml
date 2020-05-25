@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/button_collection_person_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1_person_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="個人資料"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:background="@color/colorWhiteSmoke" />
+
+        <Button
+            android:id="@+id/button2_person_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="參與活動"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:background="@color/colorWhiteSmoke"/>
+
+        <Button
+            android:id="@+id/button3_person_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="參與提案"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:background="@color/colorWhiteSmoke" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_person_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_collection_person_main"/>
+
+
+</RelativeLayout>

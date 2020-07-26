@@ -3,12 +3,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#444444"
     tools:context=".ui.person.PersonEditFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="25dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/image_photoshot_edit_person"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"
+                    android:src="@mipmap/icon_boy"/>
+
+                <Button
+                    android:id="@+id/button_changeIcon_edit_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_edit_change_image"
+                    android:textColor="#6dffbf"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:background="#444444"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/line_card"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_edit_username"
+                        android:textColor="#6dffbf"
+                        android:textSize="20sp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="2"
+                        android:gravity="end"/>
+
+                    <EditText
+                        android:id="@+id/text_username_edit_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/person_edit_username_content"
+                        android:textSize="20sp"
+                        android:textColor="#6bfff7"
+                        android:textColorHint="#52afaa"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_edit_self_introduction"
+                        android:textColor="#6dffbf"
+                        android:textSize="20sp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="2"
+                        android:gravity="end"/>
+
+                    <EditText
+                        android:id="@+id/text_content_edit_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/person_edit_self_introduction_content"
+                        android:textColor="#6bfff7"
+                        android:textColorHint="#52afaa"
+                        android:textSize="20sp"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_edit_tag"
+                        android:textColor="#6dffbf"
+                        android:textSize="20sp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="2"
+                        android:gravity="end"/>
+
+                    <EditText
+                        android:id="@+id/text_tag_edit_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/person_edit_tag_content"
+                        android:textColor="#6bfff7"
+                        android:textColorHint="#52afaa"
+                        android:textSize="20sp"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/line_card"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_update_user_info_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_edit_submit_button"
+                        android:textAllCaps="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
 
 </FrameLayout>

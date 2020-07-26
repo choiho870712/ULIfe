@@ -5,10 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccountFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/page_create_account"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:background="#444444"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#6dffbf"
+            android:padding="30dp"
+            android:text="@string/create_account_title"/>
+
+        <EditText
+            android:id="@+id/edit_username_create_account_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_account_username"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_password_create_account_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_account_password"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            />
+
+        <EditText
+            android:id="@+id/edit_vertify_password_create_account_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_account_password_vertify"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_submit_create_new_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account_submit_button"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

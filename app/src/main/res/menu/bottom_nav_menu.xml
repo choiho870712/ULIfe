@@ -9,7 +9,8 @@
     <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_question_answer_black_24dp"
-        android:title="@string/title_chat" />
+        android:title="@string/title_chat"
+        android:visible="false"/>
 
     <item
         android:id="@+id/navigation_notifications"

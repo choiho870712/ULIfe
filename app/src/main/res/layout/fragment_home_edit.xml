@@ -5,10 +5,31 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeEditFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/text_edit_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/home_edit_proposal_title"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            />
+
+        <EditText
+            android:id="@+id/text_edit_home_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/home_edit_proposal_content"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            />
+
+    </LinearLayout>
 
 </FrameLayout>

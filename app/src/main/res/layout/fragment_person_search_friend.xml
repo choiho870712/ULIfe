@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.person.PersonSearchFriendFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_edit_username"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+
+            <EditText
+                android:id="@+id/edit_username_search_friend_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/person_edit_username_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:layout_weight="4"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_search_friend_person_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_edit_submit_button"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_search_friend_person"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

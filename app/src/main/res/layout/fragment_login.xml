@@ -5,10 +5,66 @@
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/page_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:background="#444444"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#6dffbf"
+            android:padding="30dp"
+            android:text="@string/login_title"/>
+
+        <EditText
+            android:id="@+id/edit_username_login_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_username"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_password_login_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_password"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_login_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_button"
+                />
+
+            <Button
+                android:id="@+id/button_create_new_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_create_account_button"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

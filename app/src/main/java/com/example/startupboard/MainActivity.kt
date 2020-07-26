@@ -1,100 +1,89 @@
 package com.example.startupboard
 
+import android.content.Context
+import android.graphics.BitmapFactory
+import android.net.ConnectivityManager
 import android.os.Bundle
-import android.widget.*
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.util.Log.d
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.startupboard.GlobalVariables.Companion.globalUserInfo
-import com.example.startupboard.GlobalVariables.Companion.globalApi
-import com.example.startupboard.GlobalVariables.Companion.globalUserInfoSetted
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.startupboard.ui.UiController
+import com.example.startupboard.ui.api.Api
+import com.example.startupboard.ui.api.UserInfo
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.fragment_home_page2.view.*
+import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mMap: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        login()
+
+        setGlobalVariables()
+        setUi()
+        setButtons()
+
     }
 
-    private fun runMainPage() {
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        val navController = findNavController(R.id.nav_host_fragment)
-        navView.setupWithNavController(navController)
+    override fun onSupportNavigateUp(): Boolean {
+        return nav_host_fragment.findNavController().navigateUp()
     }
 
-    private fun login() {
-        val loginPageLayout = findViewById<LinearLayout>(R.id.page_login)
-        val mainPageLayout = findViewById<RelativeLayout>(R.id.container)
-        val createAccountPageLayout = findViewById<LinearLayout>(R.id.page_create_account)
-        val uploadUserInfoPageLayout = findViewById<LinearLayout>(R.id.page_upload_user_info)
+    private fun setGlobalVariables() {
+        GlobalVariables.activity = this
+        GlobalVariables.userInfo = UserInfo("","","","","", "", mutableListOf(), 0.0, 0.0)
+        GlobalVariables.uiController = UiController()
+        GlobalVariables.api = Api()
+        GlobalVariables.homeMenuChoose = "food"
+        GlobalVariables.homeAreaChoose = "Zhongli"
 
-        val submitButton = findViewById<Button>(R.id.button_login_submit)
-        val createAccountButton = findViewById<Button>(R.id.button_create_new_account)
-        val submitCreateAccountButton = findViewById<Button>(R.id.button_submit_create_new_account)
-        val submitUploadUserInfo = findViewById<Button>(R.id.button_submit_upload_user_info)
-
-        submitButton.setOnClickListener {
-            Thread {
-                val userNameView = findViewById<EditText>(R.id.edit_username_login_page)
-                val passwordView = findViewById<EditText>(R.id.edit_password_login_page)
-                val id = userNameView.text.toString()
-                val password = passwordView.text.toString()
-
-                if (globalApi.login(id, password, id)) {
+        Thread {
+            while (true) {
+                if (!GlobalVariables.api.isNetWorkConnecting(this)) {
                     runOnUiThread(Runnable {
-                        loginPageLayout.visibility = LinearLayout.INVISIBLE
-                        runMainPage()
-                        mainPageLayout.visibility = RelativeLayout.VISIBLE
-                    })
-
-                    globalUserInfo = globalApi.getUserInfo(id)
-                    globalUserInfo.ID = id
-                    globalUserInfoSetted = true
-                }
-            }.start()
-        }
-
-        createAccountButton.setOnClickListener {
-            loginPageLayout.visibility = LinearLayout.INVISIBLE
-            createAccountPageLayout.visibility = LinearLayout.VISIBLE
-        }
-
-        submitCreateAccountButton.setOnClickListener {
-            Thread {
-                val userNameView = findViewById<EditText>(R.id.edit_username_create_account_page)
-                val passwordView = findViewById<EditText>(R.id.edit_password_create_account_page)
-                val vertifyPasswordView = findViewById<EditText>(R.id.edit_vertify_password_create_account_page)
-                val id = userNameView.text.toString()
-                val password = passwordView.text.toString()
-                val vertifyPassword = vertifyPasswordView.text.toString()
-
-                if (password == vertifyPassword)
-                    if (globalApi.createUser(id, password, id)) {
-                        runOnUiThread(Runnable {
-                            createAccountPageLayout.visibility = LinearLayout.INVISIBLE
-                            uploadUserInfoPageLayout.visibility = LinearLayout.VISIBLE
-                        })
-
-                        globalUserInfo.ID = id
-                    }
-            }.start()
-        }
-
-        submitUploadUserInfo.setOnClickListener {
-            Thread {
-                val userNameView = findViewById<EditText>(R.id.edit_username_upload_user_info)
-                val userName = userNameView.text.toString()
-                val iconString = "nil"
-
-                if (globalApi.uploadUserInfo(globalUserInfo.ID, iconString, userName)) {
-                    runOnUiThread(Runnable {
-                        uploadUserInfoPageLayout.visibility = LinearLayout.INVISIBLE
-                        loginPageLayout.visibility = LinearLayout.VISIBLE
+                        Toast.makeText(this, "請確認 wifi 是否開啟", Toast.LENGTH_SHORT).show()
                     })
                 }
+                Thread.sleep(5000)
+            }
+        }.start()
+
+        if (GlobalVariables.api.isNetWorkConnecting(this)) {
+            Thread {
+                GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(1, GlobalVariables.homeAreaChoose)
+                GlobalVariables.homePageProposalCount = 10
             }.start()
+        }
+    }
+
+    private fun setUi() {
+        val navController = nav_host_fragment.findNavController()
+        toolbar.setupWithNavController(navController, AppBarConfiguration(navController.graph))
+        toolbar.inflateMenu(R.menu.toolbar_menu)
+        nav_view.setupWithNavController(navController)
+    }
+
+    private fun setButtons() {
+        linkMainPageToolbarButton()
+    }
+
+    private fun linkMainPageToolbarButton() {
+        toolbar.button_toolbar_main.setOnClickListener {
+            //nav_host_fragment.findNavController().navigate(R.id.action_navigation_home_to_homeMenuFragment)
         }
     }
 }

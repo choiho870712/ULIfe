@@ -3,29 +3,195 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.startupboard.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_homePage1Fragment"
+            app:destination="@id/homePage1Fragment"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_navigation_home_to_homeEditFragment"
+            app:destination="@id/homeEditFragment"
+            app:popUpTo="@+id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_homeMenuFragment"
+            app:destination="@id/homeMenuFragment"
+            app:popUpTo="@+id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_chat"
         android:name="com.example.startupboard.ui.chat.ChatFragment"
-        android:label="@string/title_chat"
-        tools:layout="@layout/fragment_chat" />
+        android:label="聊天室"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_navigation_chat_to_chatFriendListFragment"
+            app:destination="@id/chatFriendListFragment"
+            app:popUpTo="@+id/navigation_chat" />
+        <action
+            android:id="@+id/action_navigation_chat_to_personSearchFriendFragment"
+            app:destination="@id/personSearchFriendFragment"
+            app:popUpTo="@+id/navigation_chat" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.startupboard.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_personInfoFragment"
+            app:destination="@id/personInfoFragment"
+            app:popUpTo="@+id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/navigation_notifications" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_person"
         android:name="com.example.startupboard.ui.person.PersonFragment"
         android:label="@string/title_person"
-        tools:layout="@layout/fragment_person" />
+        tools:layout="@layout/fragment_person">
+        <action
+            android:id="@+id/action_navigation_person_to_personInfoFragment"
+            app:destination="@id/personInfoFragment"
+            app:popUpTo="@+id/navigation_person" />
+        <action
+            android:id="@+id/action_navigation_person_to_personSearchFriendFragment"
+            app:destination="@id/personSearchFriendFragment"
+            app:popUpTo="@+id/navigation_person" />
+        <action
+            android:id="@+id/action_navigation_person_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/navigation_person" />
+        <action
+            android:id="@+id/action_navigation_person_to_notificationSendFragment"
+            app:destination="@id/notificationSendFragment"
+            app:popUpTo="@+id/navigation_person" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage1Fragment"
+        android:name="com.example.startupboard.ui.home.HomePage1Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_page1">
+        <action
+            android:id="@+id/action_homePage1Fragment_to_homePage2Fragment"
+            app:destination="@id/homePage2Fragment"
+            app:popUpTo="@+id/navigation_home" />
+        <action
+            android:id="@+id/action_homePage1Fragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/homePage1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeEditFragment"
+        android:name="com.example.startupboard.ui.home.HomeEditFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_edit">
+        <action
+            android:id="@+id/action_homeEditFragment_to_homePage1Fragment"
+            app:destination="@id/homePage1Fragment"
+            app:popUpTo="@+id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/personEditFragment"
+        android:name="com.example.startupboard.ui.person.PersonEditFragment"
+        android:label=""
+        tools:layout="@layout/fragment_person_edit">
+        <action
+            android:id="@+id/action_personEditFragment_to_personInfoFragment"
+            app:destination="@id/personInfoFragment"
+            app:popUpTo="@+id/personInfoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_personEditFragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/personShopInfoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage2Fragment"
+        android:name="com.example.startupboard.ui.home.HomePage2Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_page2">
+        <action
+            android:id="@+id/action_homePage2Fragment_to_homePage1Fragment"
+            app:destination="@id/homePage1Fragment"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeMenuFragment"
+        android:name="com.example.startupboard.ui.home.HomeMenuFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_menu">
+        <action
+            android:id="@+id/action_homeMenuFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/personInfoFragment"
+        android:name="com.example.startupboard.ui.person.PersonInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_person_info">
+        <action
+            android:id="@+id/action_personInfoFragment_to_personEditFragment"
+            app:destination="@id/personEditFragment"
+            app:popUpTo="@+id/personInfoFragment" />
+        <action
+            android:id="@+id/action_personInfoFragment_to_chatFriendListFragment"
+            app:destination="@id/chatFriendListFragment"
+            app:popUpTo="@+id/personInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personSearchFriendFragment"
+        android:name="com.example.startupboard.ui.person.PersonSearchFriendFragment"
+        android:label="搜尋好友"
+        tools:layout="@layout/fragment_person_search_friend" >
+        <action
+            android:id="@+id/action_personSearchFriendFragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/personSearchFriendFragment" />
+        <action
+            android:id="@+id/action_personSearchFriendFragment_to_personInfoFragment"
+            app:destination="@id/personInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFriendListFragment"
+        android:name="com.example.startupboard.ui.chat.ChatFriendListFragment"
+        android:label="好友清單"
+        tools:layout="@layout/fragment_chat_friend_list" >
+        <action
+            android:id="@+id/action_chatFriendListFragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment"
+            app:popUpTo="@+id/navigation_chat" />
+        <action
+            android:id="@+id/action_chatFriendListFragment_to_personInfoFragment"
+            app:destination="@id/personInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personShopInfoFragment"
+        android:name="com.example.startupboard.ui.person.PersonShopInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_person_shop_info" >
+        <action
+            android:id="@+id/action_personShopInfoFragment_to_personEditFragment"
+            app:destination="@id/personEditFragment"
+            app:popUpTo="@+id/personShopInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationSendFragment"
+        android:name="com.example.startupboard.ui.notifications.NotificationSendFragment"
+        android:label="推撥通知"
+        tools:layout="@layout/fragment_notification_send" />
 </navigation>

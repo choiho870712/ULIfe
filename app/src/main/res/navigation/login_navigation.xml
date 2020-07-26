@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/login_navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment"
+    android:id="@+id/login_navigation">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.startupboard.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation"
+            app:popUpTo="@+id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.startupboard.CreateAccountFragment"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_makeUserInfoFragment"
+            app:destination="@id/makeUserInfoFragment"
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/makeUserInfoFragment"
+        android:name="com.example.startupboard.MakeUserInfoFragment"
+        tools:layout="@layout/fragment_make_user_info" >
+        <action
+            android:id="@+id/action_makeUserInfoFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation"
+            app:popUpTo="@+id/loginFragment" />
+    </fragment>
+    <include app:graph="@navigation/mobile_navigation" />
 
 </navigation>

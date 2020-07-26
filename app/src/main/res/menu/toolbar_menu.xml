@@ -1,4 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/button_edit_proposal"
+        android:icon="@drawable/ic_add_white_24dp"
+        android:title="@string/home_edit_title"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/button_edit_person"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="@string/person_edit_title"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/button_send_new_proposal"
+        android:title="送出"
+        android:visible="false"
+        android:enabled="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/button_add_friend"
+        android:icon="@drawable/ic_friend_add_white_24dp"
+        android:title="加好友"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/button_friend_list"
+        android:icon="@drawable/ic_friend_list_white_24dp"
+        android:title="好友清單"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/button_search_friend"
+        android:icon="@mipmap/search_friend_foreground"
+        android:title="搜尋好友"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
 </menu>

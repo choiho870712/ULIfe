@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "433010924655",
+    "firebase_url": "https://teamup-ef7ea.firebaseio.com",
+    "project_id": "teamup-ef7ea",
+    "storage_bucket": "teamup-ef7ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433010924655:android:d462f9d46cb7c26b4f819a",
+        "android_client_info": {
+          "package_name": "com.example.startupboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433010924655-d0na5i6vdl1l3cl1997l2hqusja7a4po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQCTbaoxF0OnDaCnNzuAYueTiti1Wn908"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433010924655-d0na5i6vdl1l3cl1997l2hqusja7a4po.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "433010924655-9gcuatr9dddd3d3l00r90betcdu5f50o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ChunPo-Chan.JP-TeamUP"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

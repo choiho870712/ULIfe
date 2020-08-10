@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.startupboard.LoginFragment"
+        android:name="com.choiho.ulife.LoginFragment"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_createAccountFragment"
@@ -21,17 +21,23 @@
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
-        android:name="com.example.startupboard.CreateAccountFragment"
+        android:name="com.choiho.ulife.CreateAccountFragment"
         tools:layout="@layout/fragment_create_account" >
         <action
             android:id="@+id/action_createAccountFragment_to_makeUserInfoFragment"
             app:destination="@id/makeUserInfoFragment"
             app:popUpTo="@+id/loginFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_privacyPolicyEnglishFragment"
+            app:destination="@id/privacyPolicyEnglishFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_privacyPolicyChineseFragment"
+            app:destination="@id/privacyPolicyChineseFragment" />
     </fragment>
     <fragment
         android:id="@+id/makeUserInfoFragment"
-        android:name="com.example.startupboard.MakeUserInfoFragment"
+        android:name="com.choiho.ulife.MakeUserInfoFragment"
         tools:layout="@layout/fragment_make_user_info" >
         <action
             android:id="@+id/action_makeUserInfoFragment_to_mobile_navigation"
@@ -39,5 +45,13 @@
             app:popUpTo="@+id/loginFragment" />
     </fragment>
     <include app:graph="@navigation/mobile_navigation" />
+    <fragment
+        android:id="@+id/privacyPolicyEnglishFragment"
+        android:name="com.choiho.ulife.PrivacyPolicyEnglishFragment"
+        tools:layout="@layout/fragment_privacy_policy_english" />
+    <fragment
+        android:id="@+id/privacyPolicyChineseFragment"
+        android:name="com.choiho.ulife.PrivacyPolicyChineseFragment"
+        tools:layout="@layout/fragment_privacy_policy_chinese" />
 
 </navigation>

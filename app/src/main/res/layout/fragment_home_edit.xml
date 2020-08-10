@@ -5,31 +5,106 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeEditFragment">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="25dp"
-        android:orientation="vertical"
-        android:visibility="visible">
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
 
-        <EditText
-            android:id="@+id/text_edit_home_title"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_edit_proposal_title"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/text_edit_home_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/home_edit_proposal_content"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            />
+            <Button
+                android:id="@+id/button_select_image_edit_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上傳照片"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/image_edit_home_proposalImage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/text_author_edit_home"
+                android:text="@string/home_card_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="start"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edit_title_edit_home"
+                android:hint="標題"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_date_edit_home"
+                android:text="@string/home_card_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="end"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/edit_content_edit_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="內文"
+                android:textSize="15sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edit_tag_edit_home"
+                android:hint="關鍵字"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/button_submit_edit_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="送出"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

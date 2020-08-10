@@ -17,7 +17,8 @@
             android:background="@drawable/btn_round_primary_dark"
             android:layout_margin="5dp"
             android:foregroundGravity="center"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/image_toolbar_main"

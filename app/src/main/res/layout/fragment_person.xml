@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.person.PersonFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,65 +19,321 @@
 
         <ImageView
             android:id="@+id/image_person_icon_boy"
-            android:layout_marginTop="40dp"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:src="@mipmap/icon_boy"
-            android:scaleType="centerCrop"
-            />
+            android:src="@mipmap/bird_salute_foreground"
+            android:scaleType="centerCrop" />
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="20dp"
+            android:src="@mipmap/tool_store_tou_foreground"
+            android:scaleX="20"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/tool_store_pic2"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="20sp">
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/image_person_search_friend"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/search_friend_foreground"
-                    android:scaleType="centerCrop"
-                    />
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/image_send_notification_person"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_notifications_black_24dp"
-                    android:scaleType="centerCrop"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
-                    />
+                    <ImageView
+                        android:id="@+id/image_send_notification_person"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/shop_notice_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"/>
 
-                <ImageView
-                    android:id="@+id/image_person_random_food"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    <TextView
+                        android:id="@+id/text_send_notification_person"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_send_notification_person"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"
+                        android:text="推撥"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/random_food_plate_foreground"
-                    android:scaleType="centerCrop"
-                    android:visibility="invisible"
-                    />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_1_2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_1_2"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_1_3"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_1_3"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
 
             </LinearLayout>
+        </RelativeLayout>
 
-        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/tool_store_pic2"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_2_1"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_2_1"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_2_2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_2_2"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_2_3"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_2_3"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/tool_store_pic2"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_3_1"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_3_1"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_3_2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_3_2"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_tool_box_empty_3_3"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@mipmap/tool_store_empty_box_foreground"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tool_box_square_text_box"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_tool_box_empty_3_3"
+                        android:layout_marginTop="-15dp"
+                        android:padding="2dp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </FrameLayout>

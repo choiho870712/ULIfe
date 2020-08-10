@@ -3,7 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.person.PersonInfoFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -14,80 +22,152 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/text_friendCount_information_person_section1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/user_profile_empty_icon_foreground"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_page1_friend_count"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/image_photoshot_information_person_section1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="30dp"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="#FFFFFF"
-                    android:src="@mipmap/icon_boy"/>
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/bird_salute_foreground"
+                    android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_toEndOf="@id/image_photoshot_information_person_section1"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:weightSum="2">
-
-                    <TextView
-                        android:id="@+id/text_friendCount_information_person_section1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/person_page1_friend_count"
-                        android:textSize="30sp"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
 
                     <TextView
                         android:id="@+id/text_followerCount_information_person_section1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/user_profile_follower_foreground"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/person_page1_follower_count"
-                        android:textSize="30sp"
+                        android:text="訂閱"
+                        android:textSize="15sp"
                         android:gravity="center"
-                        android:layout_weight="1"/>
+                        android:textStyle="bold"/>
+
                 </LinearLayout>
 
-            </RelativeLayout>
+            </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="100">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/text_selfIntroduction_information_person_section1"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/person_page1_self_introduction"
-                    android:textSize="20sp"
-                    android:layout_weight="97"/>
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/text_tag_information_person_section1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/person_page1_tag"
-                    android:textSize="20sp"
-                    android:layout_weight="2"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/tool_store_tou_foreground"
+                        android:scaleType="centerCrop"/>
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:background="@color/colorWhiteSmoke">
+
+                        <TextView
+                            android:id="@+id/text_selfIntroduction_information_person_section1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/person_page1_self_introduction"
+                            android:textSize="20sp"
+                            android:layout_weight="97"/>
+
+                        <TextView
+                            android:id="@+id/text_tag_information_person_section1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/person_page1_tag"
+                            android:textSize="20sp"
+                            android:layout_weight="2"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/tool_store_tou_foreground"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@mipmap/user_profile_board_leg_foreground"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@mipmap/user_profile_bird_foreground"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="30dp"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
 

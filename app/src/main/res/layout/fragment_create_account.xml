@@ -5,71 +5,96 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccountFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
     <LinearLayout
         android:id="@+id/page_create_account"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#444444"
         android:padding="25dp"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/creat_account_bird_foreground" />
+
+        <EditText
+            android:layout_marginTop="30dp"
+            android:id="@+id/edit_username_create_account_page"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:hint="@string/login_username"
+            android:textAlignment="center"
+            android:background="@drawable/tool_box_square_text_box"
+            />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/edit_password_create_account_page"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:hint="@string/create_account_password"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:background="@drawable/tool_box_square_text_box"
+            />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/edit_vertify_password_create_account_page"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:hint="@string/create_account_password_vertify"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:background="@drawable/tool_box_square_text_box"
+            />
+
         <TextView
+            android:id="@+id/text_privacy_policy_chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="隱私權條款"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/text_privacy_policy_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_privacy_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:textColor="#6dffbf"
-            android:padding="30dp"
-            android:text="@string/create_account_title"/>
+            android:text="您已詳細閱讀『隱私權條款』並同意"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
-        <EditText
-            android:id="@+id/edit_username_create_account_page"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button_submit_create_new_account"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/create_account_username"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:textAlignment="center"
-            />
-
-        <EditText
-            android:id="@+id/edit_password_create_account_page"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/create_account_password"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:textAlignment="center"
-            android:inputType="textPassword"
-            />
-
-        <EditText
-            android:id="@+id/edit_vertify_password_create_account_page"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/create_account_password_vertify"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:textAlignment="center"
-            android:inputType="textPassword"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="@string/login_create_account_button"
             android:gravity="center"
-            android:padding="25dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button_submit_create_new_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/create_account_submit_button"
-                android:textAllCaps="false"
-                />
-
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"/>
 
     </LinearLayout>
 

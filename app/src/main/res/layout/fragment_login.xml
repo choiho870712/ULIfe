@@ -7,40 +7,38 @@
 
     <LinearLayout
         android:id="@+id/page_login"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="#444444"
+        android:background="@color/colorPrimary"
         android:padding="25dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:textColor="#6dffbf"
-            android:padding="30dp"
-            android:text="@string/login_title"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/login_bird_foreground" />
 
         <EditText
+            android:layout_marginTop="30dp"
             android:id="@+id/edit_username_login_page"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:hint="@string/login_username"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
             android:textAlignment="center"
+            android:background="@drawable/tool_box_square_text_box"
             />
 
         <EditText
+            android:layout_marginTop="30dp"
             android:id="@+id/edit_password_login_page"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:hint="@string/login_password"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
             android:textAlignment="center"
             android:inputType="textPassword"
+            android:background="@drawable/tool_box_square_text_box"
             />
 
         <LinearLayout
@@ -51,20 +49,42 @@
             android:orientation="horizontal">
 
             <Button
+                android:layout_margin="20dp"
                 android:id="@+id/button_login_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login_button"
-                />
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
 
             <Button
+                android:layout_margin="20dp"
                 android:id="@+id/button_create_new_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login_create_account_button"
-                />
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_login_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="系統維修中"
+        android:visibility="gone"/>
 
 </FrameLayout>

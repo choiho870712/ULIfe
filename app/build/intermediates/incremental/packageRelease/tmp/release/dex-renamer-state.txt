@@ -1,0 +1,7 @@
+#Sun Aug 09 23:37:25 CST 2020
+base.0=/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/dex/release/mergeDexRelease/out/classes2.dex

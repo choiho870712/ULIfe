@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.chat.ChatFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_chat"
         android:orientation="vertical"

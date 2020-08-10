@@ -5,12 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".MakeUserInfoFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
     <LinearLayout
         android:id="@+id/page_upload_user_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#444444"
         android:padding="25dp"
         android:orientation="vertical">
 
@@ -18,7 +24,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:textColor="#6dffbf"
             android:padding="30dp"
             android:text="@string/upload_user_info_title"/>
 
@@ -27,45 +32,49 @@
             android:id="@+id/image_photoshot_make_user_info"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FFFFFF"
-            android:src="@mipmap/icon_boy"/>
-
-        <Button
-            android:id="@+id/button_changeIcon_make_user_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/upload_user_info_add_image"
-            android:textColor="#6dffbf"
-            android:background="#444444"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            android:gravity="center" />
+            android:src="@mipmap/bird_salute_foreground"/>
 
         <EditText
+            android:layout_marginTop="30dp"
             android:id="@+id/edit_username_make_user_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:hint="@string/upload_user_info_username"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
             android:textAlignment="center"
+            android:background="@drawable/tool_box_square_text_box"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="25dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
             <Button
+                android:layout_margin="30dp"
                 android:id="@+id/button_submit_upload_user_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/upload_user_info_button"
-                android:textAllCaps="false"
-                />
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:layout_margin="30dp"
+                android:id="@+id/button_changeIcon_make_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_user_info_add_image"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
 

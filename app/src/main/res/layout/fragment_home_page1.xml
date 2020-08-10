@@ -5,42 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomePage1Fragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/shop_canvas_foreground"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:id="@+id/homePage1ButtonSet">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="菜單"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:textStyle="bold"/>
-
-            <Button
-                android:id="@+id/button_toPage2_home_page1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="店家資訊"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@color/colorWhiteSmoke"/>
-
-        </LinearLayout>
-
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/homePage1ButtonSet">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,7 +38,7 @@
                     <ImageView
                         android:id="@+id/image_proposal"
                         android:layout_width="match_parent"
-                        android:layout_height="300dp"
+                        android:layout_height="315dp"
                         android:scaleType="centerCrop"
                         android:visibility="gone"/>
 

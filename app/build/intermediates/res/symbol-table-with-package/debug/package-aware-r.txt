@@ -1524,6 +1524,9 @@ drawable post_event_background
 drawable price_big_xxx
 drawable price_m
 drawable random_food_plate_background
+drawable random_food_plate_board_background
+drawable random_food_plate_leg_background
+drawable random_food_plate_pointer_background
 drawable search_friend_background
 drawable shop_canvas_background
 drawable shop_notice_background
@@ -1623,10 +1626,13 @@ id action_navigation_home_to_homeMenuFragment
 id action_navigation_home_to_homePage1Fragment
 id action_navigation_notifications_to_notificationFriendFragment
 id action_navigation_notifications_to_notificationsShopFragment
+id action_navigation_person_to_foodPriceFragment
 id action_navigation_person_to_notificationSendFragment
 id action_navigation_person_to_personInfoFragment
 id action_navigation_person_to_personSearchFriendFragment
 id action_navigation_person_to_personShopInfoFragment
+id action_navigation_person_to_randomPlateFragment
+id action_navigation_person_to_studentPermissionFragment
 id action_notificationFriendFragment_to_personInfoFragment
 id action_notificationsShopFragment_to_personShopInfoFragment
 id action_personEditFragment_to_personInfoFragment
@@ -1639,6 +1645,7 @@ id action_personSearchFriendFragment_to_personInfoFragment
 id action_personSearchFriendFragment_to_personShopInfoFragment
 id action_personShopInfoFragment_to_chatFriendListFragment
 id action_personShopInfoFragment_to_personEditFragment
+id action_randomPlateFragment_to_foodPriceFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1673,12 +1680,14 @@ id button_logout
 id button_main_menu_choose_event
 id button_main_menu_choose_food
 id button_main_menu_choose_game
+id button_random_food
 id button_search_friend
 id button_search_friend_person_submit
 id button_select_image_edit_home
 id button_send_friend_notification
 id button_send_new_proposal
 id button_send_notification
+id button_student_permission
 id button_submit_create_new_account
 id button_submit_edit_home
 id button_submit_upload_user_info
@@ -1734,6 +1743,8 @@ id edit_password_login_page
 id edit_query
 id edit_send_friend_notification
 id edit_send_notification
+id edit_student_ID_permission
+id edit_student_password_permission
 id edit_tag_edit_home
 id edit_title_edit_home
 id edit_username_create_account_page
@@ -1756,6 +1767,7 @@ id filled
 id filter_chip
 id fitToContents
 id fixed
+id foodPriceFragment
 id forever
 id fragment_container_view_tag
 id ghost_view
@@ -1790,7 +1802,10 @@ id image_photoshot_information_person_section1
 id image_photoshot_make_user_info
 id image_proposal
 id image_proposal_item
-id image_send_notification_person
+id image_random_food_plate_board
+id image_random_food_plate_leg
+id image_random_food_plate_pointer
+id image_tool_box_empty_1_1
 id image_tool_box_empty_1_2
 id image_tool_box_empty_1_3
 id image_tool_box_empty_2_1
@@ -1807,6 +1822,11 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout_student_permission
+id layout_student_permission_done
+id layout_tool_box_empty_1_1
+id layout_tool_box_empty_2_1
+id layout_tool_box_empty_3_1
 id left
 id light
 id line1
@@ -1899,8 +1919,10 @@ id privacyPolicyEnglishFragment
 id progress_circular
 id progress_horizontal
 id radio
+id randomPlateFragment
 id recycler_chat
 id recycler_class_button
+id recycler_food_price
 id recycler_friend_list_chat
 id recycler_home
 id recycler_message_chat_page1
@@ -1960,6 +1982,7 @@ id standard
 id start
 id status_bar_latest_event_content
 id stretch
+id studentPermissionFragment
 id submenuarrow
 id submit_area
 id swip_recycler_home
@@ -1995,6 +2018,8 @@ id text_date_home_page1
 id text_date_notifications_shop
 id text_followerCount_information_person_section1
 id text_followerCount_shopFragment
+id text_food_price_date
+id text_food_price_message
 id text_friendCount_information_person_section1
 id text_input_end_icon
 id text_input_start_icon
@@ -2007,8 +2032,8 @@ id text_privacy_policy_chinese
 id text_privacy_policy_english
 id text_selfIntroduction_information_person_section1
 id text_selfIntroduction_shopFragment
-id text_send_notification_person
 id text_sended_notification_card
+id text_student_permission_ID
 id text_tag_card_home
 id text_tag_edit_person
 id text_tag_home_page1
@@ -2016,6 +2041,9 @@ id text_tag_information_person_section1
 id text_tag_shopFragment
 id text_title_card_home
 id text_title_home_page1
+id text_tool_box_empty_1_1
+id text_tool_box_empty_2_1
+id text_tool_box_empty_3_1
 id text_toolbar_main
 id text_username_card_chat
 id text_username_card_search_friend
@@ -2118,6 +2146,7 @@ layout card_chat
 layout card_chat_friend_message
 layout card_chat_my_message
 layout card_class_button
+layout card_food_price
 layout card_home
 layout card_notifications
 layout card_proposal_item
@@ -2143,6 +2172,7 @@ layout fragment_chat
 layout fragment_chat_friend_list
 layout fragment_chat_page1
 layout fragment_create_account
+layout fragment_food_price
 layout fragment_home
 layout fragment_home_edit
 layout fragment_home_menu
@@ -2161,6 +2191,8 @@ layout fragment_person_search_friend
 layout fragment_person_shop_info
 layout fragment_privacy_policy_chinese
 layout fragment_privacy_policy_english
+layout fragment_random_plate
+layout fragment_student_permission
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2259,7 +2291,16 @@ mipmap post_event
 mipmap post_event_foreground
 mipmap post_event_round
 mipmap random_food_plate
+mipmap random_food_plate_board
+mipmap random_food_plate_board_foreground
+mipmap random_food_plate_board_round
 mipmap random_food_plate_foreground
+mipmap random_food_plate_leg
+mipmap random_food_plate_leg_foreground
+mipmap random_food_plate_leg_round
+mipmap random_food_plate_pointer
+mipmap random_food_plate_pointer_foreground
+mipmap random_food_plate_pointer_round
 mipmap random_food_plate_round
 mipmap search_friend
 mipmap search_friend_foreground
@@ -2380,6 +2421,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home_card_author
 string home_card_date

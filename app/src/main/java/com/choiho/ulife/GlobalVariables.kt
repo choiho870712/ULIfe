@@ -12,6 +12,7 @@ import com.choiho.ulife.ui.api.Notification
 import com.choiho.ulife.ui.api.Proposal
 import com.choiho.ulife.ui.api.UserInfo
 import com.choiho.ulife.ui.home.CardAdapter
+import com.choiho.ulife.ui.person.CardFoodPriceAdapter
 
 class GlobalVariables : Application() {
     companion object {
@@ -64,6 +65,8 @@ class GlobalVariables : Application() {
 
         var sendedNotificationList: ArrayList<String> = ArrayList()
         var sendedNotificationListIsReady = false
+
+        var studentPermissionID = ""
 
         lateinit var dbHelper: DBHelper
 

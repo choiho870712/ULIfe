@@ -76,6 +76,15 @@
             android:id="@+id/action_navigation_person_to_notificationSendFragment"
             app:destination="@id/notificationSendFragment"
             app:popUpTo="@+id/navigation_person" />
+        <action
+            android:id="@+id/action_navigation_person_to_randomPlateFragment"
+            app:destination="@id/randomPlateFragment" />
+        <action
+            android:id="@+id/action_navigation_person_to_foodPriceFragment"
+            app:destination="@id/foodPriceFragment" />
+        <action
+            android:id="@+id/action_navigation_person_to_studentPermissionFragment"
+            app:destination="@id/studentPermissionFragment" />
     </fragment>
     <fragment
         android:id="@+id/homePage1Fragment"
@@ -213,4 +222,23 @@
             app:destination="@id/personInfoFragment"
             app:popUpTo="@+id/notificationFriendFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/randomPlateFragment"
+        android:name="com.choiho.ulife.ui.person.RandomPlateFragment"
+        android:label="轉盤"
+        tools:layout="@layout/fragment_random_plate" >
+        <action
+            android:id="@+id/action_randomPlateFragment_to_foodPriceFragment"
+            app:destination="@id/foodPriceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodPriceFragment"
+        android:name="com.choiho.ulife.ui.person.FoodPriceFragment"
+        android:label="折價券"
+        tools:layout="@layout/fragment_food_price" />
+    <fragment
+        android:id="@+id/studentPermissionFragment"
+        android:name="com.choiho.ulife.ui.person.StudentPermissionFragment"
+        android:label="學生身份認證"
+        tools:layout="@layout/fragment_student_permission" />
 </navigation>

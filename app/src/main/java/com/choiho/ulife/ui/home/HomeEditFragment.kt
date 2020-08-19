@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,8 +20,8 @@ import com.choiho.ulife.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home_edit.view.*
 import kotlinx.android.synthetic.main.fragment_home_edit.view.edit_tag_edit_home
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+import org.threeten.bp.LocalDateTime
+import java.text.SimpleDateFormat
 
 /**
  * A simple [Fragment] subclass.
@@ -39,8 +40,12 @@ class HomeEditFragment : Fragment() {
 
         root.text_author_edit_home.text = GlobalVariables.userInfo.name
 
-        val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss:SSS")
-        root.text_date_edit_home.text = dateTimeFormatter.format(LocalDateTime.now())
+        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        val formatter = SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
+        val date = formatter.format(parser.parse(LocalDateTime.now().toString()))
+
+
+        root.text_date_edit_home.text = date
 
         root.button_select_image_edit_home.setOnClickListener {
             pickImageFromGallery()
@@ -53,7 +58,6 @@ class HomeEditFragment : Fragment() {
                     val id = GlobalVariables.userInfo.ID
                     val title = root.edit_title_edit_home.text.toString()
                     val content = root.edit_content_edit_home.text.toString()
-                    val date = root.text_date_edit_home.text.toString()
                     val hashtag = root.edit_tag_edit_home.text.toString()
                     val image = root.image_edit_home_proposalImage.drawable.toBitmap()
                     val area = GlobalVariables.homeAreaChoose
@@ -97,12 +101,13 @@ class HomeEditFragment : Fragment() {
                                 )
 
                                 GlobalVariables.proposalUserInfo = GlobalVariables.userInfo
-                                GlobalVariables.proposalUserScribeList = GlobalVariables.subscribeList
+                                GlobalVariables.proposalUserScribeList =
+                                    GlobalVariables.subscribeList
 
                                 while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
-                                ;
+                                    continue
 
-                                for (i in 0 until(GlobalVariables.proposal!!.proposalItemList.size)) {
+                                for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
                                     Thread {
                                         GlobalVariables.proposal!!.proposalItemList[i].convertImageUrlToImageAll()
                                     }.start()
@@ -110,13 +115,45 @@ class HomeEditFragment : Fragment() {
 
                                 if (activity != null) {
                                     requireActivity().runOnUiThread(Runnable {
-                                        Toast.makeText(activity, "上傳文章成功", Toast.LENGTH_SHORT).show()
-                                        GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
-                                            R.id.action_homeEditFragment_to_homePage1Fragment)
+                                        Toast.makeText(activity, "上傳文章成功", Toast.LENGTH_SHORT)
+                                            .show()
+                                        GlobalVariables.activity.nav_host_fragment.findNavController()
+                                            .navigate(
+                                                R.id.action_homeEditFragment_to_homePage1Fragment
+                                            )
                                     })
                                 }
 
                                 isRunningSubmitAddProposal = false
+                            }.start()
+
+                            Thread{
+                                var count = 0
+                                val message = GlobalVariables.userInfo.name + " 發布了新文章"
+                                Thread {
+                                    val subscribeList = GlobalVariables.api.getSubscribeList(GlobalVariables.userInfo.ID)
+
+                                    for (i in 0 until(subscribeList.size)) {
+                                        Thread{
+                                            Log.d(">>>>>>>>>>>>>>>>>>>>>>", subscribeList[i].ID)
+
+                                            GlobalVariables.api.requestSendingFCM(
+                                                subscribeList[i].FMC_ID,
+                                                GlobalVariables.userInfo.name,
+                                                message
+                                            )
+                                            count++
+                                        }.start()
+                                    }
+                                }.start()
+
+                                Thread {
+                                    GlobalVariables.api.postNotification(
+                                        GlobalVariables.userInfo.ID,
+                                        message,
+                                        date
+                                    )
+                                }.start()
                             }.start()
 
                             break

@@ -27,6 +27,7 @@ class GlobalFunctions {
             GlobalVariables.userInfo = GlobalVariables.api.getUserInfo(id)
             GlobalVariables.userInfo.ID = id
             GlobalVariables.userInfo.FMC_ID = GlobalVariables.FCM_token
+            GlobalVariables.studentPermissionID = GlobalVariables.dbHelper.readDB("studentPermissionID")
             GlobalVariables.UserInfoIsReady = true
         }.start()
     }
@@ -242,6 +243,7 @@ class GlobalFunctions {
         GlobalVariables.UserInfoIsReady = false
         GlobalVariables.userInfo.clear()
         GlobalVariables.UserInfoIsReady = GlobalVariables.userInfo.readDB("userInfo")
+        GlobalVariables.studentPermissionID = GlobalVariables.dbHelper.readDB("studentPermissionID")
         return GlobalVariables.UserInfoIsReady
     }
 

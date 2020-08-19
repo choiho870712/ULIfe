@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">433010924655-d0na5i6vdl1l3cl1997l2hqusja7a4po.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://teamup-ef7ea.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">433010924655</string>
-    <string name="google_api_key" translatable="false">AIzaSyDQCTbaoxF0OnDaCnNzuAYueTiti1Wn908</string>
-    <string name="google_app_id" translatable="false">1:433010924655:android:d462f9d46cb7c26b4f819a</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDQCTbaoxF0OnDaCnNzuAYueTiti1Wn908</string>
-    <string name="google_storage_bucket" translatable="false">teamup-ef7ea.appspot.com</string>
-    <string name="project_id" translatable="false">teamup-ef7ea</string>
+    <string name="default_web_client_id" translatable="false">993128907260-proep208ieihtj43jf274kcqj4e1taao.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://ulife-5d9a8.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">993128907260</string>
+    <string name="google_api_key" translatable="false">AIzaSyCwjLoGzX0ZGr-s3qAT4ur2_ftr2FlmTxI</string>
+    <string name="google_app_id" translatable="false">1:993128907260:android:fcc0da9635f28a45947279</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCwjLoGzX0ZGr-s3qAT4ur2_ftr2FlmTxI</string>
+    <string name="google_storage_bucket" translatable="false">ulife-5d9a8.appspot.com</string>
+    <string name="project_id" translatable="false">ulife-5d9a8</string>
 </resources>

@@ -149,14 +149,20 @@ class HomeFragment : Fragment() {
 
     private fun createClassButton(root:View) {
         val classList:ArrayList<String> = ArrayList()
-        classList.add("早餐")
-        classList.add("鍋物")
-        classList.add("義式")
-        classList.add("日式")
-        classList.add("美式")
+        classList.add("早午餐")
+        classList.add("飲品")
         classList.add("台式")
-        classList.add("甜點烘培")
-        classList.add("飲料")
+        classList.add("鍋類")
+        classList.add("中式")
+        classList.add("日式")
+        classList.add("韓式")
+        classList.add("美式")
+        classList.add("歐式")
+        classList.add("泰式")
+        classList.add("咖啡")
+        classList.add("甜點")
+        classList.add("麵包糕點")
+        classList.add("酒吧")
 
         if (activity != null) {
             root.recycler_class_button.apply {

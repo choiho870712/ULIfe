@@ -29,8 +29,13 @@ class PersonFragment : Fragment() {
     private fun setButton() {
         GlobalVariables.uiController.openToolbarBackButton(false)
         setPersonPageButton()
-        setSearchFriendButton()
-        setSendNotificationButton()
+//        setSearchFriendButton()
+        if (GlobalVariables.userInfo.isShop()) setSendNotificationButton()
+        else {
+            setRandomFoodButton()
+            setFoodPriceButton()
+            setStudentPremissionButton()
+        }
         GlobalVariables.uiController.setNavViewButton()
     }
 
@@ -64,16 +69,38 @@ class PersonFragment : Fragment() {
     }
 
     private fun setSendNotificationButton() {
-        if (GlobalVariables.userInfo.isShop()) {
-            root.image_send_notification_person.setOnClickListener {
-                if (activity != null)
-                    requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_notificationSendFragment)
-            }
-        }
-        else {
-            root.image_send_notification_person.setImageResource(R.mipmap.tool_store_empty_box_foreground)
-            root.text_send_notification_person.text = ""
+        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.shop_notice_foreground)
+        root.text_tool_box_empty_1_1.text = "推撥"
+        root.layout_tool_box_empty_1_1.setOnClickListener {
+            if (activity != null)
+                requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_notificationSendFragment)
         }
     }
 
+    private fun setRandomFoodButton() {
+        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_plate_foreground)
+        root.text_tool_box_empty_1_1.text = "轉盤"
+        root.layout_tool_box_empty_1_1.setOnClickListener {
+            if (activity != null)
+                requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_randomPlateFragment)
+        }
+    }
+
+    private fun setFoodPriceButton() {
+        root.image_tool_box_empty_2_1.setImageResource(R.drawable.chicken_m)
+        root.text_tool_box_empty_2_1.text = "折價券"
+        root.layout_tool_box_empty_2_1.setOnClickListener {
+            if (activity != null)
+                requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_foodPriceFragment)
+        }
+    }
+
+    private fun setStudentPremissionButton() {
+        root.image_tool_box_empty_3_1.setImageResource(R.mipmap.icon_boy_foreground)
+        root.text_tool_box_empty_3_1.text = "學生認證"
+        root.layout_tool_box_empty_3_1.setOnClickListener {
+            if (activity != null)
+                requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_studentPermissionFragment)
+        }
+    }
 }

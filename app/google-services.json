@@ -1,38 +1,38 @@
 {
   "project_info": {
-    "project_number": "433010924655",
-    "firebase_url": "https://teamup-ef7ea.firebaseio.com",
-    "project_id": "teamup-ef7ea",
-    "storage_bucket": "teamup-ef7ea.appspot.com"
+    "project_number": "993128907260",
+    "firebase_url": "https://ulife-5d9a8.firebaseio.com",
+    "project_id": "ulife-5d9a8",
+    "storage_bucket": "ulife-5d9a8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:433010924655:android:d462f9d46cb7c26b4f819a",
+        "mobilesdk_app_id": "1:993128907260:android:fcc0da9635f28a45947279",
         "android_client_info": {
           "package_name": "com.choiho.ulife"
         }
       },
       "oauth_client": [
         {
-          "client_id": "433010924655-d0na5i6vdl1l3cl1997l2hqusja7a4po.apps.googleusercontent.com",
+          "client_id": "993128907260-proep208ieihtj43jf274kcqj4e1taao.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDQCTbaoxF0OnDaCnNzuAYueTiti1Wn908"
+          "current_key": "AIzaSyCwjLoGzX0ZGr-s3qAT4ur2_ftr2FlmTxI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "433010924655-d0na5i6vdl1l3cl1997l2hqusja7a4po.apps.googleusercontent.com",
+              "client_id": "993128907260-proep208ieihtj43jf274kcqj4e1taao.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "433010924655-9gcuatr9dddd3d3l00r90betcdu5f50o.apps.googleusercontent.com",
+              "client_id": "993128907260-voe6oahl31ureu69mhocb701v9pvac6f.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.ChunPo-Chan.JP-TeamUP"

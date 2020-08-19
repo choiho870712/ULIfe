@@ -13,8 +13,8 @@ import com.choiho.ulife.GlobalVariables
 
 import com.choiho.ulife.R
 import kotlinx.android.synthetic.main.fragment_notification_send.view.*
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+import org.threeten.bp.LocalDateTime
+import java.text.SimpleDateFormat
 
 /**
  * A simple [Fragment] subclass.
@@ -61,11 +61,12 @@ class NotificationSendFragment : Fragment() {
                 }.start()
 
                 Thread {
-                    val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss:SSS")
+                    val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                    val formatter = SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
                     GlobalVariables.api.postNotification(
                         GlobalVariables.userInfo.ID,
                         message,
-                        dateTimeFormatter.format(LocalDateTime.now())
+                        formatter.format(parser.parse(LocalDateTime.now().toString()))
                     )
                 }.start()
 

@@ -5,9 +5,9 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="26"
+8        android:minSdkVersion="21"
 8-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
-9        android:targetSdkVersion="29" />
+9        android:targetSdkVersion="30" />
 9-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
 10
 11    <!--

@@ -35,7 +35,6 @@
 
     <item
         android:id="@+id/button_subscribe"
-        android:icon="@drawable/ic_friend_add_white_24dp"
         android:title="訂閱"
         android:enabled="false"
         android:visible="false"

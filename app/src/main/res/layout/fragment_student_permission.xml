@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.person.StudentPermissionFragment">
+    tools:context=".navigationUI.userInfo.StudentPermissionFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -18,13 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="25dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/login_bird_foreground" />
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <EditText
             android:layout_marginTop="30dp"
@@ -78,20 +73,39 @@
         android:padding="25dp"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/icon_boy_foreground" />
-
-        <TextView
-            android:id="@+id/text_student_permission_ID"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text=""
-            android:textColor="@color/colorPrimaryDark"
-            android:gravity="center_horizontal"/>
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/student_permission_card_foreground" />
+
+            <TextView
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/text_student_permission_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="CYCU"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="end" />
+
+            <TextView
+                android:layout_marginEnd="20dp"
+                android:id="@+id/text_student_permission_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="end"
+                android:layout_below="@+id/text_student_permission_school"/>
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"

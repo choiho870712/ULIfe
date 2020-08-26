@@ -112,8 +112,8 @@
 67
 68        <service
 68-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:48:9-54:19
-69            android:name="com.choiho.ulife.MyFirebaseMessagingService"
-69-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:13-71
+69            android:name="com.choiho.ulife.firebase.MyFireBaseMessagingService"
+69-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:13-80
 70            android:exported="false" >
 70-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:50:13-37
 71            <intent-filter>
@@ -140,11 +140,11 @@
 86             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 87        -->
 88        <meta-data
-88-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:68:9-70:55
+88-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:68:9-70:70
 89            android:name="com.google.android.geo.API_KEY"
 89-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:69:13-58
-90            android:value="@string/google_maps_key" />
-90-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-52
+90            android:value="AIzaSyANfsWhhWmQilT5MCKZfxadO5cKsYOGFZ4" />
+90-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-68
 91
 92        <activity
 92-->/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:72:9-81:20

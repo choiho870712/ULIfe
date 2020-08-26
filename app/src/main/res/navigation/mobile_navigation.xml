@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.choiho.ulife.ui.home.HomeFragment"
+        android:name="com.choiho.ulife.navigationUI.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
         <action
@@ -26,23 +26,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_chat"
-        android:name="com.choiho.ulife.ui.chat.ChatFragment"
-        android:label="聊天室"
-        tools:layout="@layout/fragment_chat" >
-        <action
-            android:id="@+id/action_navigation_chat_to_chatFriendListFragment"
-            app:destination="@id/chatFriendListFragment"
-            app:popUpTo="@+id/navigation_chat" />
-        <action
-            android:id="@+id/action_navigation_chat_to_personSearchFriendFragment"
-            app:destination="@id/personSearchFriendFragment"
-            app:popUpTo="@+id/navigation_chat" />
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.choiho.ulife.ui.notifications.NotificationsFragment"
+        android:name="com.choiho.ulife.navigationUI.notifications.NotificationsFragment"
         android:label=""
         tools:layout="@layout/fragment_notifications" >
         <action
@@ -57,7 +42,7 @@
 
     <fragment
         android:id="@+id/navigation_person"
-        android:name="com.choiho.ulife.ui.person.PersonFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonFragment"
         android:label=""
         tools:layout="@layout/fragment_person">
         <action
@@ -85,10 +70,16 @@
         <action
             android:id="@+id/action_navigation_person_to_studentPermissionFragment"
             app:destination="@id/studentPermissionFragment" />
+        <action
+            android:id="@+id/action_navigation_person_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_navigation_person_to_viewBoxFragment2"
+            app:destination="@id/viewBoxFragment" />
     </fragment>
     <fragment
         android:id="@+id/homePage1Fragment"
-        android:name="com.choiho.ulife.ui.home.HomePage1Fragment"
+        android:name="com.choiho.ulife.navigationUI.home.HomePage1Fragment"
         android:label=""
         tools:layout="@layout/fragment_home_page1">
         <action
@@ -98,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeEditFragment"
-        android:name="com.choiho.ulife.ui.home.HomeEditFragment"
+        android:name="com.choiho.ulife.navigationUI.home.HomeEditFragment"
         android:label="發文"
         tools:layout="@layout/fragment_home_edit">
         <action
@@ -108,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/personEditFragment"
-        android:name="com.choiho.ulife.ui.person.PersonEditFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonEditFragment"
         android:label=""
         tools:layout="@layout/fragment_person_edit">
         <action
@@ -124,7 +115,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeMenuFragment"
-        android:name="com.choiho.ulife.ui.home.HomeMenuFragment"
+        android:name="com.choiho.ulife.navigationUI.home.HomeMenuFragment"
         android:label=""
         tools:layout="@layout/fragment_home_menu">
         <action
@@ -135,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/personInfoFragment"
-        android:name="com.choiho.ulife.ui.person.PersonInfoFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonInfoFragment"
         android:label=""
         tools:layout="@layout/fragment_person_info">
         <action
@@ -152,7 +143,7 @@
     </fragment>
     <fragment
         android:id="@+id/personSearchFriendFragment"
-        android:name="com.choiho.ulife.ui.person.PersonSearchFriendFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonSearchFriendFragment"
         android:label="搜尋好友"
         tools:layout="@layout/fragment_person_search_friend" >
         <action
@@ -168,20 +159,19 @@
     </fragment>
     <fragment
         android:id="@+id/chatFriendListFragment"
-        android:name="com.choiho.ulife.ui.chat.ChatFriendListFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.UserListFragment"
         android:label=""
         tools:layout="@layout/fragment_chat_friend_list" >
         <action
             android:id="@+id/action_chatFriendListFragment_to_personShopInfoFragment"
-            app:destination="@id/personShopInfoFragment"
-            app:popUpTo="@+id/navigation_chat" />
+            app:destination="@id/personShopInfoFragment"/>
         <action
             android:id="@+id/action_chatFriendListFragment_to_personInfoFragment"
             app:destination="@id/personInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/personShopInfoFragment"
-        android:name="com.choiho.ulife.ui.person.PersonShopInfoFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonShopInfoFragment"
         android:label=""
         tools:layout="@layout/fragment_person_shop_info" >
         <action
@@ -195,16 +185,16 @@
     </fragment>
     <fragment
         android:id="@+id/notificationSendFragment"
-        android:name="com.choiho.ulife.ui.notifications.NotificationSendFragment"
-        android:label="推撥通知"
+        android:name="com.choiho.ulife.navigationUI.notifications.NotificationSendFragment"
+        android:label="推播通知"
         tools:layout="@layout/fragment_notification_send" />
     <fragment
         android:id="@+id/personAddFriendFragment"
-        android:name="com.choiho.ulife.ui.person.PersonAddFriendFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.PersonAddFriendFragment"
         tools:layout="@layout/fragment_person_add_friend" />
     <fragment
         android:id="@+id/notificationsShopFragment"
-        android:name="com.choiho.ulife.ui.notifications.NotificationsShopFragment"
+        android:name="com.choiho.ulife.navigationUI.notifications.NotificationsShopFragment"
         android:label="店家通知"
         tools:layout="@layout/fragment_notifications_shop" >
         <action
@@ -214,7 +204,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificationFriendFragment"
-        android:name="com.choiho.ulife.ui.notifications.NotificationFriendFragment"
+        android:name="com.choiho.ulife.navigationUI.notifications.NotificationFriendFragment"
         android:label="好友請求"
         tools:layout="@layout/fragment_notification_friend">
         <action
@@ -224,7 +214,7 @@
     </fragment>
     <fragment
         android:id="@+id/randomPlateFragment"
-        android:name="com.choiho.ulife.ui.person.RandomPlateFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.RandomPlateFragment"
         android:label="轉盤"
         tools:layout="@layout/fragment_random_plate" >
         <action
@@ -233,12 +223,32 @@
     </fragment>
     <fragment
         android:id="@+id/foodPriceFragment"
-        android:name="com.choiho.ulife.ui.person.FoodPriceFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.FoodPriceFragment"
         android:label="折價券"
         tools:layout="@layout/fragment_food_price" />
     <fragment
         android:id="@+id/studentPermissionFragment"
-        android:name="com.choiho.ulife.ui.person.StudentPermissionFragment"
+        android:name="com.choiho.ulife.navigationUI.userInfo.StudentPermissionFragment"
         android:label="學生身份認證"
-        tools:layout="@layout/fragment_student_permission" />
+        tools:layout="@layout/fragment_student_permission" >
+        <action
+            android:id="@+id/action_studentPermissionFragment_to_formFragment"
+            app:destination="@id/formFragment"
+            app:popUpTo="@+id/navigation_person" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.choiho.ulife.FormFragment"
+        android:label="中原大學防疫問卷"
+        tools:layout="@layout/fragment_form" >
+        <action
+            android:id="@+id/action_formFragment_to_studentPermissionFragment"
+            app:destination="@id/studentPermissionFragment"
+            app:popUpTo="@+id/navigation_person" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBoxFragment"
+        android:name="com.choiho.ulife.ViewBoxFragment"
+        android:label="意見箱"
+        tools:layout="@layout/fragment_view_box" />
 </navigation>

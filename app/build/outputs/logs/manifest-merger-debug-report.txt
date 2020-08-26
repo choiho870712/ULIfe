@@ -285,12 +285,12 @@ ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidMan
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:46:13-34
 	android:name
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:45:13-65
-service#com.choiho.ulife.MyFirebaseMessagingService
+service#com.choiho.ulife.firebase.MyFireBaseMessagingService
 ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:48:9-54:19
 	android:exported
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:50:13-37
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:13-71
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:13-80
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
 ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:51:13-53:29
 action#com.google.firebase.MESSAGING_EVENT
@@ -306,9 +306,9 @@ MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/chou/.g
 	android:name
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:57:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:68:9-70:55
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:68:9-70:70
 	android:value
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-52
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-68
 	android:name
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:69:13-58
 activity#com.choiho.ulife.MainActivity

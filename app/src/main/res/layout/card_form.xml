@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_question_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="start"
+            android:textSize="20sp"
+            android:text="問題"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edit_answer_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="必填"
+            android:textSize="15sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_answer_select_form"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

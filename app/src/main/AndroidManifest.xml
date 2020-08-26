@@ -46,7 +46,7 @@
             android:value="false" />
 
         <service
-            android:name="com.choiho.ulife.MyFirebaseMessagingService"
+            android:name="com.choiho.ulife.firebase.MyFireBaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -67,7 +67,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyANfsWhhWmQilT5MCKZfxadO5cKsYOGFZ4"/>
 
         <activity
             android:name="com.choiho.ulife.MainActivity"

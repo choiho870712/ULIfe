@@ -61,4 +61,22 @@
         android:background="?android:attr/windowBackground"
         app:menu="@menu/bottom_nav_menu"/>
 
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/nav_view"
+        android:background="@color/colorWhiteSmoke"
+        android:alpha="0.5">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

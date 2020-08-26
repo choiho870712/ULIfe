@@ -6,70 +6,71 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.choiho.ulife.ui.UiController
-import com.choiho.ulife.ui.api.Api
-import com.choiho.ulife.ui.api.Notification
-import com.choiho.ulife.ui.api.Proposal
-import com.choiho.ulife.ui.api.UserInfo
-import com.choiho.ulife.ui.home.CardAdapter
-import com.choiho.ulife.ui.person.CardFoodPriceAdapter
+import com.choiho.ulife.firebase.MyFireBaseMessagingService
+import com.choiho.ulife.navigationUI.notifications.Notification
+import com.choiho.ulife.navigationUI.home.Proposal
+import com.choiho.ulife.navigationUI.userInfo.UserInfo
+import com.choiho.ulife.navigationUI.home.CardAdapter
 
 class GlobalVariables : Application() {
     companion object {
         lateinit var activity: FragmentActivity
+        lateinit var dbHelper: DBHelper
+        lateinit var FCM_token: String
 
-        val uiController = UiController()
+        val toolBarController = ToolBarController()
+        val imageHelper = ImageHelper()
         val api = Api()
         val functions = GlobalFunctions()
+        val fireBase = MyFireBaseMessagingService()
 
+        var userInfo = UserInfo("", "", "", "", "", "", mutableListOf(), 0.0, 0.0, mutableListOf(), mutableListOf())
+        var studentPermissionID = ""
+        var isDoneStudentForm = false
+
+        var homePageView: View? = null
         var homeMenuChoose = "food"
         var homeAreaChoose = "Zhongli"
         lateinit var homeLayoutManager: GridLayoutManager
-
-        var homePageView: View? = null
-        var homePageProposalCount = 0
-        var isRefreshingHomePage = false
+        lateinit var homeAdapter: RecyclerView.Adapter<CardAdapter.CardHolder>
+        var homeProposalList:ArrayList<Proposal> = ArrayList()
+        var lockRefreshHomeProposalList = false
+        var lockRefreshHomePage = false
+        var homeCurrentPosition = 0
 
         var proposal: Proposal? = null
-        var proposalUserInfo: UserInfo = UserInfo("","","","","", "", mutableListOf(), 0.0, 0.0, mutableListOf(), mutableListOf())
-        var proposalUserInfoDoneLoading: Boolean = false
-        lateinit var proposalUserScribeList: ArrayList<UserInfo>
+        var proposalItemIndex = 0
+        var proposalUserInfo: UserInfo =
+            UserInfo(
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                mutableListOf(),
+                0.0,
+                0.0,
+                mutableListOf(),
+                mutableListOf()
+            )
+        lateinit var proposalUserScribeListData: ArrayList<UserInfo>
 
-        lateinit var homeAdapter: RecyclerView.Adapter<CardAdapter.CardHolder>
-        lateinit var homeProposalList:ArrayList<Proposal>
+        var otherUserInfoList: ArrayList<UserInfo> = ArrayList()
 
-        var userInfo = UserInfo("","","","","", "", mutableListOf(), 0.0, 0.0, mutableListOf(), mutableListOf())
-        var UserInfoIsReady = false
-
-        var friendStringList:ArrayList<String> = ArrayList()
-        var friendList: ArrayList<UserInfo> = ArrayList()
-        var friendListIsReady = false
         var needUnsubscribeButton = false
-
         var subscribeList: ArrayList<UserInfo> = ArrayList()
         var subscribeListIsReady = false
 
-        lateinit var notificationListShopLayoutManager: LinearLayoutManager
-        var notificationListShopAdapter:
-                RecyclerView.Adapter<com.choiho.ulife.ui.notifications.CardShopAdapter.CardHolder>? = null
-        var notificationShopList: ArrayList<Notification> = ArrayList()
-        var notificationShopUserInfoList: ArrayList<UserInfo> = ArrayList()
-        var notificationShopListIsReady = false
+        lateinit var notificationListLayoutManager: LinearLayoutManager
+        var notificationListAdapter:
+                RecyclerView.Adapter<com.choiho.ulife.navigationUI.notifications.CardShopAdapter.CardHolder>? = null
+        var notificationList: ArrayList<Notification> = ArrayList()
+        var notificationListIsReady = false
 
-//        lateinit var notificationListFriendLayoutManager: LinearLayoutManager
-//        lateinit var notificationListFriendAdapter: RecyclerView.Adapter<com.example.startupboard.ui.notifications.CardFriendAdapter.CardHolder>
-//        var notificationFriendList: ArrayList<Notification> = ArrayList()
-//        var notificationFriendUserInfoList: ArrayList<UserInfo> = ArrayList()
-//        var notificationFriendListIsReady = false
+        var myOldNotificationList: ArrayList<String> = ArrayList()
+        var myOldNotificationListIsReady = false
 
-
-        var sendedNotificationList: ArrayList<String> = ArrayList()
-        var sendedNotificationListIsReady = false
-
-        var studentPermissionID = ""
-
-        lateinit var dbHelper: DBHelper
-
-        lateinit var FCM_token: String
+        var taskCount = 0
     }
 }

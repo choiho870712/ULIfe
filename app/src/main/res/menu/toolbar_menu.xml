@@ -79,4 +79,11 @@
         android:visible="false"
         app:showAsAction="always"/>
 
+    <item
+        android:id="@+id/button_delete_proposal_item"
+        android:title="刪除這篇文章"
+        android:visible="false"
+        android:enabled="false"
+        app:showAsAction="always" />
+
 </menu>

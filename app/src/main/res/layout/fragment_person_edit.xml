@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.person.PersonEditFragment">
+    tools:context=".navigationUI.userInfo.PersonEditFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -27,9 +27,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FFFFFF"
-                android:src="@mipmap/bird_salute_foreground"
+                android:src="@mipmap/icon_boy"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="10dp"/>
 

@@ -21,13 +21,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
-            //資源類型為 string，名稱為 API_KEY，值為 GoogleMapKey
-            resValue("string", "API_KEY", GoogleMapKey)
         }
         debug {
-            //資源類型為 string，名稱為 API_KEY，值為 GoogleMapKey
-            resValue("string", "API_KEY", GoogleMapKey)
+
         }
     }
     compileOptions {

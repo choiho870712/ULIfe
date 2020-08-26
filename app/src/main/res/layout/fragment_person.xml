@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.person.PersonFragment">
+    tools:context=".navigationUI.userInfo.PersonFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,6 +24,17 @@
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/bird_salute_foreground"
             android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="我的檔案"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-20dp"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -65,7 +76,7 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_1_1"
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -78,6 +89,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/layout_tool_box_empty_1_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,7 +105,8 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:id="@+id/text_tool_box_empty_1_2"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -120,7 +133,7 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -168,7 +181,7 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_2_1"
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -181,6 +194,7 @@
 
 
                 <RelativeLayout
+                    android:id="@+id/layout_tool_box_empty_2_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -196,7 +210,8 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:id="@+id/text_tool_box_empty_2_2"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -223,7 +238,7 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -271,7 +286,7 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_3_1"
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -298,7 +313,7 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
@@ -325,7 +340,7 @@
                         />
 
                     <TextView
-                        android:layout_width="60dp"
+                        android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"

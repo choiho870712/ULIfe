@@ -40,6 +40,7 @@
                     android:layout_marginTop="20dp">
 
                     <TextView
+                        android:id="@+id/text_score_shopFragment"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@mipmap/shop_profile_score_foreground"
@@ -158,5 +159,227 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/card_scoring"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"
+            android:alpha="0.7"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/colorWhiteSmoke"
+            android:alpha="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_score_star_1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:alpha="1"/>
+
+                        <TextView
+                            android:id="@+id/text_score_star_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_score_star_2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:alpha="0.1"/>
+
+                        <TextView
+                            android:id="@+id/text_score_star_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_score_star_3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:alpha="0.1"/>
+
+                        <TextView
+                            android:id="@+id/text_score_star_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_score_star_4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:alpha="0.1"/>
+
+                        <TextView
+                            android:id="@+id/text_score_star_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_score_star_5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:alpha="0.1"/>
+
+                        <TextView
+                            android:id="@+id/text_score_star_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp">
+
+                        <Button
+                            android:id="@+id/button_cancel_scoring"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="取消"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp">
+
+                        <Button
+                            android:id="@+id/button_submit_scoring"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="評分"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 
 </FrameLayout>

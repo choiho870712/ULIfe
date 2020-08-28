@@ -15,7 +15,7 @@ import java.net.URL
 
 class ImageHelper {
 
-    fun scaleImage(srcBmp: Bitmap): Bitmap {
+    fun scaleImage(srcBmp: Bitmap, pixelSize:Int): Bitmap {
         val image: Bitmap
         if (srcBmp.getWidth() > srcBmp.getHeight()){
 
@@ -39,7 +39,7 @@ class ImageHelper {
         }
         else image = srcBmp
 
-        return image.scale(800,800)
+        return image.scale(pixelSize,pixelSize)
     }
 
     fun convertString64ToImage(base64String: String): Bitmap {

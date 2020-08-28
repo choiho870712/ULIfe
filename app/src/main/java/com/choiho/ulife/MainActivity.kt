@@ -1,8 +1,12 @@
 package com.choiho.ulife
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -24,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController:NavController
 
+    companion object {
+        private const val PERMISSION_REQUEST_ACCESS_FINE_LOCATION = 100
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +39,15 @@ class MainActivity : AppCompatActivity() {
         setGlobalVariables()
         setUi()
         setButtons()
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                PERMISSION_REQUEST_ACCESS_FINE_LOCATION)
+            return
+        }
     }
 
     // tool bar back button navigation
@@ -100,7 +117,7 @@ class MainActivity : AppCompatActivity() {
             while (true) {
                 if (!GlobalVariables.functions.isNetWorkConnecting()) {
                     isReconnect = true
-                    GlobalVariables.functions.navigate(R.id.login_navigation)
+                    GlobalVariables.functions.popUpTo(R.id.login_navigation)
                     GlobalVariables.functions.makeToast("請確認 wifi 是否已開啟")
                 }
                 else if (isReconnect) {
@@ -108,7 +125,7 @@ class MainActivity : AppCompatActivity() {
                     // TODO cost down
                     GlobalVariables.functions.resetProposalList()
 
-                    GlobalVariables.functions.navigate(R.id.login_navigation)
+                    GlobalVariables.functions.popUpTo(R.id.login_navigation)
                     GlobalVariables.functions.makeToast("wifi 已開啟")
                     isReconnect = false
                 }

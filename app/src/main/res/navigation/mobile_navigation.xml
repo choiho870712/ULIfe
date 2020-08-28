@@ -86,6 +86,12 @@
             android:id="@+id/action_homePage1Fragment_to_personShopInfoFragment"
             app:destination="@id/personShopInfoFragment"
             app:popUpTo="@+id/homePage1Fragment" />
+        <action
+            android:id="@+id/action_homePage1Fragment_to_viewBoxFragment"
+            app:destination="@id/viewBoxFragment" />
+        <action
+            android:id="@+id/action_homePage1Fragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeEditFragment"
@@ -159,7 +165,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatFriendListFragment"
-        android:name="com.choiho.ulife.navigationUI.userInfo.UserListFragment"
+        android:name="com.choiho.ulife.userList.UserListFragment"
         android:label=""
         tools:layout="@layout/fragment_chat_friend_list" >
         <action
@@ -185,7 +191,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificationSendFragment"
-        android:name="com.choiho.ulife.navigationUI.notifications.NotificationSendFragment"
+        android:name="com.choiho.ulife.sendNotify.NotificationSendFragment"
         android:label="推播通知"
         tools:layout="@layout/fragment_notification_send" />
     <fragment
@@ -214,7 +220,7 @@
     </fragment>
     <fragment
         android:id="@+id/randomPlateFragment"
-        android:name="com.choiho.ulife.navigationUI.userInfo.RandomPlateFragment"
+        android:name="com.choiho.ulife.discountTicket.RandomPlateFragment"
         android:label="轉盤"
         tools:layout="@layout/fragment_random_plate" >
         <action
@@ -223,12 +229,16 @@
     </fragment>
     <fragment
         android:id="@+id/foodPriceFragment"
-        android:name="com.choiho.ulife.navigationUI.userInfo.FoodPriceFragment"
+        android:name="com.choiho.ulife.discountTicket.FoodPriceFragment"
         android:label="折價券"
-        tools:layout="@layout/fragment_food_price" />
+        tools:layout="@layout/fragment_food_price" >
+        <action
+            android:id="@+id/action_foodPriceFragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/studentPermissionFragment"
-        android:name="com.choiho.ulife.navigationUI.userInfo.StudentPermissionFragment"
+        android:name="com.choiho.ulife.studentPermission.StudentPermissionFragment"
         android:label="學生身份認證"
         tools:layout="@layout/fragment_student_permission" >
         <action
@@ -238,7 +248,7 @@
     </fragment>
     <fragment
         android:id="@+id/formFragment"
-        android:name="com.choiho.ulife.FormFragment"
+        android:name="com.choiho.ulife.form.FormFragment"
         android:label="中原大學防疫問卷"
         tools:layout="@layout/fragment_form" >
         <action
@@ -248,7 +258,12 @@
     </fragment>
     <fragment
         android:id="@+id/viewBoxFragment"
-        android:name="com.choiho.ulife.ViewBoxFragment"
+        android:name="com.choiho.ulife.complaint.ViewBoxFragment"
         android:label="意見箱"
         tools:layout="@layout/fragment_view_box" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.choiho.ulife.reportFragment"
+        android:label="投訴店家"
+        tools:layout="@layout/fragment_report" />
 </navigation>

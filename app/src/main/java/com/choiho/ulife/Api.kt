@@ -1,12 +1,19 @@
 package com.choiho.ulife
 
+import android.graphics.Bitmap
 import android.util.Log
+import com.choiho.ulife.discountTicket.DistountItem
+import com.choiho.ulife.discountTicket.DistountTicket
+import com.choiho.ulife.form.FormItem
 import com.choiho.ulife.navigationUI.notifications.Notification
 import com.choiho.ulife.navigationUI.home.Proposal
 import com.choiho.ulife.navigationUI.home.ProposalItem
 import com.choiho.ulife.navigationUI.userInfo.UserInfo
 import com.squareup.okhttp.*
 import org.json.JSONArray
+import org.threeten.bp.Instant
+import org.threeten.bp.LocalDateTime
+import org.threeten.bp.ZoneId
 import java.io.IOException
 
 class Api {
@@ -40,8 +47,31 @@ class Api {
     private val urlGetDiscountTicket = urlDirectory + "zhongli/discount/get-discount-ticket"
     private val urlGetForm = urlDirectory + "questionnaire/get-questionnaire"
     private val urlPostForm = urlDirectory + "questionnaire/post-questionnaire"
+    private val urlGetRanking = urlDirectory + "ranking/get-ranking"
+    private val urlClickInRanking = urlDirectory + "ranking/click-in-ranking"
 
-    fun postForm(id:String, student_id:String, ans:ArrayList<String>): Boolean {
+    fun clickInRanking(id:String, index:Int, time:Int): Boolean {
+        val json = "{\"id\": \"$id\", \"index\": $index, \"time\": $time}"
+        return getJsonMessage(callApi(json, urlClickInRanking)) == "No Error"
+    }
+
+    private fun getRakingJson(rawJsonString : String): ArrayList<Int> {
+        val dataList = ArrayList<Int>()
+        val jsonArray = JSONArray(rawJsonString)
+        val jsonObject = jsonArray.getJSONObject(0)
+        val jsonRankingArray = jsonObject.getJSONArray("ranking")
+        for ( i in 0 until(jsonRankingArray.length()) )
+            dataList.add(jsonRankingArray.getInt(i))
+
+        return dataList
+    }
+
+    fun getRanking(id:String): ArrayList<Int> {
+        val json = "{\"id\": \"$id\"}"
+        return getRakingJson(callApi(json, urlGetRanking))
+    }
+
+    fun postForm(id:String, student_id:String, ans:ArrayList<String>): Int {
         var json = "{\"id\": \"$id\", \"student_id\": \"$student_id\""
         json += ", \"ans\": [ "
         var isFirst = true
@@ -56,7 +86,13 @@ class Api {
         }
         json += "]"
         json += "}"
-        return getJsonMessage(callApi(json, urlPostForm)) == "No Error"
+
+        if (getJsonMessage(callApi(json, urlPostFoodItem)) == "No Error" )
+            return 1
+        else if (getJsonMessage(callApi(json, urlPostFoodItem)) == "Questionnaire Already Completed")
+            return 2
+        else
+            return 0
     }
 
     private fun getFormJson(rawJsonString : String): ArrayList<FormItem> {
@@ -75,7 +111,7 @@ class Api {
 
             dataList.add(
                 FormItem(
-                    "",
+                    jsonObject.getString("question"),
                     jsonObject.getString("type"),
                     answerList
                 )
@@ -98,13 +134,21 @@ class Api {
             if(jsonObject.has("message"))
                 break
 
+            val timeInt = jsonObject.getInt("expiration_time")
+            val triggerTime = LocalDateTime.ofInstant(
+                Instant.ofEpochSecond(timeInt.toLong()),
+                ZoneId.systemDefault()
+            )
+            if (triggerTime < LocalDateTime.now())
+                continue
+
             dataList.add(
                 DistountTicket(
                     jsonObject.getString("name"),
                     jsonObject.getString("content"),
                     jsonObject.getString("discount_code"),
                     jsonObject.getInt("create_time"),
-                    jsonObject.getInt("expiration_time")
+                    timeInt
                 )
             )
         }
@@ -116,8 +160,9 @@ class Api {
         return getDiscountTicketsJson(callApi(json, urlGetDiscountTicket))
     }
 
-    fun postDiscountTicket(id: String, discount_code: String, area: String): Boolean {
-        val json = "{\"id\": \"$id\", \"discount_code\": \"$discount_code\", \"area\": \"$area\"}"
+    fun postDiscountTicket(id: String, discount_code: String, area: String, shop_id:String, content:String): Boolean {
+        val fixedContent = fixLineFeed(content)
+        val json = "{\"id\": \"$id\", \"discount_code\": \"$discount_code\", \"area\": \"$area\", \"shop_id\": \"$shop_id\", \"content\": \"$fixedContent\"}"
         return getJsonMessage(callApi(json, urlPostDiscountTicket)) == "No Error"
     }
 
@@ -134,7 +179,9 @@ class Api {
                 DistountItem(
                     jsonObject.getString("discount_code"),
                     jsonObject.getInt("percentage"),
-                    jsonObject.getString("content")
+                    jsonObject.getString("content"),
+                    jsonObject.getString("id"),
+                    jsonObject.getString("name")
                 )
             )
         }
@@ -157,7 +204,8 @@ class Api {
     }
 
     fun clickInNotification(id:String, date:String, content:String, view: Int, index: Int):Boolean {
-        val json = "{\"id\": \"$id\", \"date\": \"$date\", \"content\": \"$content\", \"view\": $view, \"index\": $index}"
+        val fixedContent = fixLineFeed(content)
+        val json = "{\"id\": \"$id\", \"date\": \"$date\", \"content\": \"$fixedContent\", \"view\": $view, \"index\": $index}"
         return getJsonMessage(callApi(json, urlClickInNotification)) == "No Error"
     }
 
@@ -167,7 +215,8 @@ class Api {
     }
 
     fun complaint(complained_id: String, complainant: String, timestamp: String, type: String, content: String): Boolean {
-        val json = "{\"complained_id\": \"$complained_id\", \"complainant\": \"$complainant\", \"timestmp\": \"$timestamp\", \"type\": \"$type\", \"content\": \"$content\"}"
+        val fixedContent = fixLineFeed(content)
+        val json = "{\"complained_id\": \"$complained_id\", \"complainant\": \"$complainant\", \"timestmp\": \"$timestamp\", \"type\": \"$type\", \"content\": \"$fixedContent\"}"
         return getJsonMessage(callApi(json, urlComplaint)) == "No Error"
     }
 
@@ -182,8 +231,9 @@ class Api {
     }
 
     fun postFoodItem(id: String, title: String, content: String, date: String,
-                     type: String, hashtag: MutableList<String>, image: String, area: String ): Boolean {
-        var json = "{\"id\": \"$id\", \"title\": \"$title\", \"content\": \"$content\", \"date\": \"$date\"," +
+                     type: String, hashtag: MutableList<String>, image: Bitmap, area: String ): Boolean {
+        val fixedContent = fixLineFeed(content)
+        var json = "{\"id\": \"$id\", \"title\": \"$title\", \"content\": \"$fixedContent\", \"date\": \"$date\"," +
                 "\"type\": \"$type\", \"hashtag\": ["
 
         var isFirst = true
@@ -194,9 +244,17 @@ class Api {
             }
             json += "\"" + hashtag[i] + "\""
         }
+        json += "]"
 
-        json += "], \"image\": [\"$image\"], \"area\": \"$area\"}"
-        return (getJsonMessage(callApi(json, urlPostFoodItem)) == "No Error" )
+        val imageSmallString = GlobalVariables.imageHelper.getString(
+            GlobalVariables.imageHelper.scaleImage(image, 340))
+        val imageLargeString = GlobalVariables.imageHelper.getString(
+            GlobalVariables.imageHelper.scaleImage(image, 800))
+
+        json += ", \"image\": [\"$imageSmallString\", \"$imageLargeString\"]"
+        json += ", \"area\": \"$area\"}"
+
+        return getJsonMessage(callApi(json, urlPostFoodItem)) == "No Error"
     }
 
     private fun getSubscribeListJson(rawJsonString : String) : ArrayList<UserInfo> {
@@ -291,8 +349,6 @@ class Api {
         for ( i in 0 until(jsonArray.length()) ) {
             val jsonObject = jsonArray.getJSONObject(i)
 
-            val headContent = jsonObject.getString("content")
-
             val itemList = ArrayList<ProposalItem>()
             val jsonItemArray = jsonObject.getJSONArray("item")
             for ( j in 0 until(jsonItemArray.length())) {
@@ -314,7 +370,7 @@ class Api {
                         imageUrlList,
                         jsonItemObject.getInt("view"),
                         jsonItemObject.getString("title"),
-                        headContent,
+                        jsonItemObject.getString("content"),
                         hashtagList,
                         mutableListOf()
                     )
@@ -325,7 +381,8 @@ class Api {
                 Proposal(
                     jsonObject.getString("name"),
                     jsonObject.getString("id"),
-                    itemList.asReversed()
+                    jsonObject.getString("content"),
+                    itemList
                 )
             )
         }
@@ -444,13 +501,20 @@ class Api {
     }
 
     fun uploadUserInfo(id:String, icon: String, name: String) : Boolean {
-        val json = "{\"id\": \"$id\",\"icon\": \"$icon\",\"name\": \"$name\" }"
-        val a = callApi(json, urlUploadUserInfo)
-        return (getJsonMessage(a)=="No Error")
+        val bm = GlobalVariables.imageHelper.convertString64ToImage(icon)
+        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 200)
+        val newIcon = GlobalVariables.imageHelper.getString(scaled)
+
+        val json = "{\"id\": \"$id\",\"icon\": \"$newIcon\",\"name\": \"$name\" }"
+        return (getJsonMessage(callApi(json, urlUploadUserInfo))=="No Error")
     }
 
     fun updateUserInfo(id:String, name: String, icon: String, hashtag: List<String>, content: String) : Boolean {
-        var json = "{\"id\": \"$id\",\"name\": \"$name\", \"icon\": \"$icon\""
+        val bm = GlobalVariables.imageHelper.convertString64ToImage(icon)
+        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 200)
+        val newIcon = GlobalVariables.imageHelper.getString(scaled)
+
+        var json = "{\"id\": \"$id\",\"name\": \"$name\", \"icon\": \"$newIcon\""
         json += ", \"hashtag\": [ "
         var isFirst = true
         for (hashtagItem in hashtag) {
@@ -459,7 +523,9 @@ class Api {
             json += "\"$hashtagItem\""
         }
         json += " ]"
-        json += ", \"content\": \"$content\" }"
+        val fixedContent = fixLineFeed(content)
+        json += ", \"content\": \"$fixedContent\" }"
+
         return (getJsonMessage(callApi(json, urlUpdateUserInfo))=="No Error")
     }
 
@@ -481,7 +547,8 @@ class Api {
     }
 
     fun postNotification(id:String,content:String, date:String) : Boolean {
-        val json = "{\"id\": \"$id\", \"content\": \"$content\", \"date\": \"$date\"}"
+        val fixedContent = fixLineFeed(content)
+        val json = "{\"id\": \"$id\", \"content\": \"$fixedContent\", \"date\": \"$date\"}"
         return getJsonMessage(callApi(json, urlPostNotification)) == "No Error"
     }
 
@@ -496,6 +563,15 @@ class Api {
         }
         json += "]}"
         return getNotificationListJson(callApi(json, urlGetNotification))
+    }
+
+    private fun fixLineFeed(json: String): String {
+        var newJson = ""
+        for (char in json) {
+            if (char == '\n') newJson += "\\n"
+            else newJson += char
+        }
+        return newJson
     }
 
     private fun callApi(json:String, apiUrl: String) : String {

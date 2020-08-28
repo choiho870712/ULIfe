@@ -23,12 +23,16 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
         holder.title.text = myDataSet[position].proposalItemList[0].title
         holder.tag.text = myDataSet[position].proposalItemList[0].getHashTagString()
 
-        Thread {
-            while (!myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne()) continue
-            GlobalVariables.activity.runOnUiThread {
-                holder.image.setImageBitmap(myDataSet[position].proposalItemList[0].imageList[0])
-            }
-        }.start()
+        if (myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne())
+            holder.image.setImageBitmap(myDataSet[position].proposalItemList[0].imageList[0])
+        else {
+            Thread {
+                while (!myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne()) continue
+                GlobalVariables.activity.runOnUiThread {
+                    holder.image.setImageBitmap(myDataSet[position].proposalItemList[0].imageList[0])
+                }
+            }.start()
+        }
 
         holder.cardView.setOnClickListener {
             if (!GlobalVariables.lockRefreshHomePage) {

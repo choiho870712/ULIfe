@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:21.5.0] /home/chou/.gradle/caches/transforms-2/files-2.1/647c74d044762ea2c20fd9592524fa17/firebase-firestore-ktx-21.5.0/AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-common-ktx:19.3.0] /home/chou/.gradle/caches/transforms-2/files-2.1/be48fae5840320662d4fb45ccf29faa7/firebase-common-ktx-19.3.0/AndroidManifest.xml:2:1-21:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.0-rc01] /home/chou/.gradle/caches/transforms-2/files-2.1/ddafe02d2a426ad5ca5ab811c04cfd28/navigation-ui-ktx-2.3.0-rc01/AndroidManifest.xml:17:1-24:12
@@ -94,20 +94,20 @@ MERGED from [androidx.print:print:1.0.0] /home/chou/.gradle/caches/transforms-2/
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/chou/.gradle/caches/transforms-2/files-2.1/c7e64d9a0e712bb60595248e2700ed6c/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] /home/chou/.gradle/caches/transforms-2/files-2.1/53447f6799adb47e0a05e36ed54ce6fb/transport-api-2.2.0/AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] /home/chou/.gradle/caches/transforms-2/files-2.1/7dc1b36fa3cb33e18905930c41858f38/protolite-well-known-types-17.1.0/AndroidManifest.xml:2:1-11:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
-INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
+INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
 	package
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-84:12
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:1-85:12
 		INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:2:11-69
@@ -168,19 +168,19 @@ ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidMan
 	android:name
 		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:13:22-77
 supports-screens
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:15:5-20:41
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:16:5-21:41
 	android:largeScreens
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:17:9-37
 	android:smallScreens
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:19:9-36
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:20:9-36
 	android:normalScreens
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:18:9-37
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:19:9-37
 	android:xlargeScreens
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:20:9-38
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:21:9-38
 	android:largestWidthLimitDp
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:17:9-42
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:18:9-42
 application
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:22:5-82:19
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:23:5-83:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:21.5.0] /home/chou/.gradle/caches/transforms-2/files-2.1/647c74d044762ea2c20fd9592524fa17/firebase-firestore-ktx-21.5.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:21.5.0] /home/chou/.gradle/caches/transforms-2/files-2.1/647c74d044762ea2c20fd9592524fa17/firebase-firestore-ktx-21.5.0/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:19.3.0] /home/chou/.gradle/caches/transforms-2/files-2.1/be48fae5840320662d4fb45ccf29faa7/firebase-common-ktx-19.3.0/AndroidManifest.xml:11:5-19:19
@@ -250,85 +250,85 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/chou/
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.0] /home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:27:9-35
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:28:9-35
 	android:label
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:26:9-41
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:27:9-41
 	android:icon
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:25:9-44
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:26:9-44
 	android:allowBackup
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:25:9-35
 	android:theme
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:28:9-40
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:29:9-40
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:23:9-56
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:24:9-56
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:32:9-34:72
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:33:9-35:72
 	android:resource
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:34:13-69
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:35:13-69
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:33:13-83
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:34:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:37:9-39:53
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:38:9-40:53
 	android:resource
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:39:13-50
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:40:13-50
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:38:13-84
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:39:13-84
 meta-data#firebase_messaging_auto_init_enabled
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:41:9-43:37
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:42:9-44:37
 	android:value
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:43:13-34
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:44:13-34
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:42:13-64
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:43:13-64
 meta-data#firebase_analytics_collection_enabled
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:44:9-46:37
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:45:9-47:37
 	android:value
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:46:13-34
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:47:13-34
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:45:13-65
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:46:13-65
 service#com.choiho.ulife.firebase.MyFireBaseMessagingService
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:48:9-54:19
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:9-55:19
 	android:exported
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:50:13-37
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:49:13-80
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:50:13-80
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:51:13-53:29
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:52:13-54:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:52:17-78
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:53:17-78
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:52:25-75
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:53:25-75
 meta-data#com.google.android.gms.version
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:56:9-58:69
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:57:9-59:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/chou/.gradle/caches/transforms-2/files-2.1/84497fc4807e10c9aca5c80ff525c686/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/chou/.gradle/caches/transforms-2/files-2.1/84497fc4807e10c9aca5c80ff525c686/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:58:13-66
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:59:13-66
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:57:13-58
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:58:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:68:9-70:70
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:69:9-71:70
 	android:value
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-68
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:71:13-68
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:69:13-58
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:70:13-58
 activity#com.choiho.ulife.MainActivity
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:72:9-81:20
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:73:9-82:20
 	android:screenOrientation
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:75:13-49
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:76:13-49
 	android:label
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:74:13-45
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:75:13-45
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:73:13-57
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:74:13-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:76:13-80:29
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:77:13-81:29
 action#android.intent.action.MAIN
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:77:17-69
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:78:17-69
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:77:25-66
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:78:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:79:17-77
+ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:80:17-77
 	android:name
-		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:79:27-74
+		ADDED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml:80:27-74
 uses-sdk
 INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/chou/AndroidStudioProjects/startUpBoard/app/src/main/AndroidManifest.xml

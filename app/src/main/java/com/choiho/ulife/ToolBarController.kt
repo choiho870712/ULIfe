@@ -42,6 +42,7 @@ class ToolBarController {
                                 GlobalVariables.taskCount--
                                 GlobalVariables.activity.runOnUiThread{
                                     openSubscribeButton(false)
+                                    openUnSubscribeButton(true)
                                 }
                             }
                             else {
@@ -54,9 +55,32 @@ class ToolBarController {
 
                     true
                 }
+                R.id.button_unsubscribe -> {
+                    Thread {
+                        GlobalVariables.taskCount++
+
+                        if (GlobalVariables.api.deleteSubscribe(
+                                GlobalVariables.proposalUserInfo.ID,
+                                GlobalVariables.userInfo.ID)
+                        ) {
+                            val id = GlobalVariables.userInfo.ID
+                            GlobalVariables.functions.loginFromApi(id)
+                            GlobalVariables.functions.makeToast("已取消訂閱")
+                            GlobalVariables.activity.runOnUiThread{
+                                openSubscribeButton(true)
+                                openUnSubscribeButton(false)
+                            }
+                        }
+                        else GlobalVariables.functions.makeToast("取消訂閱失敗")
+
+                        GlobalVariables.taskCount--
+                    }.start()
+
+                    true
+                }
                 R.id.button_add_proposal -> {
                     GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
-                        R.id.action_navigation_home_to_homeEditFragment)
+                        R.id.homeEditFragment)
 
                     true
                 }
@@ -102,19 +126,29 @@ class ToolBarController {
                     if (!lockDeleteProposalItemButton) {
                         Thread {
                             lockDeleteProposalItemButton = true
+                            GlobalVariables.taskCount++
                             // call delete item api
                             val index = GlobalVariables.proposalItemIndex
                             val isSuccess = GlobalVariables.api.deleteFoodItem(
                                 GlobalVariables.userInfo.permission[0],
                                 GlobalVariables.userInfo.ID,
-                                index,
+                                GlobalVariables.proposal!!.proposalItemList.size - index -1,
                                 GlobalVariables.homeAreaChoose,
                                 GlobalVariables.proposal!!.proposalItemList[index].imageUrlList[0]
                             )
 
-                            if (isSuccess) GlobalVariables.functions.makeToast("刪除文章成功")
+                            if (isSuccess) {
+                                GlobalVariables.functions.makeToast("刪除文章成功")
+                                GlobalVariables.functions.resetProposalList()
+                                GlobalVariables.activity.runOnUiThread {
+                                    GlobalVariables.proposal!!.proposalItemList.removeAt(index)
+                                    GlobalVariables.proposalItemAdapter.notifyDataSetChanged()
+                                }
+
+                            }
                             else GlobalVariables.functions.makeToast("刪除文章失敗")
 
+                            GlobalVariables.taskCount--
                             lockDeleteProposalItemButton = false
                         }.start()
                     }
@@ -205,6 +239,14 @@ class ToolBarController {
         GlobalVariables.activity.runOnUiThread {
             buttonSubscribe.setEnabled(enable)
             buttonSubscribe.setVisible(enable)
+        }
+    }
+
+    fun openUnSubscribeButton(enable:Boolean) {
+        val buttonUnSubscribe = GlobalVariables.activity.toolbar.menu.findItem(R.id.button_unsubscribe)
+        GlobalVariables.activity.runOnUiThread {
+            buttonUnSubscribe.setEnabled(enable)
+            buttonUnSubscribe.setVisible(enable)
         }
     }
 

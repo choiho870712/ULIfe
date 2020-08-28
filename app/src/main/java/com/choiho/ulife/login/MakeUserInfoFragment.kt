@@ -22,6 +22,7 @@ class MakeUserInfoFragment : Fragment() {
     private lateinit var root:View
     private var lockPickPictureButton = false
     private var lockMakeUserInfoButton = false
+    private var lockPassButton = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -33,6 +34,7 @@ class MakeUserInfoFragment : Fragment() {
     private fun setButtons() {
         linkMakeUserInfoChangeIconButton()
         linkMakeUserInfoSubmitButton()
+        linkMakeUserInfoPassButton()
     }
 
     private fun linkMakeUserInfoChangeIconButton() {
@@ -56,6 +58,28 @@ class MakeUserInfoFragment : Fragment() {
                     GlobalVariables.taskCount--
                 }.start()
             }
+        }
+    }
+
+    private fun linkMakeUserInfoPassButton() {
+        root.button_pass_upload_user_info.setOnClickListener {
+            if (!lockPassButton) {
+                Thread {
+                    lockPassButton = true
+                    GlobalVariables.taskCount++
+                    passMakeInfo()
+                    lockPassButton = false
+                    GlobalVariables.taskCount--
+                }.start()
+            }
+        }
+    }
+
+    private fun passMakeInfo() {
+        GlobalVariables.functions.loginFromApi(GlobalVariables.userInfo.ID)
+        if (activity != null) requireActivity().runOnUiThread{
+            GlobalVariables.functions.navigate(
+                R.id.action_makeUserInfoFragment_to_mobile_navigation)
         }
     }
 

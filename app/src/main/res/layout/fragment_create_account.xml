@@ -80,23 +80,28 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/text_privacy_policy_chinese"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="隱私權條款"
-            android:textColor="@color/colorPrimaryDark"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
 
-        <CheckBox
-            android:id="@+id/checkbox_privacy_policy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="您已詳細閱讀『隱私權條款』並同意"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            <CheckBox
+                android:id="@+id/checkbox_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/text_privacy_policy_chinese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="您已詳細閱讀『平台使用條款』及『隱私權條款』並同意"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_margin="15dp"

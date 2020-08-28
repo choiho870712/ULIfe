@@ -29,14 +29,16 @@ class PersonFragment : Fragment() {
     private fun setButton() {
         GlobalVariables.toolBarController.openToolbarBackButton(false)
         setPersonPageButton()
-        if (GlobalVariables.userInfo.isShop()) setSendNotificationButton()
+        if (GlobalVariables.userInfo.isShop()) {
+            setSendNotificationButton()
+            setComplaintButton()
+        }
         else {
             setRandomFoodButton()
             setFoodPriceButton()
             setStudentPremissionButton()
-            setViewBoxButton()
-            if (!GlobalVariables.isDoneStudentForm)
-                setFormButton()
+            setComplaintButton()
+            setFormButton()
         }
     }
 
@@ -106,7 +108,7 @@ class PersonFragment : Fragment() {
         }
     }
 
-    private fun setViewBoxButton() {
+    private fun setComplaintButton() {
         if (GlobalVariables.userInfo.isShop()) {
             root.image_tool_box_empty_2_1.setImageResource(R.mipmap.view_box_foreground)
             root.text_tool_box_empty_2_1.text = "意見箱"

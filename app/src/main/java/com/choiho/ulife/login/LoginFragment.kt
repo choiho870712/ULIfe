@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import kotlinx.android.synthetic.main.fragment_login.view.edit_username_login_page
 
@@ -115,6 +117,8 @@ class LoginFragment : Fragment() {
 
     private fun goToMainPage() {
         if (activity != null) requireActivity().runOnUiThread {
+            GlobalVariables.activity.nav_host_fragment.
+                findNavController().setGraph(R.navigation.login_navigation)
             GlobalVariables.functions.navigate(
                 R.id.action_loginFragment_to_mobile_navigation
             )

@@ -11,6 +11,8 @@ import com.choiho.ulife.navigationUI.notifications.Notification
 import com.choiho.ulife.navigationUI.home.Proposal
 import com.choiho.ulife.navigationUI.userInfo.UserInfo
 import com.choiho.ulife.navigationUI.home.CardAdapter
+import com.choiho.ulife.navigationUI.home.CardProposalItemAdapter
+import org.threeten.bp.LocalDate
 
 class GlobalVariables : Application() {
     companion object {
@@ -40,6 +42,7 @@ class GlobalVariables : Application() {
 
         var proposal: Proposal? = null
         var proposalItemIndex = 0
+        lateinit var proposalItemAdapter: RecyclerView.Adapter<CardProposalItemAdapter.CardHolder>
         var proposalUserInfo: UserInfo =
             UserInfo(
                 "",
@@ -72,5 +75,9 @@ class GlobalVariables : Application() {
         var myOldNotificationListIsReady = false
 
         var taskCount = 0
+
+        var random_price_chance = 3
+
+        var report_shop_id = ""
     }
 }

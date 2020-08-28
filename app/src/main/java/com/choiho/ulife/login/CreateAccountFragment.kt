@@ -52,9 +52,12 @@ class CreateAccountFragment : Fragment() {
 
         if (!root.checkbox_privacy_policy.isChecked)
             GlobalVariables.functions.makeToast("請詳閱隱私權條款")
+        else if (!isLettersOrDigits(id))
+            GlobalVariables.functions.makeToast("帳號必須為英文字母或數字")
+        else if (password.length < 6 || password.length > 16)
+            GlobalVariables.functions.makeToast("密碼長度必須在 6~20 之間")
         else if (password != twicePassword)
             GlobalVariables.functions.makeToast("密碼驗證失敗")
-        // TODO id should be ascii and password should more than 6 letters
         else if (!GlobalVariables.api.createUser(id, password, GlobalVariables.FCM_token))
             GlobalVariables.functions.makeToast("註冊失敗")
         else {
@@ -66,5 +69,14 @@ class CreateAccountFragment : Fragment() {
 
             GlobalVariables.userInfo.ID = id
         }
+    }
+
+    private fun isLettersOrDigits(chars: String): Boolean {
+        for (c in chars) {
+            if (c !in 'A'..'Z' && c !in 'a'..'z' && c !in '0'..'9') {
+                return false
+            }
+        }
+        return true
     }
 }

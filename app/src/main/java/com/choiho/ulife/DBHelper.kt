@@ -52,15 +52,18 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, _DBName, null, _DB
 
     fun writeDB(title: String, value: String) {
         // Gets the data repository in write mode
-        val db = this.writableDatabase
+        if (readDB(title) != "") updateDB(title, value)
+        else {
+            val db = this.writableDatabase
 
-        // Create a new map of values, where column names are the keys
-        val values = ContentValues().apply {
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE, title)
-            put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE, value)
+            // Create a new map of values, where column names are the keys
+            val values = ContentValues().apply {
+                put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE, title)
+                put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE, value)
+            }
+            // Insert the new row, returning the primary key value of the new row
+            val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
         }
-        // Insert the new row, returning the primary key value of the new row
-        val newRowId = db?.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
     }
 
     fun readDB(title: String): String {

@@ -43,5 +43,6 @@ data class ProposalItem(
 data class Proposal(
     var name: String = "",
     var poster_id: String = "",
+    var content: String = "",
     var proposalItemList: MutableList<ProposalItem>
 )

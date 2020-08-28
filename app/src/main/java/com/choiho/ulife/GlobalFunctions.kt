@@ -82,6 +82,7 @@ class GlobalFunctions {
             GlobalVariables.dbHelper.readDB("studentPermissionID")
         GlobalVariables.isDoneStudentForm =
             GlobalVariables.dbHelper.readDB("isDoneStudentForm") == "true"
+        readMyOldNotificationFromSQL()
         return GlobalVariables.userInfo.readDB("userInfo")
     }
 
@@ -166,6 +167,12 @@ class GlobalFunctions {
     fun navigate(actionId: Int) {
         GlobalVariables.activity.runOnUiThread {
             GlobalVariables.activity.nav_host_fragment.findNavController().navigate(actionId)
+        }
+    }
+
+    fun popUpTo(desId: Int) {
+        GlobalVariables.activity.runOnUiThread {
+            GlobalVariables.activity.nav_host_fragment.findNavController().popBackStack(desId, false)
         }
     }
 

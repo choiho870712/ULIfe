@@ -2,6 +2,7 @@ package com.choiho.ulife.navigationUI.userInfo
 
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -60,52 +61,67 @@ class PersonEditFragment : Fragment() {
         }
     }
 
+    private fun submitInfo() {
+        GlobalVariables.functions.makeToast("正在上傳")
+        GlobalVariables.taskCount++
+
+        Thread {
+            val isSuccess = GlobalVariables.api.updateUserInfo(
+                GlobalVariables.userInfo.ID,
+                root.text_username_edit_person.text.toString(),
+                GlobalVariables.userInfo.iconString,
+                mutableListOf(root.text_tag_edit_person.text.toString()),
+                root.text_content_edit_person.text.toString()
+            )
+
+            if (isSuccess) {
+                GlobalVariables.userInfo.name = root.text_username_edit_person.text.toString()
+                GlobalVariables.userInfo.content = root.text_content_edit_person.text.toString()
+                GlobalVariables.userInfo.hashtag = mutableListOf(root.text_tag_edit_person.text.toString())
+
+                GlobalVariables.userInfo.updateDB("userInfo")
+                GlobalVariables.functions.makeToast("上傳成功")
+
+                if (activity!=null) {
+                    GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
+
+                    if (GlobalVariables.userInfo.isShop())
+                        GlobalVariables.functions.navigate(
+                            R.id.action_personEditFragment_to_personShopInfoFragment)
+                    else
+                        GlobalVariables.functions.navigate(
+                            R.id.action_personEditFragment_to_personInfoFragment)
+                }
+            }
+            else GlobalVariables.functions.makeToast("上傳失敗")
+
+            GlobalVariables.taskCount--
+        }.start()
+    }
+
     private fun setSubmitButton() {
         root.button_update_user_info_submit.setOnClickListener {
             if (!isRunningUpdateUserInfo) {
                 isRunningUpdateUserInfo = true
 
-                val isSuccess = GlobalVariables.api.updateUserInfo(
-                    GlobalVariables.userInfo.ID,
-                    root.text_username_edit_person.text.toString(),
-                    GlobalVariables.userInfo.iconString,
-                    mutableListOf(root.text_tag_edit_person.text.toString()),
-                    root.text_content_edit_person.text.toString()
-                )
+                // setup dialog builder
+                val builder = AlertDialog.Builder(requireActivity())
+                builder.setTitle("是否確定送出？")
 
-                if (isSuccess) {
-                    GlobalVariables.userInfo.name = root.text_username_edit_person.text.toString()
-                    GlobalVariables.userInfo.content = root.text_content_edit_person.text.toString()
-                    GlobalVariables.userInfo.hashtag = mutableListOf(root.text_tag_edit_person.text.toString())
+                builder.setPositiveButton("是", { dialogInterface, i ->
+                    submitInfo()
+                    isRunningUpdateUserInfo = false
+                })
+                builder.setNegativeButton("否", { dialogInterface, i ->
+                    isRunningUpdateUserInfo = false
+                })
 
-                    GlobalVariables.userInfo.updateDB("userInfo")
-
-                    if (GlobalVariables.userInfo.isShop()) {
-                        if (activity != null) {
-                            requireActivity().nav_host_fragment.findNavController().navigate(
-                                R.id.action_personEditFragment_to_personShopInfoFragment
-                            )
-                        }
-                    }
-                    else {
-                        if (activity != null) {
-                            requireActivity().nav_host_fragment.findNavController().navigate(
-                                R.id.action_personEditFragment_to_personInfoFragment
-                            )
-                        }
-                    }
+                // create dialog and show it
+                requireActivity().runOnUiThread{
+                    val dialog = builder.create()
+                    dialog.show()
                 }
-                else {
-                    if (activity != null) {
-                        requireActivity().runOnUiThread(Runnable {
-                            Toast.makeText(activity, "上傳失敗", Toast.LENGTH_SHORT).show()
-                        })
-                    }
-                }
-
-                isRunningUpdateUserInfo = false
             }
-
         }
     }
 

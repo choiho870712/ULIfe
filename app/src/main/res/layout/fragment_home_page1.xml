@@ -57,17 +57,26 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@mipmap/bird_salute_foreground" />
+                        android:layout_weight="1"/>
 
                     <TextView
                         android:id="@+id/text_author_home_page1"
                         android:text=""
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="5dp"
                         android:gravity="start"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp"
+                        android:layout_weight="100"/>
+
+                    <Button
+                        android:id="@+id/button_complaint_shop_home_page1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_report_problem_red_24dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 
@@ -127,7 +136,8 @@
                         android:id="@+id/map_home_page1"
                         android:apiKey="AIzaSyDgBKoExNIkROG45k5BhjRZnwo4aXsStBs"
                         android:layout_width="match_parent"
-                        android:layout_height="500dp"/>
+                        android:layout_height="500dp"
+                        android:visibility="gone"/>
 
                 </androidx.cardview.widget.CardView>
 

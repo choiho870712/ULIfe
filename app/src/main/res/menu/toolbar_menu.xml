@@ -41,6 +41,13 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/button_unsubscribe"
+        android:title="停止訂閱"
+        android:enabled="false"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/button_friend_list"
         android:icon="@drawable/ic_friend_list_white_24dp"
         android:title="好友清單"

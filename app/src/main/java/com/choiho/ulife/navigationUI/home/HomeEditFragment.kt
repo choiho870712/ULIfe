@@ -2,6 +2,7 @@ package com.choiho.ulife.navigationUI.home
 
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -31,6 +32,7 @@ class HomeEditFragment : Fragment() {
 
     private lateinit var root:View
     private var isRunningSubmitAddProposal = false
+    private lateinit var date: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -40,7 +42,7 @@ class HomeEditFragment : Fragment() {
 
         val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
         val formatter = SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
-        val date = formatter.format(parser.parse(LocalDateTime.now().toString())!!)
+        date = formatter.format(parser.parse(LocalDateTime.now().toString())!!)
 
         root.text_date_edit_home.text = date
 
@@ -50,120 +52,133 @@ class HomeEditFragment : Fragment() {
 
         root.button_submit_edit_home.setOnClickListener {
             if (!isRunningSubmitAddProposal) {
-                isRunningSubmitAddProposal = true
-                Thread {
-                    val id = GlobalVariables.userInfo.ID
-                    val title = root.edit_title_edit_home.text.toString()
-                    val content = root.edit_content_edit_home.text.toString()
-                    val hashtag = root.edit_tag_edit_home.text.toString()
-                    var image = Bitmap.createBitmap(800, 800, Bitmap.Config.ARGB_8888)
-                    if (root.image_edit_home_proposalImage.drawable != null ) {
-                        image = root.image_edit_home_proposalImage.drawable.toBitmap()
-                    }
-                    val area = GlobalVariables.homeAreaChoose
+                if (root.image_edit_home_proposalImage.drawable == null)
+                    GlobalVariables.functions.makeToast("請上傳圖片")
+                else if (root.edit_title_edit_home.text.toString() == "")
+                    GlobalVariables.functions.makeToast("標題為必填")
+                else if (root.edit_content_edit_home.text.toString() == "")
+                    GlobalVariables.functions.makeToast("內文為必填")
+                else {
+                    // setup dialog builder
+                    val builder = AlertDialog.Builder(requireActivity())
+                    builder.setTitle("是否確定送出？")
 
-                    var downCount = GlobalVariables.userInfo.permission.size
-                    for (i in 0 until(GlobalVariables.userInfo.permission.size)) {
-                        Thread {
-                            GlobalVariables.api.postFoodItem(
-                                id, title, content, date,
-                                GlobalVariables.userInfo.permission[i],
-                                mutableListOf(hashtag),
-                                GlobalVariables.imageHelper.getString(
-                                    GlobalVariables.imageHelper.scaleImage(image))!!,
-                                area
-                            )
+                    builder.setPositiveButton("是", { dialogInterface, i ->
+                        submitInfo()
+                        isRunningSubmitAddProposal = false
+                    })
+                    builder.setNegativeButton("否", { dialogInterface, i ->
+                        isRunningSubmitAddProposal = false
+                    })
 
-                            downCount--
-                        }.start()
+                    // create dialog and show it
+                    requireActivity().runOnUiThread{
+                        val dialog = builder.create()
+                        dialog.show()
                     }
 
-                    while (true) {
-                        if (downCount == 0) {
-
-                            if (!GlobalVariables.lockRefreshHomePage) {
-                                GlobalVariables.lockRefreshHomePage = true
-
-                                Thread {
-                                    GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(1, GlobalVariables.homeAreaChoose)
-                                    GlobalVariables.homeAdapter = CardAdapter(GlobalVariables.homeProposalList)
-                                    GlobalVariables.homeLayoutManager = GridLayoutManager(GlobalVariables.activity, 2)
-                                    GlobalVariables.lockRefreshHomePage = false
-                                }.start()
-                            }
-
-                            Thread {
-                                GlobalVariables.proposal = GlobalVariables.api.getFoodItem(
-                                    GlobalVariables.userInfo.ID,
-                                    GlobalVariables.userInfo.permission[0],
-                                    GlobalVariables.homeAreaChoose
-                                )
-
-                                GlobalVariables.proposalUserInfo = GlobalVariables.userInfo
-                                GlobalVariables.proposalUserScribeListData =
-                                    GlobalVariables.subscribeList
-
-                                while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
-                                    continue
-
-                                for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
-                                    Thread {
-                                        GlobalVariables.proposal!!.proposalItemList[i].convertImageUrlToImageAll()
-                                    }.start()
-                                }
-
-                                if (activity != null) {
-                                    requireActivity().runOnUiThread(Runnable {
-                                        Toast.makeText(activity, "上傳文章成功", Toast.LENGTH_SHORT)
-                                            .show()
-                                        GlobalVariables.activity.nav_host_fragment.findNavController()
-                                            .navigate(
-                                                R.id.action_homeEditFragment_to_homePage1Fragment
-                                            )
-                                    })
-                                }
-
-                                isRunningSubmitAddProposal = false
-                            }.start()
-
-                            Thread{
-                                var count = 0
-                                val message = "發了一篇新的文章快來看看!!"
-                                Thread {
-                                    val subscribeList = GlobalVariables.api.getSubscribeList(GlobalVariables.userInfo.ID)
-
-                                    for (i in 0 until(subscribeList.size)) {
-                                        Thread{
-                                            Log.d(">>>>>>>>>>>>>>>>>>>>>>", subscribeList[i].ID)
-
-                                            GlobalVariables.fireBase.requestSendingFCM(
-                                                subscribeList[i].FMC_ID,
-                                                GlobalVariables.userInfo.name,
-                                                message
-                                            )
-                                            count++
-                                        }.start()
-                                    }
-                                }.start()
-
-                                Thread {
-                                    GlobalVariables.api.postNotification(
-                                        GlobalVariables.userInfo.ID,
-                                        message,
-                                        date
-                                    )
-                                }.start()
-                            }.start()
-
-                            break
-                        }
-                    }
-                }.start()
+                }
             }
         }
 
         return root
     }
+
+    private fun submitInfo() {
+        isRunningSubmitAddProposal = true
+        GlobalVariables.taskCount++
+
+        Thread {
+            val id = GlobalVariables.userInfo.ID
+            val title = root.edit_title_edit_home.text.toString()
+            val content = root.edit_content_edit_home.text.toString()
+            val hashtag = root.edit_tag_edit_home.text.toString()
+            val image = root.image_edit_home_proposalImage.drawable.toBitmap()
+            val area = GlobalVariables.homeAreaChoose
+
+            var downCount = GlobalVariables.userInfo.permission.size
+            for (i in 0 until(GlobalVariables.userInfo.permission.size)) {
+                Thread {
+                    GlobalVariables.api.postFoodItem(
+                        id, title, content, date,
+                        GlobalVariables.userInfo.permission[i],
+                        mutableListOf(hashtag),
+                        image,
+                        area
+                    )
+
+                    downCount--
+                }.start()
+            }
+
+            while (true) {
+                if (downCount == 0) {
+                    GlobalVariables.functions.makeToast("上傳文章成功")
+                    GlobalVariables.functions.resetProposalList()
+
+                    Thread {
+                        GlobalVariables.proposal = GlobalVariables.api.getFoodItem(
+                            GlobalVariables.userInfo.ID,
+                            GlobalVariables.userInfo.permission[0],
+                            GlobalVariables.homeAreaChoose
+                        )
+
+                        GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
+                        GlobalVariables.proposalUserScribeListData =
+                            GlobalVariables.subscribeList
+
+                        GlobalVariables.functions.navigate(
+                            R.id.action_homeEditFragment_to_homePage1Fragment)
+
+                        while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
+                            continue
+
+                        for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
+                            Thread {
+                                GlobalVariables.proposal!!.proposalItemList[i].convertImageUrlToImageAll()
+                            }.start()
+                        }
+
+                        GlobalVariables.taskCount--
+                        isRunningSubmitAddProposal = false
+                    }.start()
+
+                    Thread{
+                        var count = 0
+                        val message = "發了一篇新的文章快來看看!!"
+                        Thread {
+                            val subscribeList = GlobalVariables.api.getSubscribeList(GlobalVariables.userInfo.ID)
+
+                            for (i in 0 until(subscribeList.size)) {
+                                Thread{
+                                    Log.d(">>>>>>>>>>>>>>>>>>>>>>", subscribeList[i].ID)
+
+                                    GlobalVariables.fireBase.requestSendingFCM(
+                                        subscribeList[i].FMC_ID,
+                                        GlobalVariables.userInfo.name,
+                                        message
+                                    )
+                                    count++
+                                }.start()
+                            }
+                        }.start()
+
+                        Thread {
+                            GlobalVariables.api.postNotification(
+                                GlobalVariables.userInfo.ID,
+                                message,
+                                date
+                            )
+                        }.start()
+                    }.start()
+
+                    break
+                }
+            }
+        }.start()
+    }
+
+
 
     // the code of getting image /////////////////////////////////
 

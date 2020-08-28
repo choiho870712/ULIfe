@@ -96,7 +96,7 @@ class HomeEditFragment : Fragment() {
             val image = root.image_edit_home_proposalImage.drawable.toBitmap()
             val area = GlobalVariables.homeAreaChoose
 
-            var downCount = GlobalVariables.userInfo.permission.size
+//            var downCount = GlobalVariables.userInfo.permission.size
             for (i in 0 until(GlobalVariables.userInfo.permission.size)) {
                 Thread {
                     GlobalVariables.api.postFoodItem(
@@ -107,74 +107,72 @@ class HomeEditFragment : Fragment() {
                         area
                     )
 
-                    downCount--
+//                    downCount--
                 }.start()
             }
 
-            while (true) {
-                if (downCount == 0) {
-                    GlobalVariables.functions.makeToast("上傳文章成功")
-                    GlobalVariables.functions.resetProposalList()
+//            while (downCount > 0) continue
+            Thread.sleep(5000)
 
+            GlobalVariables.functions.makeToast("上傳文章成功")
+            GlobalVariables.functions.resetProposalList()
+
+            Thread {
+                GlobalVariables.proposal = GlobalVariables.api.getFoodItem(
+                    GlobalVariables.userInfo.ID,
+                    GlobalVariables.userInfo.permission[0],
+                    GlobalVariables.homeAreaChoose
+                )
+
+                GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
+                GlobalVariables.proposalUserScribeListData =
+                    GlobalVariables.subscribeList
+
+                GlobalVariables.functions.navigate(
+                    R.id.action_homeEditFragment_to_homePage1Fragment)
+
+                while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
+                    continue
+
+                for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
                     Thread {
-                        GlobalVariables.proposal = GlobalVariables.api.getFoodItem(
-                            GlobalVariables.userInfo.ID,
-                            GlobalVariables.userInfo.permission[0],
-                            GlobalVariables.homeAreaChoose
-                        )
-
-                        GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
-                        GlobalVariables.proposalUserScribeListData =
-                            GlobalVariables.subscribeList
-
-                        GlobalVariables.functions.navigate(
-                            R.id.action_homeEditFragment_to_homePage1Fragment)
-
-                        while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
-                            continue
-
-                        for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
-                            Thread {
-                                GlobalVariables.proposal!!.proposalItemList[i].convertImageUrlToImageAll()
-                            }.start()
-                        }
-
-                        GlobalVariables.taskCount--
-                        isRunningSubmitAddProposal = false
+                        GlobalVariables.proposal!!.proposalItemList[i].convertImageUrlToImageAll()
                     }.start()
-
-                    Thread{
-                        var count = 0
-                        val message = "發了一篇新的文章快來看看!!"
-                        Thread {
-                            val subscribeList = GlobalVariables.api.getSubscribeList(GlobalVariables.userInfo.ID)
-
-                            for (i in 0 until(subscribeList.size)) {
-                                Thread{
-                                    Log.d(">>>>>>>>>>>>>>>>>>>>>>", subscribeList[i].ID)
-
-                                    GlobalVariables.fireBase.requestSendingFCM(
-                                        subscribeList[i].FMC_ID,
-                                        GlobalVariables.userInfo.name,
-                                        message
-                                    )
-                                    count++
-                                }.start()
-                            }
-                        }.start()
-
-                        Thread {
-                            GlobalVariables.api.postNotification(
-                                GlobalVariables.userInfo.ID,
-                                message,
-                                date
-                            )
-                        }.start()
-                    }.start()
-
-                    break
                 }
-            }
+
+                GlobalVariables.taskCount--
+                isRunningSubmitAddProposal = false
+            }.start()
+
+            Thread{
+                var count = 0
+                val message = "發了一篇新的文章快來看看!!"
+                Thread {
+                    val subscribeList = GlobalVariables.api.getSubscribeList(
+                        GlobalVariables.userInfo.ID)
+
+                    for (i in 0 until(subscribeList.size)) {
+                        Thread{
+                            Log.d(">>>>>>>>>>>>>>>>>>>>>>", subscribeList[i].ID)
+
+                            GlobalVariables.fireBase.requestSendingFCM(
+                                subscribeList[i].FMC_ID,
+                                GlobalVariables.userInfo.name,
+                                message
+                            )
+                            count++
+                        }.start()
+                    }
+                }.start()
+
+                Thread {
+                    GlobalVariables.api.postNotification(
+                        GlobalVariables.userInfo.ID,
+                        message,
+                        date
+                    )
+                }.start()
+            }.start()
         }.start()
     }
 

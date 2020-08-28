@@ -8,16 +8,16 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_ic_voice_search_api_material.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_ic_voice_search_api_material.xml"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_user_profile_empty_icon_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/user_profile_empty_icon_foreground.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_ic_voice_search_api_material.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -28,6 +28,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/my_launcher_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
@@ -36,12 +40,12 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable/ic_keyboard_arrow_right_black_24dp.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_bird_salute_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/bird_salute_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_common_google_signin_btn_tint.xml.flat",
@@ -104,6 +108,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_random_food_price.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/random_food_price.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_home_edit.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_home_edit.xml"
     },
@@ -120,20 +128,20 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_tabs_icon_color_selector.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_user_profile_board_leg_foreground.png.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/user_profile_board_leg_foreground.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color-v21_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color-v21/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_user_profile_board_leg_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/user_profile_board_leg_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_shop_profile_score.png.flat",
@@ -144,12 +152,12 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_btn_radio_material.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_bird_salute_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/bird_salute_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_btn_radio_material.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_btn_radio_material.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_common_google_signin_btn_icon_dark.xml.flat",
@@ -208,12 +216,20 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable/ic_menu_arrow_up_black_24dp.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_form_icon_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/form_icon_round.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_material_on_surface_emphasis_high_type.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/material_on_surface_emphasis_high_type.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_discount_ticket.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/discount_ticket.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -244,12 +260,12 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_post_event_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/post_event_background.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -288,20 +304,40 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable-xhdpi-v4/design_ic_visibility_off.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_random_food_price_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_price_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_shop_profile_follower_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/shop_profile_follower_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_form.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_form.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_form_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/form_icon_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_user_profile_empty_icon.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/user_profile_empty_icon.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_abc_cascading_menu_item_layout.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_notification_offical.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/notification_offical.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_abc_cascading_menu_item_layout.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/layout/abc_cascading_menu_item_layout.xml"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_icon_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_card.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_card.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_creat_account_bird.png.flat",
@@ -320,6 +356,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_extended_fab_ripple_color.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_discount_ticket.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/discount_ticket.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_tool_store_bottom_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/tool_store_bottom_foreground.png"
     },
@@ -328,12 +368,12 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/design_navigation_item.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_home_menu.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_home_menu.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_btn_radio_off_mtrl.xml.flat",
@@ -348,12 +388,12 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/notification_shop.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_fragment_close_exit.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/fe7b553990ad9634624bd97712394e10/fragment-1.2.4/res/anim/fragment_close_exit.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_fragment_close_exit.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/fe7b553990ad9634624bd97712394e10/fragment-1.2.4/res/anim/fragment_close_exit.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_abc_list_menu_item_icon.xml.flat",
@@ -362,6 +402,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_fragment_close_enter.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/fe7b553990ad9634624bd97712394e10/fragment-1.2.4/res/anim/fragment_close_enter.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_random_food_price_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/random_food_price_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_notification_main.xml.flat",
@@ -388,10 +432,6 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/text_view_with_theme_line_height.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_chat.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_chat.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_abc_tint_edittext.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color/abc_tint_edittext.xml"
     },
@@ -416,12 +456,12 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_support_simple_spinner_dropdown_item.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/layout/support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_common_google_signin_btn_icon_light.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_support_simple_spinner_dropdown_item.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_my_launcher2_round.png.flat",
@@ -444,6 +484,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_notification_shop_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/notification_shop_round.png"
     },
@@ -464,16 +508,16 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/user_profile_bird_foreground.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_notification_friend_foreground.png.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/notification_friend_foreground.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_text_cursor_material.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_text_cursor_material.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_notification_friend_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/notification_friend_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -488,6 +532,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/tool_store_bottom_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_privacy_policy.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_privacy_policy.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_random_food_plate_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/random_food_plate_foreground.png"
     },
@@ -500,6 +548,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_form_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/form_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
@@ -508,12 +560,12 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/login_bird.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_shop_canvas_background.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/shop_canvas_background.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_shop_canvas_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/shop_canvas_background.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_shop_profile_follower.png.flat",
@@ -528,20 +580,24 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/material_on_surface_emphasis_medium.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_tool_store_empty_box.png.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/tool_store_empty_box.png"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_common_google_signin_btn_text_light.xml.flat",
+        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/animator-v21_design_appbar_state_list_animator.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/animator-v21/design_appbar_state_list_animator.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_common_google_signin_btn_text_light.xml.flat",
-        "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/color/common_google_signin_btn_text_light.xml"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_tool_store_empty_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/tool_store_empty_box.png"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_chat.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_chat.xml"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_student_permission_icon_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/student_permission_icon_round.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_view_box_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/view_box_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_tool_store_tou_background.xml.flat",
@@ -572,6 +628,14 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_plate_leg.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_icon.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_random_food_price_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/random_food_price_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -582,6 +646,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_random_food_price_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_price_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_tool_store_empty_box_foreground.png.flat",
@@ -606,6 +674,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_random_food_plate_leg_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_plate_leg_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_form.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_form.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_abc_hint_foreground_material_light.xml.flat",
@@ -752,12 +824,20 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/random_food_plate_leg.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_form_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/form_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_random_food_price_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/random_food_price_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout-v21_notification_template_icon_group.xml.flat",
@@ -836,6 +916,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/test_toolbar_surface.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_discount_ticket.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/discount_ticket.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_random_food_plate_board_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_plate_board_foreground.png"
     },
@@ -888,6 +972,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/icon_boy_background.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_random_food_price_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/random_food_price_round.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_notification_offical_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/notification_offical_foreground.png"
     },
@@ -898,6 +986,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_abc_slide_in_top.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_view_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/view_box.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_tool_store_tou_foreground.png.flat",
@@ -930,6 +1022,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_creat_account_bird_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/creat_account_bird_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_report.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_report.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_event_record.png.flat",
@@ -1024,6 +1120,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/menu/bottom_nav_menu.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_form_icon.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/form_icon.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_mtrl_ic_error.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable/mtrl_ic_error.xml"
     },
@@ -1084,6 +1184,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_form_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/form_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
@@ -1130,6 +1234,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_tool_box_bottom_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/tool_box_bottom_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_form_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/form_icon_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_my_launcher2_round.xml.flat",
@@ -1222,6 +1330,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_my_launcher_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/my_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_form_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/form_icon.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_disco_ball_m.png.flat",
@@ -1528,12 +1640,24 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_form_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/form_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_mtrl_picker_header_fullscreen.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/mtrl_picker_header_fullscreen.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_discount_ticket_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/discount_ticket_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_search_friend_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/search_friend_background.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_discount_ticket_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/discount_ticket_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_mtrl_bottom_nav_item_tint.xml.flat",
@@ -1566,6 +1690,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_view_box_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/view_box_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-v21_abc_list_divider_material.xml.flat",
@@ -1628,6 +1756,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_discount_ticket_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/discount_ticket_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_student_permission.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_student_permission.xml"
     },
@@ -1644,6 +1776,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_view_box_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/view_box_background.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_creat_account_bird_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/creat_account_bird_round.png"
     },
@@ -1656,6 +1792,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/tool_store_tou.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_card_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_card_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_notification_friend.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_notification_friend.xml"
     },
@@ -1666,6 +1806,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_my_launcher2.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/my_launcher2.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_icon_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_mtrl_picker_header_dialog.xml.flat",
@@ -1684,6 +1828,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color/abc_primary_text_material_light.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_form_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/form_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_shop_canvas.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/shop_canvas.png"
     },
@@ -1694,6 +1842,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_notification_main_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/notification_main_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_card_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_card_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_shop_profile_follower.png.flat",
@@ -1804,6 +1956,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/ic_person_add_white_24dp.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_card_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_card_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
     },
@@ -1870,6 +2026,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_notification_offical.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/notification_offical.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_icon.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_random_food_plate.png.flat",
@@ -2036,6 +2196,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/anim-v21/mtrl_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_random_food_price_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/random_food_price_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
@@ -2076,6 +2240,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/icon_boy.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_random_food_price_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/random_food_price_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_tool_store_background_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/tool_store_background_foreground.png"
     },
@@ -2094,6 +2262,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_proposal_item.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_proposal_item.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_card.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_card.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_tool_box_bottom_round.png.flat",
@@ -2128,6 +2300,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/mtrl_calendar_vertical.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_card_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_card_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_random_food_plate_pointer.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_plate_pointer.png"
     },
@@ -2146,6 +2322,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_notification_main_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/notification_main_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_view_box_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/view_box_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -2170,6 +2350,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_tool_store_background.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/tool_store_background.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_discount_ticket_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/discount_ticket_background.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color-v23_abc_tint_default.xml.flat",
@@ -2228,8 +2412,16 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_discount_ticket_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/discount_ticket_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_view_box_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/view_box_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_btn_checkbox_to_unchecked_box_inner_merged_animation.xml.flat",
@@ -2360,6 +2552,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_form_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/form_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -2384,6 +2580,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_plate_board_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_random_food_price_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/random_food_price_background.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout-v21_notification_template_custom_big.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/res/layout-v21/notification_template_custom_big.xml"
     },
@@ -2398,6 +2598,14 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_tool_store_bottom_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/tool_store_bottom_background.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_view_box_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/view_box_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_view_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/view_box.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_ic_mtrl_chip_close_circle.xml.flat",
@@ -2472,6 +2680,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/text_view_with_line_height_from_layout.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_shop_notice.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/shop_notice.xml"
     },
@@ -2520,8 +2732,16 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_view_box_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/view_box_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_test_mtrl_calendar_day.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/test_mtrl_calendar_day.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_form_select_answer.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_form_select_answer.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -2546,6 +2766,14 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_search_friend_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/search_friend_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_view_box.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/view_box.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_random_food_price.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_price.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_notification_friend_foreground.png.flat",
@@ -2574,6 +2802,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_design_text_input_start_icon.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/design_text_input_start_icon.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_random_food_price_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/random_food_price_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_random_food_plate_pointer.png.flat",
@@ -2644,6 +2876,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/event_record.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_notification_offical_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/notification_offical_foreground.png"
     },
@@ -2672,6 +2908,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable-hdpi-v4/common_full_open_on_phone.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout-sw600dp-v13_design_layout_snackbar.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     },
@@ -2684,12 +2924,20 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_tab_indicator_material.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_user_profile_bird_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/user_profile_bird_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_random_food_plate_pointer_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_plate_pointer_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_random_food_price.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/random_food_price.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_home.xml.flat",
@@ -2776,6 +3024,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/9e152cf2e3a94d8858dd369c20272b85/media-1.0.0/res/layout/notification_media_action.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_discount_ticket_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/discount_ticket_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_login_bird_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/login_bird_round.png"
     },
@@ -2806,6 +3058,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_view_box_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/view_box_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -2872,8 +3128,16 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_card.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_card.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_creat_account_bird_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/creat_account_bird_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_discount_ticket_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/discount_ticket_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_tool_store_bottom_foreground.png.flat",
@@ -2884,12 +3148,20 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_random_food_price_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_price_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_user_profile_empty_icon.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/user_profile_empty_icon.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_login.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_student_permission_card.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/student_permission_card.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_random_food_plate_board_foreground.png.flat",
@@ -2928,20 +3200,12 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_privacy_policy_chinese.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_privacy_policy_chinese.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_user_profile_board_leg_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/user_profile_board_leg_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_user_profile_bird_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/user_profile_bird_foreground.png"
-    },
-    {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_chat_page1.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_chat_page1.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_ic_navigate_before_white_24dp.xml.flat",
@@ -2958,6 +3222,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_user_profile_empty_icon.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/user_profile_empty_icon.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_student_permission_icon.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/student_permission_icon.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_notification_shop_background.xml.flat",
@@ -3028,6 +3296,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/user_profile_board_leg.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_design_text_input_end_icon.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/design_text_input_end_icon.xml"
     },
@@ -3056,8 +3328,20 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/shop_profile_score.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_form_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/form_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_discount_ticket_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/discount_ticket_foreground.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_student_permission_card_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/student_permission_card_background.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_abc_popup_exit.xml.flat",
@@ -3094,6 +3378,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_mtrl_alert_select_dialog_singlechoice.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/mtrl_alert_select_dialog_singlechoice.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_view_box_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/view_box_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_notification_main.png.flat",
@@ -3176,6 +3464,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/user_profile_board_leg_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_card_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_card_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_random_food_plate_leg_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/random_food_plate_leg_background.xml"
     },
@@ -3190,6 +3482,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_mtrl_popupmenu_background_dark.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/drawable/mtrl_popupmenu_background_dark.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_discount_ticket_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/discount_ticket_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_my_launcher.png.flat",
@@ -3224,10 +3520,6 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/design_box_stroke_color.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_chat_friend_message.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_chat_friend_message.xml"
-    },
-    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -3242,6 +3534,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_mtrl_calendar_month_labeled.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/layout/mtrl_calendar_month_labeled.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_view_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/view_box.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_event_record_background.xml.flat",
@@ -3278,6 +3574,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_icon_boy.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/icon_boy.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_form_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/form_icon_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_user_profile_follower_round.png.flat",
@@ -3352,6 +3652,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/user_profile_follower_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_icon_boy_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/icon_boy_round.png"
     },
@@ -3398,6 +3702,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_shop_profile_score.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/shop_profile_score.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_icon_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_tool_store_empty_box.png.flat",
@@ -3512,6 +3820,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_discount_ticket.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/discount_ticket.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_user_profile_bird_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/user_profile_bird_background.xml"
     },
@@ -3522,6 +3834,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_random_food_plate_pointer_round.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/random_food_plate_pointer_round.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_view_box_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/view_box_round.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_abc_list_menu_item_radio.xml.flat",
@@ -3612,6 +3928,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/tool_store_empty_box_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_icon_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_icon_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
@@ -3672,6 +3992,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/notification_main_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_random_food_price.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/random_food_price.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_user_profile_board_leg_foreground.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/user_profile_board_leg_foreground.png"
     },
@@ -3690,6 +4014,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_mtrl_navigation_item_background_color.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_navigation_item_background_color.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_discount_ticket.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/discount_ticket.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_bird_salute.png.flat",
@@ -3760,8 +4088,16 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/random_food_plate_leg.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_discount_ticket_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/discount_ticket_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/animator_mtrl_extended_fab_state_list_animator.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/animator/mtrl_extended_fab_state_list_animator.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_view_box.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_view_box.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -3808,6 +4144,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_person_info.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_discount_ticket.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/discount_ticket.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_bird_salute.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/bird_salute.xml"
     },
@@ -3830,6 +4170,14 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_common_google_signin_btn_icon_disabled.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_student_permission_card_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/student_permission_card_round.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_discount_ticket_round.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/discount_ticket_round.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_ic_question_answer_black_24dp.xml.flat",
@@ -3892,6 +4240,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/search_friend_foreground.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_card_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_card_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_mtrl_filled_icon_tint.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_filled_icon_tint.xml"
     },
@@ -3902,6 +4254,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_notification_template_big_media_custom.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/9e152cf2e3a94d8858dd369c20272b85/media-1.0.0/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_card_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_card_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_search_friend_round.png.flat",
@@ -3922,6 +4278,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_mtrl_choice_chip_background_color.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_choice_chip_background_color.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_form_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/form_icon_foreground.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_common_google_signin_btn_text_dark.xml.flat",
@@ -3946,6 +4306,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_ic_clear_material.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_random_food_price_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/random_food_price_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_mtrl_calendar_day_of_week.xml.flat",
@@ -4044,12 +4408,20 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/user_profile_empty_icon_foreground.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_card_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_card_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_abc_search_view.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color-v23_abc_tint_switch_track.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_student_permission_card_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/student_permission_card_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_person.xml.flat",
@@ -4176,6 +4548,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_view_box_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/view_box_round.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_post_event.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/post_event.png"
     },
@@ -4240,6 +4616,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/notification_main_round.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_student_permission_card.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/student_permission_card.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -4278,10 +4658,6 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_mtrl_navigation_item_text_color.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_navigation_item_text_color.xml"
-    },
-    {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_card_chat_my_message.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_chat_my_message.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -4352,8 +4728,8 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/7558be688b89083e538014b36982e963/play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/layout_fragment_privacy_policy_english.xml.flat",
-        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_privacy_policy_english.xml"
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_student_permission_icon_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/student_permission_icon_background.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_user_profile_bird.png.flat",
@@ -4444,12 +4820,20 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/random_food_plate_foreground.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_view_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/view_box.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_notification_friend_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/notification_friend_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_view_box.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/view_box.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -4572,6 +4956,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_form_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/form_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/color_abc_search_url_text.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color/abc_search_url_text.xml"
     },
@@ -4632,12 +5020,20 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/color/abc_btn_colored_text_material.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_student_permission_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/student_permission_icon.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_cab_background_internal_bg.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_abc_ratingbar_material.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_form_icon.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/form_icon.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -4756,6 +5152,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/login_bird.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_view_box_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xhdpi/view_box_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/interpolator-v21_mtrl_fast_out_linear_in.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/interpolator-v21/mtrl_fast_out_linear_in.xml"
     },
@@ -4804,6 +5204,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable/abc_btn_borderless_material.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_form_icon_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/form_icon_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/animator_mtrl_extended_fab_change_size_motion_spec.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/animator/mtrl_extended_fab_change_size_motion_spec.xml"
     },
@@ -4814,6 +5218,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_shop_canvas.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/shop_canvas.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_form_icon_background.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/form_icon_background.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_tool_store_bottom.png.flat",
@@ -4832,8 +5240,16 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/bda2b12f21c14dfc6e810c3ea6cb630a/core-1.3.0/res/drawable/notification_bg.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_student_permission_card_foreground.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/student_permission_card_foreground.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_tool_store_empty_box_background.xml.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/tool_store_empty_box_background.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_random_food_price.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-anydpi-v26/random_food_price.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_shop_profile_follower_foreground.png.flat",
@@ -4870,6 +5286,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable_ic_report_problem_red_24dp.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/ic_report_problem_red_24dp.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_tool_box_bottom.xml.flat",
@@ -4910,6 +5330,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-hdpi_student_permission_card.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-hdpi/student_permission_card.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_shop_canvas_foreground.png.flat",
@@ -4956,6 +5380,10 @@
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-mdpi_random_food_price.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-mdpi/random_food_price.png"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -4970,6 +5398,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxhdpi_tool_store_background_round.png.flat",
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxhdpi/tool_store_background_round.png"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_discount_ticket_round.png.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/mipmap-xxxhdpi/discount_ticket_round.png"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/release/mipmap-xhdpi_event_record_round.png.flat",

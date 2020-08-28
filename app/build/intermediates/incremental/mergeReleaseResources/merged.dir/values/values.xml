@@ -246,6 +246,7 @@
     <color name="colorSilver">#C0C0C0</color>
     <color name="colorWhite">#DDDDDD</color>
     <color name="colorWhiteSmoke">#F5F5F5</color>
+    <color name="colorYellow">#FFFF00</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -783,7 +784,6 @@
     <item quantity="one"><ns1:g id="count">%d</ns1:g> new notification</item>
     <item quantity="other"><ns1:g id="count">%d</ns1:g> new notifications</item>
   </plurals>
-    <string name="API_KEY" translatable="false">"AIzaSyDgBKoExNIkROG45k5BhjRZnwo4aXsStBs"</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>

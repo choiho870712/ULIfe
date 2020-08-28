@@ -30,7 +30,12 @@ class FormFragment : Fragment() {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_form, container, false)
 
-        if (GlobalVariables.isDoneStudentForm) {
+        if (GlobalVariables.studentPermissionID == "") {
+            GlobalVariables.functions.makeToast("請先完成學生認證")
+            GlobalVariables.functions.navigate(
+                R.id.action_formFragment_to_studentPermissionFragment)
+        }
+        else if (GlobalVariables.isDoneStudentForm) {
             root.layout_form_done.visibility = View.VISIBLE
             root.layout_form_not_done.visibility = View.GONE
         }

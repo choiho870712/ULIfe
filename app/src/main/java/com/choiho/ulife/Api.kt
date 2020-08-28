@@ -87,9 +87,10 @@ class Api {
         json += "]"
         json += "}"
 
-        if (getJsonMessage(callApi(json, urlPostFoodItem)) == "No Error" )
+        val msg = getJsonMessage(callApi(json, urlPostForm))
+        if (msg == "No Error" )
             return 1
-        else if (getJsonMessage(callApi(json, urlPostFoodItem)) == "Questionnaire Already Completed")
+        else if (msg == "Questionnaire Already Completed")
             return 2
         else
             return 0
@@ -502,7 +503,7 @@ class Api {
 
     fun uploadUserInfo(id:String, icon: String, name: String) : Boolean {
         val bm = GlobalVariables.imageHelper.convertString64ToImage(icon)
-        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 200)
+        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 340)
         val newIcon = GlobalVariables.imageHelper.getString(scaled)
 
         val json = "{\"id\": \"$id\",\"icon\": \"$newIcon\",\"name\": \"$name\" }"
@@ -511,7 +512,7 @@ class Api {
 
     fun updateUserInfo(id:String, name: String, icon: String, hashtag: List<String>, content: String) : Boolean {
         val bm = GlobalVariables.imageHelper.convertString64ToImage(icon)
-        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 200)
+        val scaled = GlobalVariables.imageHelper.scaleImage(bm, 340)
         val newIcon = GlobalVariables.imageHelper.getString(scaled)
 
         var json = "{\"id\": \"$id\",\"name\": \"$name\", \"icon\": \"$newIcon\""

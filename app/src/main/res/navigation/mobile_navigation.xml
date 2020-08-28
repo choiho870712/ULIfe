@@ -263,7 +263,7 @@
         tools:layout="@layout/fragment_view_box" />
     <fragment
         android:id="@+id/reportFragment"
-        android:name="com.choiho.ulife.reportFragment"
+        android:name="com.choiho.ulife.complaint.reportFragment"
         android:label="投訴店家"
         tools:layout="@layout/fragment_report" />
 </navigation>

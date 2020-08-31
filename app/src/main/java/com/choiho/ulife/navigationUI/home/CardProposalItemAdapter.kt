@@ -1,5 +1,6 @@
 package com.choiho.ulife.navigationUI.home
 
+import android.graphics.Bitmap
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
 import kotlinx.android.synthetic.main.card_proposal_item.view.*
 import kotlinx.android.synthetic.main.fragment_home_page1.view.*
+import java.lang.Exception
 import java.text.SimpleDateFormat
 
 class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val proposalView: View)
@@ -25,7 +27,7 @@ class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val prop
         holder.index = position
 
         Thread {
-            while (!myDataset[holder.index].isDoneImageLoadingAll())
+            while (!myDataset[holder.index].isDoneImageLoadingOnlyOne())
                 continue
 
             GlobalVariables.activity.runOnUiThread {
@@ -55,8 +57,27 @@ class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val prop
             proposalView.text_tag_home_page1.visibility = View.VISIBLE
 
             proposalView.image_proposal.setImageBitmap(
-                myDataset[holder.index].imageList[myDataset[holder.index].imageList.size-1])
+                Bitmap.createBitmap(500, 500, Bitmap.Config.ARGB_8888))
             proposalView.image_proposal.visibility = View.VISIBLE
+
+            Thread {
+                GlobalVariables.taskCount++
+                myDataset[holder.index].convertImageUrlToImageAll()
+                while (!myDataset[holder.index].isDoneImageLoadingAll())
+                    continue
+
+                GlobalVariables.taskCount--
+
+                try {
+                    GlobalVariables.activity.runOnUiThread {
+                        proposalView.image_proposal.setImageBitmap(
+                            myDataset[holder.index].imageList[myDataset[holder.index].imageList.size-1])
+                    }
+                }
+                catch (e:Exception) {
+
+                }
+            }.start()
         }
     }
 

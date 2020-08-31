@@ -2,6 +2,8 @@ package com.choiho.ulife
 
 import android.content.Context
 import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.choiho.ulife.navigationUI.notifications.Notification
@@ -157,8 +159,10 @@ class GlobalFunctions {
             GlobalVariables.homeProposalList.clear()
             if (isNetWorkConnecting()) {
                 GlobalVariables.lockRefreshHomeProposalList = true
-                GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(1, GlobalVariables.homeAreaChoose)
+                GlobalVariables.homeProposalNumber = 1
+                GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(GlobalVariables.homeProposalNumber, GlobalVariables.homeAreaChoose)
                 GlobalVariables.homeCurrentPosition = 0
+                GlobalVariables.homeProposalNumber += 10
                 GlobalVariables.lockRefreshHomeProposalList = false
             }
         }.start()
@@ -182,8 +186,40 @@ class GlobalFunctions {
         }
     }
 
-    fun isNetWorkConnecting():Boolean {
-        val connectivityManager = GlobalVariables.activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
-        return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting() ?: false
+//    fun isNetWorkConnecting():Boolean {
+//        val connectivityManager = GlobalVariables.activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
+//        return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting() ?: false
+//    }
+
+    fun isNetWorkConnecting(): Boolean {
+        var result = false
+        val connectivityManager =
+            GlobalVariables.activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val networkCapabilities = connectivityManager.activeNetwork ?: return false
+            val actNw =
+                connectivityManager.getNetworkCapabilities(networkCapabilities) ?: return false
+            result = when {
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+                else -> false
+            }
+        } else {
+            connectivityManager.run {
+                connectivityManager.activeNetworkInfo?.run {
+                    result = when (type) {
+                        ConnectivityManager.TYPE_WIFI -> true
+                        ConnectivityManager.TYPE_MOBILE -> true
+                        ConnectivityManager.TYPE_ETHERNET -> true
+                        else -> false
+                    }
+
+                }
+            }
+        }
+
+        return result
     }
+
 }

@@ -76,14 +76,13 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_1_1"
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_1_1"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"
                         android:text=""/>
                 </RelativeLayout>
@@ -106,14 +105,13 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_1_2"
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_1_2"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -133,14 +131,13 @@
                         />
 
                     <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_1_3"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -181,14 +178,13 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_2_1"
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_2_1"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -211,14 +207,13 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_2_2"
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_2_2"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -238,14 +233,13 @@
                         />
 
                     <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_2_3"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
             </LinearLayout>
@@ -286,14 +280,13 @@
 
                     <TextView
                         android:id="@+id/text_tool_box_empty_3_1"
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_3_1"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -313,14 +306,13 @@
                         />
 
                     <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_3_2"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -340,14 +332,13 @@
                         />
 
                     <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_width="65dp"
+                        android:layout_height="20dp"
                         android:background="@drawable/tool_box_square_text_box"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/image_tool_box_empty_3_3"
-                        android:layout_marginTop="-15dp"
-                        android:padding="2dp"
+                        android:layout_marginTop="-5dp"
                         android:gravity="center"/>
                 </RelativeLayout>
 

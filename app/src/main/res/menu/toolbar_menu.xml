@@ -23,7 +23,7 @@
         android:title="送出"
         android:visible="false"
         android:enabled="false"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/button_add_friend"

@@ -52,7 +52,7 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
 
                 for ( i in 0 until(myDataSet[position].proposalItemList.size))
                     Thread {
-                        myDataSet[position].proposalItemList[i].convertImageUrlToImageAll()
+                        myDataSet[position].proposalItemList[i].convertImageUrlToImageOnlyOne()
                     }.start()
 
                 GlobalVariables.functions.navigate(R.id.action_navigation_home_to_homePage1Fragment)

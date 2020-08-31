@@ -74,7 +74,7 @@ class PersonFragment : Fragment() {
 
     private fun setRandomFoodButton() {
         root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_plate_foreground)
-        root.text_tool_box_empty_1_1.text = "轉盤"
+        root.text_tool_box_empty_1_1.text = "美食轉盤"
         root.layout_tool_box_empty_1_1.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_randomPlateFragment)

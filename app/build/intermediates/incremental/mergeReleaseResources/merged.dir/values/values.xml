@@ -244,7 +244,7 @@
     <color name="colorPrimary">#95D26B</color>
     <color name="colorPrimaryDark">#6FAC44</color>
     <color name="colorSilver">#C0C0C0</color>
-    <color name="colorWhite">#DDDDDD</color>
+    <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteSmoke">#F5F5F5</color>
     <color name="colorYellow">#FFFF00</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>

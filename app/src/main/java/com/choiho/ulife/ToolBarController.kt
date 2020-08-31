@@ -1,5 +1,9 @@
 package com.choiho.ulife
 
+import android.graphics.BlendMode
+import android.graphics.BlendModeColorFilter
+import android.graphics.PorterDuff
+import android.os.Build
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
@@ -279,6 +283,18 @@ class ToolBarController {
         GlobalVariables.activity.runOnUiThread {
             buttonDeleteItem.setEnabled(enable)
             buttonDeleteItem.setVisible(enable)
+        }
+    }
+
+    fun setTextColor(colorId:Int) {
+        val color = GlobalVariables.activity.resources.getColor(colorId)
+        GlobalVariables.activity.toolbar.setTitleTextColor(color)
+        GlobalVariables.activity.toolbar.navigationIcon?.apply {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                colorFilter = BlendModeColorFilter(color, BlendMode.SRC_ATOP)
+            }else{
+                setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+            }
         }
     }
 }

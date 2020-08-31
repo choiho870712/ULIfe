@@ -39,6 +39,7 @@ class GlobalVariables : Application() {
         var lockRefreshHomeProposalList = false
         var lockRefreshHomePage = false
         var homeCurrentPosition = 0
+        var homeProposalNumber = 1
 
         var proposal: Proposal? = null
         var proposalItemIndex = 0

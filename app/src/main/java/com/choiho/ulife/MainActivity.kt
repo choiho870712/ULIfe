@@ -2,6 +2,10 @@ package com.choiho.ulife
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.BlendMode
+import android.graphics.BlendModeColorFilter
+import android.graphics.PorterDuff
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -118,7 +122,6 @@ class MainActivity : AppCompatActivity() {
                 if (!GlobalVariables.functions.isNetWorkConnecting()) {
                     isReconnect = true
                     GlobalVariables.functions.popUpTo(R.id.login_navigation)
-                    GlobalVariables.functions.makeToast("請確認 wifi 是否已開啟")
                 }
                 else if (isReconnect) {
                     // always reset proposal list when reconnect to wifi
@@ -126,7 +129,7 @@ class MainActivity : AppCompatActivity() {
                     GlobalVariables.functions.resetProposalList()
 
                     GlobalVariables.functions.popUpTo(R.id.login_navigation)
-                    GlobalVariables.functions.makeToast("wifi 已開啟")
+                    GlobalVariables.functions.makeToast("網路已開啟")
                     isReconnect = false
                 }
                 Thread.sleep(5000)

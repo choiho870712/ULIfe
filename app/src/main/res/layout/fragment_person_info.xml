@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center_horizontal"
-                    android:layout_marginEnd="50dp"
+                    android:layout_marginEnd="30dp"
                     android:layout_marginTop="20dp"
                     android:visibility="invisible">
 
@@ -73,7 +73,7 @@
                     android:orientation="vertical"
                     android:gravity="center_horizontal"
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="50dp">
+                    android:layout_marginStart="30dp">
 
                     <TextView
                         android:id="@+id/text_followerCount_information_person_section1"
@@ -83,7 +83,7 @@
                         android:text="0"
                         android:gravity="center"
                         android:textStyle="bold"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"

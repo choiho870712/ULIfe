@@ -9,11 +9,11 @@
 
     <Button
         android:id="@+id/button_class"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:background="@color/colorWhiteSmoke"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/colorWhite"/>
+        android:textColor="@color/colorPrimaryDark"/>
 
 </androidx.cardview.widget.CardView>

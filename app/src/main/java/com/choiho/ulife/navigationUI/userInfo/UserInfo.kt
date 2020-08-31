@@ -25,6 +25,7 @@ data class UserInfo(
                 isReady = true
             }.start()
         }
+        else isReady = true
     }
 
     fun clear() {

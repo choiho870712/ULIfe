@@ -45,6 +45,9 @@ class HomePage1Fragment : Fragment(), OnMapReadyCallback {
                 GlobalVariables.taskCount++
                 while (!GlobalVariables.proposalUserInfo.isReady) continue
 
+                GlobalVariables.taskCount--
+
+
                 if (activity != null) requireActivity().runOnUiThread {
                     GlobalVariables.toolBarController.openGoToShopInfoBottom(true)
                     if (GlobalVariables.proposalUserInfo.isSubscribeAvailable())
@@ -96,8 +99,6 @@ class HomePage1Fragment : Fragment(), OnMapReadyCallback {
                     root.map_home_page1.visibility = View.VISIBLE
                     root.button_complaint_shop_home_page1.visibility = View.VISIBLE
                 }
-
-                GlobalVariables.taskCount--
             }.start()
         }
 

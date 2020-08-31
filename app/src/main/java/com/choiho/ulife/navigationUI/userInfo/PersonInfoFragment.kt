@@ -52,8 +52,9 @@ class PersonInfoFragment : Fragment() {
     }
 
     private fun setToolBarTitle(title:String) {
-        if (activity != null)
+        if (activity != null) {
             requireActivity().toolbar.setTitle(title)
+        }
     }
 
     private fun setPageInfo() {

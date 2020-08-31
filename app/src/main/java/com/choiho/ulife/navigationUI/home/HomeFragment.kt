@@ -20,6 +20,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         root = inflater.inflate(R.layout.fragment_home, container, false)
 
+        GlobalVariables.toolBarController.setTextColor(R.color.colorWhite)
+
         if (GlobalVariables.homeProposalList.isEmpty())
             GlobalVariables.functions.resetProposalList()
         createNewPage()
@@ -75,9 +77,10 @@ class HomeFragment : Fragment() {
 
     private fun morePage() {
         val moreProposal = GlobalVariables.api.getFoodAll(
-            GlobalVariables.homeProposalList.size + 2,
+            GlobalVariables.homeProposalNumber,
             GlobalVariables.homeAreaChoose
         )
+        GlobalVariables.homeProposalNumber += 10
         GlobalVariables.homeProposalList.addAll(moreProposal)
 
         if (moreProposal.isEmpty()) return

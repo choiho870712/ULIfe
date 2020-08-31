@@ -582,20 +582,43 @@ class Api {
             .build()
 
         var responseStrng = ""
+        var needToCallAgain = false
+        var isSuccess = false
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(request: Request, e: IOException) {
                 responseStrng = e.message!!
-                // if Unable... means wifi disconnect....
+                needToCallAgain = true
             }
 
             @Throws(IOException::class)
             override fun onResponse(response: Response) {
                 responseStrng = response.body().string()
+                isSuccess = true
             }
         })
 
-        while (responseStrng == "") continue
+        while (true) {
+            if (needToCallAgain) {
+                needToCallAgain = false
+                client.newCall(request).enqueue(object : Callback {
+                    override fun onFailure(request: Request, e: IOException) {
+                        responseStrng = e.message!!
+                        needToCallAgain = true
+                    }
+
+                    @Throws(IOException::class)
+                    override fun onResponse(response: Response) {
+                        responseStrng = response.body().string()
+                        isSuccess = true
+                    }
+                })
+            }
+            else if (isSuccess) {
+                break
+            }
+        }
+
         return responseStrng
     }
 }

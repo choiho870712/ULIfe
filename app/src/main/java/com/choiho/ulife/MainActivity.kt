@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity() {
                         if (GlobalVariables.taskCount > 0) View.VISIBLE else View.GONE
                 }
 
-                Thread.sleep(100)
+                Thread.sleep(500)
             }
         }.start()
     }

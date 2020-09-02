@@ -42,17 +42,9 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
                 R.id.action_foodPriceFragment_to_personShopInfoFragment)
 
             Thread {
-                GlobalVariables.taskCount++
-                var userId = ""
-                for (char in  myDataset[position].discount_code) {
-                    if (char == '_') break
-                    else userId += char
-                }
-
-                if (GlobalVariables.proposalUserInfo.ID != userId)
+                if (GlobalVariables.proposalUserInfo.ID != myDataset[position].id)
                     GlobalVariables.proposalUserInfo.isReady = false
-                GlobalVariables.proposalUserInfo.readFromApi(userId)
-                GlobalVariables.taskCount--
+                GlobalVariables.proposalUserInfo.readFromApi(myDataset[position].id)
             }.start()
         }
     }

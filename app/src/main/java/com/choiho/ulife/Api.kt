@@ -145,6 +145,7 @@ class Api {
 
             dataList.add(
                 DistountTicket(
+                    jsonObject.getString("id"),
                     jsonObject.getString("name"),
                     jsonObject.getString("content"),
                     jsonObject.getString("discount_code"),

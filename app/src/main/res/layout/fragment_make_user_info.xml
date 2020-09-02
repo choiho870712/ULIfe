@@ -26,7 +26,9 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:padding="30dp"
-            android:text="@string/upload_user_info_title"/>
+            android:textColor="@color/colorPrimaryDark"
+            android:text="註冊完成！\n請填以下資訊"
+            android:gravity="center"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"

@@ -88,7 +88,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="訂閱"
+                        android:text="訂閱中"
                         android:textSize="15sp"
                         android:gravity="center"
                         android:textStyle="bold"/>

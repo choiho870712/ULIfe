@@ -33,7 +33,7 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
             ZoneId.systemDefault()
         )
 
-        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm")
         val formatter = SimpleDateFormat("MM/dd HH:mm")
         holder.lastTime.text = formatter.format(parser.parse(triggerTime.toString()))
 

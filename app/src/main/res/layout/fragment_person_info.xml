@@ -65,7 +65,7 @@
                     android:id="@+id/image_photoshot_information_person_section1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@mipmap/icon_boy_round"/>
+                    android:src="@mipmap/bird_salute_foreground"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"

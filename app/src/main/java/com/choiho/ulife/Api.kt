@@ -598,7 +598,7 @@ class Api {
             }
         })
 
-        while (true) {
+        while (!isSuccess) {
             if (needToCallAgain) {
                 needToCallAgain = false
                 client.newCall(request).enqueue(object : Callback {
@@ -614,9 +614,7 @@ class Api {
                     }
                 })
             }
-            else if (isSuccess) {
-                break
-            }
+            Thread.sleep(500)
         }
 
         return responseStrng

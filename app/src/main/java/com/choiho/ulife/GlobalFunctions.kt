@@ -18,7 +18,9 @@ class GlobalFunctions {
 
         GlobalVariables.userInfo.readFromApi(id)
         Thread {
-            while (!GlobalVariables.userInfo.isReady) continue
+            while (!GlobalVariables.userInfo.isReady)
+                Thread.sleep(500)
+
             readSubscribeListFromApi(id)
             readNotificationListFromApi(GlobalVariables.userInfo.subscribed)
 
@@ -55,7 +57,9 @@ class GlobalFunctions {
                     }.start()
                 }
 
-                while (countDown > 0) continue
+                while (countDown > 0)
+                    Thread.sleep(500)
+
                 GlobalVariables.subscribeListIsReady = true
             }
         }.start()
@@ -63,7 +67,9 @@ class GlobalFunctions {
 
     fun writeUserInfoToSQL() {
         Thread {
-            while (!GlobalVariables.userInfo.isReady) continue
+            while (!GlobalVariables.userInfo.isReady)
+                Thread.sleep(500)
+
             GlobalVariables.userInfo.writeDB("userInfo")
         }.start()
     }
@@ -129,7 +135,8 @@ class GlobalFunctions {
         }.start()
 
         Thread {
-            while (!GlobalVariables.notificationListIsReady) continue
+            while (!GlobalVariables.notificationListIsReady)
+                Thread.sleep(500)
 
             if (GlobalVariables.notificationList.isNotEmpty()) {
                 if (GlobalVariables.notificationListAdapter!= null) {

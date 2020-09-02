@@ -43,7 +43,6 @@ data class UserInfo(
     }
 
     fun copy(userInfo: UserInfo) {
-        isReady = false
         ID = userInfo.ID
         FMC_ID = userInfo.FMC_ID
         name = userInfo.name

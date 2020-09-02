@@ -64,9 +64,9 @@ class NotificationSendFragment : Fragment() {
         }
 
         Thread {
-            while (true)
-                if (GlobalVariables.myOldNotificationListIsReady)
-                    break
+            while (!GlobalVariables.myOldNotificationListIsReady)
+                Thread.sleep(500)
+
 
             if (activity!= null) {
                 requireActivity().runOnUiThread(Runnable {

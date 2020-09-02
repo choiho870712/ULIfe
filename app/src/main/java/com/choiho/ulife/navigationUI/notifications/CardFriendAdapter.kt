@@ -133,9 +133,8 @@ class CardFriendAdapter(val myDataset: ArrayList<Notification>, val parentView: 
             if (!isClickingCard) {
                 isClickingCard = true
                 Thread {
-                    while (true)
-                        if (isDoneGettingUserInfo)
-                            break
+                    while (!isDoneGettingUserInfo)
+                        Thread.sleep(500)
 
                     GlobalVariables.activity.runOnUiThread {
                         parentView.image_notifications_friend.setImageBitmap(holder.iconBitmap)

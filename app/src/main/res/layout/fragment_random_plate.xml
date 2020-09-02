@@ -81,7 +81,7 @@
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:src="@mipmap/random_food_plate_board_foreground"
+            android:src="@drawable/random_food_plate_board_foreground"
             android:scaleType="centerCrop" />
 
         <ImageView

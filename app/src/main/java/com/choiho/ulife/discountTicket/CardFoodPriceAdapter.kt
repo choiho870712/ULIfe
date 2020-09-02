@@ -38,6 +38,9 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
         holder.lastTime.text = formatter.format(parser.parse(triggerTime.toString()))
 
         holder.cardView.setOnClickListener {
+            GlobalVariables.functions.navigate(
+                R.id.action_foodPriceFragment_to_personShopInfoFragment)
+
             Thread {
                 GlobalVariables.taskCount++
                 var userId = ""
@@ -51,9 +54,6 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
                 GlobalVariables.proposalUserInfo.readFromApi(userId)
                 GlobalVariables.taskCount--
             }.start()
-
-            GlobalVariables.functions.navigate(
-                R.id.action_foodPriceFragment_to_personShopInfoFragment)
         }
     }
 

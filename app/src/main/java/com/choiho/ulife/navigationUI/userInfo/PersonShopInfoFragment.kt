@@ -52,7 +52,8 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
 
         Thread {
             GlobalVariables.taskCount++
-            while (!GlobalVariables.proposalUserInfo.isReady) continue
+            while (!GlobalVariables.proposalUserInfo.isReady)
+                Thread.sleep(500)
 
             if (activity != null) requireActivity().runOnUiThread {
                 setUi()
@@ -198,7 +199,9 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
         refreshScore()
 
         Thread {
-            while (!rankListIsReady)continue
+            while (!rankListIsReady)
+                Thread.sleep(500)
+
 
             if (activity!= null)requireActivity().runOnUiThread {
                 root.text_score_shopFragment.setOnClickListener {

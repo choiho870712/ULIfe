@@ -43,9 +43,8 @@ class HomePage1Fragment : Fragment(), OnMapReadyCallback {
 
             Thread {
                 GlobalVariables.taskCount++
-                while (!GlobalVariables.proposalUserInfo.isReady) continue
-
-                GlobalVariables.taskCount--
+                while (!GlobalVariables.proposalUserInfo.isReady)
+                    Thread.sleep(500)
 
 
                 if (activity != null) requireActivity().runOnUiThread {
@@ -99,6 +98,8 @@ class HomePage1Fragment : Fragment(), OnMapReadyCallback {
                     root.map_home_page1.visibility = View.VISIBLE
                     root.button_complaint_shop_home_page1.visibility = View.VISIBLE
                 }
+
+                GlobalVariables.taskCount--
             }.start()
         }
 

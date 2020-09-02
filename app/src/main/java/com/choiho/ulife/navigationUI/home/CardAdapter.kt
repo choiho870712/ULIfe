@@ -39,7 +39,8 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
                 GlobalVariables.proposal = myDataSet[position]
 
                 Thread {
-                    GlobalVariables.proposalUserInfo.isReady = false
+                    if (GlobalVariables.proposalUserInfo.ID != myDataSet[position].poster_id)
+                        GlobalVariables.proposalUserInfo.isReady = false
                     GlobalVariables.proposalUserInfo.readFromApi(GlobalVariables.proposal!!.poster_id)
                 }.start()
 

@@ -19,8 +19,9 @@
 
         <ImageView
             android:id="@+id/image_person_icon_boy"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/bird_salute_foreground"
             android:scaleType="centerCrop" />

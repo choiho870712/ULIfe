@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/student_permission_card_foreground" />
+                android:src="@drawable/student_permission_card_foreground" />
 
             <TextView
                 android:layout_marginTop="150dp"

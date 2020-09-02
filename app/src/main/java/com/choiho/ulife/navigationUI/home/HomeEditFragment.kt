@@ -132,7 +132,8 @@ class HomeEditFragment : Fragment() {
                     R.id.action_homeEditFragment_to_homePage1Fragment)
 
                 while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
-                    continue
+                    Thread.sleep(500)
+
 
                 for (i in 0 until (GlobalVariables.proposal!!.proposalItemList.size)) {
                     Thread {

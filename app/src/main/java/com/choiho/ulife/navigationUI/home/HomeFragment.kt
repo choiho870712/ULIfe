@@ -46,7 +46,8 @@ class HomeFragment : Fragment() {
             GlobalVariables.homeLayoutManager = GridLayoutManager(activity, 2)
 
             Thread {
-                while (GlobalVariables.homeProposalList.isEmpty()) continue
+                while (GlobalVariables.homeProposalList.isEmpty())
+                    Thread.sleep(500)
 
                 GlobalVariables.homeAdapter = CardAdapter(GlobalVariables.homeProposalList)
                 if (activity != null) requireActivity().runOnUiThread {

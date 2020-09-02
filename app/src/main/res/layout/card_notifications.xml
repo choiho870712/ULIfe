@@ -24,7 +24,7 @@
             app:civ_border_width="2dp"
             app:civ_border_color="#FFFFFF"
             android:layout_margin="10dp"
-            android:src="@mipmap/icon_boy"/>
+            android:src="@mipmap/bird_salute_foreground"/>
 
         <LinearLayout
             android:id="@+id/notification_card_left"

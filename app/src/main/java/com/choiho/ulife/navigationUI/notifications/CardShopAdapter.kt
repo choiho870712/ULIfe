@@ -105,9 +105,8 @@ class CardShopAdapter(val myDataset: ArrayList<Notification>, val parentView: Vi
             if (!isClickingCard) {
                 isClickingCard = true
                 Thread {
-                    while (true)
-                        if (isDoneGettingUserInfo)
-                            break
+                    while (!isDoneGettingUserInfo)
+                        Thread.sleep(500)
 
                     GlobalVariables.activity.runOnUiThread {
                         parentView.image_notifications_shop.setImageBitmap(holder.iconBitmap)

@@ -67,7 +67,7 @@ class PersonInfoFragment : Fragment() {
         Thread {
             if (GlobalVariables.proposalUserInfo.isMyAccount()){
                 while (!GlobalVariables.subscribeListIsReady)
-                    continue
+                    Thread.sleep(500)
 
                 subscribeList = GlobalVariables.subscribeList
                 subscribeListIsReady = true
@@ -84,7 +84,7 @@ class PersonInfoFragment : Fragment() {
                 }
 
                 while (subscribeList.size != subscribeStringList.size)
-                    continue
+                    Thread.sleep(500)
 
                 subscribeListIsReady = true
             }
@@ -93,7 +93,7 @@ class PersonInfoFragment : Fragment() {
 
         Thread {
             while (!subscribeListIsReady)
-                continue
+                Thread.sleep(500)
 
             if (activity != null) {
                 requireActivity().runOnUiThread {
@@ -119,7 +119,7 @@ class PersonInfoFragment : Fragment() {
 
         Thread {
             while (!subscribeListIsReady)
-                continue
+                Thread.sleep(500)
 
             if (activity != null)requireActivity().runOnUiThread {
                 root.text_followerCount_information_person_section1.setOnClickListener {

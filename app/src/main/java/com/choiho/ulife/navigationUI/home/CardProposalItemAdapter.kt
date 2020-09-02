@@ -28,7 +28,7 @@ class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val prop
 
         Thread {
             while (!myDataset[holder.index].isDoneImageLoadingOnlyOne())
-                continue
+                Thread.sleep(500)
 
             GlobalVariables.activity.runOnUiThread {
                 holder.image.setImageBitmap(myDataset[holder.index].imageList[0])
@@ -64,7 +64,7 @@ class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val prop
                 GlobalVariables.taskCount++
                 myDataset[holder.index].convertImageUrlToImageAll()
                 while (!myDataset[holder.index].isDoneImageLoadingAll())
-                    continue
+                    Thread.sleep(500)
 
                 GlobalVariables.taskCount--
 

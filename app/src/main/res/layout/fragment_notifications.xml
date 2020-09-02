@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/notification_main_foreground"
+        android:src="@drawable/notification_main_foreground"
         android:scaleType="fitEnd"
         />
 

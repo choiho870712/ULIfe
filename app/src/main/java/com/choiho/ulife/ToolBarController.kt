@@ -108,7 +108,8 @@ class ToolBarController {
                             GlobalVariables.proposalUserScribeListData = GlobalVariables.subscribeList
 
                             while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())
-                                ;
+                                Thread.sleep(500)
+
 
                             for (i in 0 until(GlobalVariables.proposal!!.proposalItemList.size)) {
                                 Thread {

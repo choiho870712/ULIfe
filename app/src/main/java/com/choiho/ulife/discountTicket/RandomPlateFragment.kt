@@ -38,41 +38,55 @@ class RandomPlateFragment : Fragment() {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_random_plate, container, false)
 
-        val random_price_chance = GlobalVariables.dbHelper.readDB("random_price_chance")
-        if (random_price_chance == "") {
-            GlobalVariables.dbHelper.writeDB(
-                "random_price_chance","3"
-            )
-            GlobalVariables.random_price_chance = 3
-            GlobalVariables.dbHelper.writeDB(
-                "random_price_chance_update_date",
-                LocalDate.now().toString()
+        root.button_goto_discount_page.setOnClickListener {
+            GlobalVariables.functions.navigate(
+                R.id.randomPlateFragment,
+                R.id.action_randomPlateFragment_to_foodPriceFragment
             )
         }
-        else {
-            val lastUpdateDateString = GlobalVariables.dbHelper.readDB(
-                "random_price_chance_update_date")
 
-            val parser = SimpleDateFormat("yyyy-MM-dd")
-            val lastUpdateDate = parser.parse(lastUpdateDateString)
-            val localDate = parser.parse(LocalDate.now().toString())
+        GlobalVariables.activity.nav_view.closeBadge(R.id.randomPlateFragment)
 
-            if (lastUpdateDate.day != localDate.day || lastUpdateDate.month != localDate.month) {
-                GlobalVariables.random_price_chance = 3
-                GlobalVariables.dbHelper.writeDB(
-                    "random_price_chance","3"
-                )
-                GlobalVariables.dbHelper.writeDB(
-                    "random_price_chance_update_date",
-                    LocalDate.now().toString()
-                )
-            }
-            else GlobalVariables.random_price_chance = random_price_chance.toInt()
-        }
+//        GlobalVariables.activity.nav_view.setBadgeValue(
+//            R.id.randomPlateFragment, GlobalVariables.random_price_chance)
+//
+//        val random_price_chance = GlobalVariables.dbHelper.readDB("random_price_chance")
+//        if (random_price_chance == "") {
+//            GlobalVariables.dbHelper.writeDB(
+//                "random_price_chance","3"
+//            )
+//            GlobalVariables.random_price_chance = 3
+//            GlobalVariables.dbHelper.writeDB(
+//                "random_price_chance_update_date",
+//                LocalDate.now().toString()
+//            )
+//            GlobalVariables.activity.nav_view.setBadgeValue(
+//                R.id.randomPlateFragment, GlobalVariables.random_price_chance)
+//        }
+//        else {
+//            val lastUpdateDateString = GlobalVariables.dbHelper.readDB(
+//                "random_price_chance_update_date")
+//
+//            val parser = SimpleDateFormat("yyyy-MM-dd")
+//            val lastUpdateDate = parser.parse(lastUpdateDateString)
+//            val localDate = parser.parse(LocalDate.now().toString())
+//
+//            if (lastUpdateDate.day != localDate.day || lastUpdateDate.month != localDate.month) {
+//                GlobalVariables.random_price_chance = 3
+//                GlobalVariables.dbHelper.writeDB(
+//                    "random_price_chance","3"
+//                )
+//                GlobalVariables.dbHelper.writeDB(
+//                    "random_price_chance_update_date",
+//                    LocalDate.now().toString()
+//                )
+//            }
+//            else GlobalVariables.random_price_chance = random_price_chance.toInt()
+//        }
 
         root.text_random_price_count_left.text = GlobalVariables.random_price_chance.toString()
 
-        am = RotateAnimation(0f, 360f*10, Animation.RELATIVE_TO_SELF, 0.495f, Animation.RELATIVE_TO_SELF, 0.447f)
+        am = RotateAnimation(0f, 360f*10, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         am.duration = 3000
         am.repeatCount = 0
 
@@ -165,13 +179,9 @@ class RandomPlateFragment : Fragment() {
                 // setup dialog builder
                 val builder = AlertDialog.Builder(requireActivity())
                 builder.setTitle("恭喜您抽中！")
-                builder.setMessage(finalPrice!!.name + "\n" + finalPrice!!.content)
+                builder.setMessage("【" + finalPrice!!.name + "】\n" + finalPrice!!.content)
                 builder.setPositiveButton("謝謝", { dialogInterface, i ->
-                    requireActivity().runOnUiThread{
-                        requireActivity().nav_host_fragment.findNavController().navigate(
-                            R.id.action_randomPlateFragment_to_foodPriceFragment
-                        )
-                    }
+
                 })
 
                 // create dialog and show it

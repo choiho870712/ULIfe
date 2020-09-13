@@ -22,25 +22,28 @@ class HomeMenuFragment : Fragment() {
         root.button_main_menu_choose_food.setOnClickListener {
             GlobalVariables.homeMenuChoose = "food"
             GlobalVariables.homePageView = null
-            if (activity != null)
-                requireActivity().nav_host_fragment.findNavController().navigate(
-                    R.id.action_homeMenuFragment_to_navigation_home)
+            GlobalVariables.functions.navigate(
+                R.id.homeMenuFragment,
+                R.id.action_homeMenuFragment_to_navigation_home
+            )
         }
 
         root.button_main_menu_choose_game.setOnClickListener {
             GlobalVariables.homeMenuChoose = "game"
             GlobalVariables.homePageView = null
-            if (activity != null)
-                requireActivity().nav_host_fragment.findNavController().navigate(
-                    R.id.action_homeMenuFragment_to_navigation_home)
+            GlobalVariables.functions.navigate(
+                R.id.homeMenuFragment,
+                R.id.action_homeMenuFragment_to_navigation_home
+            )
         }
 
         root.button_main_menu_choose_event.setOnClickListener {
             GlobalVariables.homeMenuChoose = "event"
             GlobalVariables.homePageView = null
-            if (activity != null)
-                requireActivity().nav_host_fragment.findNavController().navigate(
-                    R.id.action_homeMenuFragment_to_navigation_home)
+            GlobalVariables.functions.navigate(
+                R.id.homeMenuFragment,
+                R.id.action_homeMenuFragment_to_navigation_home
+            )
         }
 
         return root

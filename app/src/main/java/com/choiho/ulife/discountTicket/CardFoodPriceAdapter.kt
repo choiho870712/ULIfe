@@ -7,12 +7,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
 import kotlinx.android.synthetic.main.card_food_price.view.*
+import kotlinx.android.synthetic.main.fragment_food_price.view.*
 import org.threeten.bp.Instant
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.ZoneId
 import java.text.SimpleDateFormat
 
-class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
+class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>, val parentView:View)
     : RecyclerView.Adapter<CardFoodPriceAdapter.CardHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
@@ -25,7 +26,8 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
     override fun getItemCount(): Int = myDataset.size
 
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
-        holder.name.text = myDataset[position].name
+        val title = "【" + myDataset[position].name + "】"
+        holder.name.text = title
         holder.content.text = myDataset[position].content
 
         val triggerTime = LocalDateTime.ofInstant(
@@ -38,14 +40,14 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>)
         holder.lastTime.text = formatter.format(parser.parse(triggerTime.toString()))
 
         holder.cardView.setOnClickListener {
-            GlobalVariables.functions.navigate(
-                R.id.action_foodPriceFragment_to_personShopInfoFragment)
-
-            Thread {
-                if (GlobalVariables.proposalUserInfo.ID != myDataset[position].id)
-                    GlobalVariables.proposalUserInfo.isReady = false
-                GlobalVariables.proposalUserInfo.readFromApi(myDataset[position].id)
-            }.start()
+            parentView.text_food_price_page2_name.text = holder.name.text
+            parentView.text_food_price_page2_content.text = holder.content.text
+            parentView.text_food_price_page2_time.text = holder.lastTime.text
+            parentView.layout_food_price_page2.visibility = View.VISIBLE
+            if (GlobalVariables.proposalUserInfo.ID != myDataset[position].id) {
+                GlobalVariables.proposalUserInfo.ID = myDataset[position].id
+                GlobalVariables.proposalUserInfo.isReady = false
+            }
         }
     }
 

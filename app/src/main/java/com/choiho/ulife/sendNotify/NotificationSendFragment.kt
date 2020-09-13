@@ -119,24 +119,27 @@ class NotificationSendFragment : Fragment() {
             )
         }.start()
 
-        GlobalVariables.taskCount++
-        while(true) {
-            if (count == GlobalVariables.subscribeList.size) {
-                isRunningSendNotification = false
-                GlobalVariables.functions.addMyOldNotification(message)
-                if (activity != null) {
-                    requireActivity().runOnUiThread(Runnable {
-                        myAdapter.notifyDataSetChanged()
-                        myLinearLayoutManager.scrollToPosition(
-                            myLinearLayoutManager.itemCount-1
-                        )
-                        Toast.makeText(activity, "送出訊息成功", Toast.LENGTH_SHORT).show()
-                    })
-                }
+        Thread {
+            GlobalVariables.taskCount++
+            while(true) {
+                if (count == GlobalVariables.subscribeList.size) {
+                    isRunningSendNotification = false
+                    GlobalVariables.functions.addMyOldNotification(message)
+                    if (activity != null) {
+                        requireActivity().runOnUiThread(Runnable {
+                            myAdapter.notifyDataSetChanged()
+                            myLinearLayoutManager.scrollToPosition(
+                                myLinearLayoutManager.itemCount-1
+                            )
+                            Toast.makeText(activity, "送出訊息成功", Toast.LENGTH_SHORT).show()
+                        })
+                    }
 
-                GlobalVariables.taskCount--
-                break
+                    GlobalVariables.taskCount--
+                    break
+                }
+                else Thread.sleep(500)
             }
-        }
+        }.start()
     }
 }

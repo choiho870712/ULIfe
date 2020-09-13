@@ -13,10 +13,13 @@ class CardFormSelectAnswerAdapter(val myDataset:ArrayList<String>, val type: Str
     : RecyclerView.Adapter<CardFormSelectAnswerAdapter.CardHolder>() {
 
     val checkBoxList:ArrayList<CheckBox> = arrayListOf()
+    val answerList:ArrayList<Boolean> = arrayListOf()
 
     fun init() {
-        for (i in 0 until(itemCount))
+        for (i in 0 until(itemCount)) {
             checkBoxList.add(CheckBox(GlobalVariables.activity))
+            answerList.add(false)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
@@ -30,11 +33,15 @@ class CardFormSelectAnswerAdapter(val myDataset:ArrayList<String>, val type: Str
         checkBoxList[position] = holder.selectAnswer
         checkBoxList[position].text = myDataset[position]
 
+        fillAnswer()
         checkBoxList[position].setOnClickListener {
             if (type == "Single" && checkBoxList[position].isChecked)
                 for (i in 0 until(itemCount))
                     if (i != position)
                         checkBoxList[i].isChecked = false
+
+            for (i in 0 until(itemCount))
+                answerList[i] = checkBoxList[i].isChecked
         }
     }
 
@@ -42,4 +49,8 @@ class CardFormSelectAnswerAdapter(val myDataset:ArrayList<String>, val type: Str
         val selectAnswer = card.checkbox_form_select_item
     }
 
+    fun fillAnswer() {
+        for (i in 0 until(itemCount))
+            checkBoxList[i].isChecked = answerList[i]
+    }
 }

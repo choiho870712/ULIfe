@@ -61,15 +61,12 @@ class CardProposalItemAdapter(val myDataset: MutableList<ProposalItem>, val prop
             proposalView.image_proposal.visibility = View.VISIBLE
 
             Thread {
-                GlobalVariables.taskCount++
-                myDataset[holder.index].convertImageUrlToImageAll()
                 while (!myDataset[holder.index].isDoneImageLoadingAll())
-                    Thread.sleep(500)
-
-                GlobalVariables.taskCount--
+                    Thread.sleep(100)
 
                 try {
                     GlobalVariables.activity.runOnUiThread {
+                        proposalView.button_complaint_shop_home_page1.visibility = View.VISIBLE
                         proposalView.image_proposal.setImageBitmap(
                             myDataset[holder.index].imageList[myDataset[holder.index].imageList.size-1])
                     }

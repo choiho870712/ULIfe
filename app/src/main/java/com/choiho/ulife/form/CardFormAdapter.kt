@@ -25,6 +25,15 @@ class CardFormAdapter(val myDataset:ArrayList<FormItem>)
                     "none"
                 )
             )
+
+            if (myDataset[i].type == "Single" || myDataset[i].type == "Multiple") {
+                selectAnswerAdapterList[i] =
+                    CardFormSelectAnswerAdapter(
+                        myDataset[i].answer, myDataset[i].type
+                    )
+
+                selectAnswerAdapterList[i].init()
+            }
         }
     }
 
@@ -38,18 +47,11 @@ class CardFormAdapter(val myDataset:ArrayList<FormItem>)
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
         val questionString = (position+1).toString() + ". " + myDataset[position].question
         holder.question.text = questionString
-        holder.answer.setText(answerList[position])
 
         if (myDataset[position].type == "Single" || myDataset[position].type == "Multiple") {
             holder.cardView.recycler_answer_select_form.visibility = View.VISIBLE
             holder.answer.visibility = View.GONE
 
-            selectAnswerAdapterList[position] =
-                CardFormSelectAnswerAdapter(
-                    myDataset[position].answer, myDataset[position].type
-                )
-
-            selectAnswerAdapterList[position].init()
             holder.cardView.recycler_answer_select_form.apply {
                 setHasFixedSize(true)
                 layoutManager = LinearLayoutManager(GlobalVariables.activity)
@@ -60,8 +62,10 @@ class CardFormAdapter(val myDataset:ArrayList<FormItem>)
             holder.cardView.recycler_answer_select_form.visibility = View.GONE
             holder.answer.visibility = View.VISIBLE
 
+            holder.answer.setText(answerList[position])
             holder.answer.addTextChangedListener {
-                answerList[position] = holder.answer.text.toString()
+                if (holder.answer.text.isNotEmpty())
+                    answerList[position] = holder.answer.text.toString()
             }
         }
 

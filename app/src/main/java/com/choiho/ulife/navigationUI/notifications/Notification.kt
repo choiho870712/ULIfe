@@ -4,22 +4,25 @@ import com.choiho.ulife.GlobalVariables
 
 data class Notification(
     var pusher_id: String = "",
+    var name: String = "",
+    var iconString: String = "",
     var date: String = "",
     var content: String = "",
-    var index: Int = 0
+    var view: Int = 0,
+    var create_time: Int
 ) {
     fun clear() {
         pusher_id = ""
         date = ""
         content = ""
-        index = 0
+        view = 0
     }
 
     fun writeDB(tag:String) {
         GlobalVariables.dbHelper.writeDB("{$tag}_pusher_id", pusher_id)
         GlobalVariables.dbHelper.writeDB("{$tag}_date", date)
         GlobalVariables.dbHelper.writeDB("{$tag}_content", content)
-        GlobalVariables.dbHelper.writeDB("{$tag}_index", index.toString())
+        GlobalVariables.dbHelper.writeDB("{$tag}_index", view.toString())
 
     }
 
@@ -28,7 +31,7 @@ data class Notification(
         if (pusher_id != "") {
             date = GlobalVariables.dbHelper.readDB("{$tag}_date")
             content = GlobalVariables.dbHelper.readDB("{$tag}_content")
-            index = GlobalVariables.dbHelper.readDB("{$tag}_index").toInt()
+            view = GlobalVariables.dbHelper.readDB("{$tag}_index").toInt()
             return true
         }
         return false
@@ -46,7 +49,7 @@ data class Notification(
         GlobalVariables.dbHelper.updateDB("{$tag}_pusher_id", pusher_id)
         GlobalVariables.dbHelper.updateDB("{$tag}_date", date)
         GlobalVariables.dbHelper.updateDB("{$tag}_content", content)
-        GlobalVariables.dbHelper.updateDB("{$tag}_index", index.toString())
+        GlobalVariables.dbHelper.updateDB("{$tag}_index", view.toString())
     }
 
     fun isEmpty():Boolean {

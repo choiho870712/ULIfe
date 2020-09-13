@@ -1,0 +1,4 @@
+# Referenced at /home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:38
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:38
+-keep class com.choiho.ulife.GlobalVariables { <init>(); }

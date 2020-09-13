@@ -36,14 +36,23 @@ class LoginFragment : Fragment() {
                 root.text_login_status.visibility = View.GONE
             }
 
-            if (!GlobalVariables.api.getServerStatusCode()) {
+            val hasUserInfo = GlobalVariables.functions.readUserInfoFromSQL()
+            var statusCode = ""
+            if (hasUserInfo)
+                statusCode = GlobalVariables.api.getServerStatusCode(GlobalVariables.userInfo.ID)
+            else
+                statusCode = GlobalVariables.api.getServerStatusCode("Not_Login")
+
+            if (statusCode == "No Error" || statusCode == "Please Update") {
+                if (GlobalVariables.functions.loginFromSQL()) goToMainPage()
+                else createPage()
+            }
+            else {
                 showStatusMaskPage()
                 if (activity!= null) requireActivity().runOnUiThread {
                     root.text_login_status.text = "系統維修中"
                 }
             }
-            else if (GlobalVariables.functions.loginFromSQL()) goToMainPage()
-            else createPage()
             GlobalVariables.taskCount--
         }.start()
 
@@ -83,7 +92,9 @@ class LoginFragment : Fragment() {
         if (activity!= null) requireActivity().runOnUiThread {
             root.button_create_new_account.setOnClickListener {
                 GlobalVariables.functions.navigate(
-                    R.id.action_loginFragment_to_createAccountFragment)
+                    R.id.loginFragment,
+                    R.id.action_loginFragment_to_createAccountFragment
+                )
             }
         }
     }
@@ -117,9 +128,8 @@ class LoginFragment : Fragment() {
 
     private fun goToMainPage() {
         if (activity != null) requireActivity().runOnUiThread {
-            GlobalVariables.activity.nav_host_fragment.
-                findNavController().setGraph(R.navigation.login_navigation)
             GlobalVariables.functions.navigate(
+                R.id.loginFragment,
                 R.id.action_loginFragment_to_mobile_navigation
             )
         }

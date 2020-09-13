@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/student_permission_card_foreground" />
+                android:src="@mipmap/student_permission_card_foreground" />
 
             <TextView
                 android:layout_marginTop="150dp"
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
-                android:text="CYCU"
+                android:text="中原大學CYCU"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="end" />
 

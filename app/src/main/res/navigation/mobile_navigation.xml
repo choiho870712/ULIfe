@@ -38,6 +38,9 @@
             android:id="@+id/action_navigation_notifications_to_notificationFriendFragment"
             app:destination="@id/notificationFriendFragment"
             app:popUpTo="@+id/notificationFriendFragment" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_notificationOfficialFragment"
+            app:destination="@id/notificationOfficialFragment" />
     </fragment>
 
     <fragment
@@ -166,11 +169,11 @@
     <fragment
         android:id="@+id/chatFriendListFragment"
         android:name="com.choiho.ulife.userList.UserListFragment"
-        android:label=""
-        tools:layout="@layout/fragment_chat_friend_list" >
+        android:label="訂閱清單"
+        tools:layout="@layout/fragment_chat_friend_list">
         <action
             android:id="@+id/action_chatFriendListFragment_to_personShopInfoFragment"
-            app:destination="@id/personShopInfoFragment"/>
+            app:destination="@id/personShopInfoFragment" />
         <action
             android:id="@+id/action_chatFriendListFragment_to_personInfoFragment"
             app:destination="@id/personInfoFragment" />
@@ -221,8 +224,8 @@
     <fragment
         android:id="@+id/randomPlateFragment"
         android:name="com.choiho.ulife.discountTicket.RandomPlateFragment"
-        android:label="轉盤"
-        tools:layout="@layout/fragment_random_plate" >
+        android:label="美食轉盤"
+        tools:layout="@layout/fragment_random_plate">
         <action
             android:id="@+id/action_randomPlateFragment_to_foodPriceFragment"
             app:destination="@id/foodPriceFragment" />
@@ -230,8 +233,8 @@
     <fragment
         android:id="@+id/foodPriceFragment"
         android:name="com.choiho.ulife.discountTicket.FoodPriceFragment"
-        android:label="折價券"
-        tools:layout="@layout/fragment_food_price" >
+        android:label="優惠券"
+        tools:layout="@layout/fragment_food_price">
         <action
             android:id="@+id/action_foodPriceFragment_to_personShopInfoFragment"
             app:destination="@id/personShopInfoFragment" />
@@ -264,6 +267,15 @@
     <fragment
         android:id="@+id/reportFragment"
         android:name="com.choiho.ulife.complaint.reportFragment"
-        android:label="投訴店家"
+        android:label="檢舉店家"
         tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/notificationOfficialFragment"
+        android:name="com.choiho.ulife.navigationUI.notifications.NotificationOfficialFragment"
+        android:label="官方通知"
+        tools:layout="@layout/fragment_notifications_official">
+        <action
+            android:id="@+id/action_notificationOfficialFragment_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment" />
+    </fragment>
 </navigation>

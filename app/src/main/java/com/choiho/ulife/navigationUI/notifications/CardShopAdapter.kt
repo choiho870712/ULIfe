@@ -33,9 +33,10 @@ class CardShopAdapter(val myDataset: ArrayList<Notification>, val parentView: Vi
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
         holder.message?.text = myDataset[position].content
         holder.date.text = myDataset[position].date
-        holder.viewCount.text = "觀看次數 " + myDataset[position].index.toString()
-        holder.viewCountNumber = myDataset[position].index
+        holder.viewCount.text = "觀看次數 " + myDataset[position].view.toString()
+        holder.viewCountNumber = myDataset[position].view
         holder.pusher_id = myDataset[position].pusher_id
+        holder.create_time = myDataset[position].create_time
 
         holder.cardView.notification_card_add_friend.visibility = View.VISIBLE
 
@@ -65,6 +66,7 @@ class CardShopAdapter(val myDataset: ArrayList<Notification>, val parentView: Vi
         var iconBitmap:Bitmap? = null
         var viewCountNumber = 0
         var pusher_id = ""
+        var create_time = 0
     }
 
     private fun searchNotificationUserInfo(id:String): UserInfo {
@@ -93,9 +95,10 @@ class CardShopAdapter(val myDataset: ArrayList<Notification>, val parentView: Vi
                 isClickingCard = true
 
                 GlobalVariables.proposalUserInfo.copy(userinfo)
-
-                GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
-                    R.id.action_notificationsShopFragment_to_personShopInfoFragment)
+                GlobalVariables.functions.navigate(
+                    R.id.notificationsShopFragment,
+                    R.id.action_notificationsShopFragment_to_personShopInfoFragment
+                )
 
                 isClickingCard = false
             }
@@ -105,33 +108,29 @@ class CardShopAdapter(val myDataset: ArrayList<Notification>, val parentView: Vi
             if (!isClickingCard) {
                 isClickingCard = true
                 Thread {
+                    GlobalVariables.api.clickInNotification(
+                        GlobalVariables.userInfo.ID,
+                        holder.create_time,
+                        holder.viewCountNumber,
+                        GlobalVariables.homeAreaChoose
+                    )
+                }.start()
+
+                Thread {
                     while (!isDoneGettingUserInfo)
                         Thread.sleep(500)
 
+                    GlobalVariables.proposalUserInfo.copy(userinfo)
                     GlobalVariables.activity.runOnUiThread {
                         parentView.image_notifications_shop.setImageBitmap(holder.iconBitmap)
                         parentView.text_message_notifications_shop.text = holder.message.text
                         parentView.text_author_notifications_shop.text = holder.author.text
                         parentView.text_date_notifications_shop.text = holder.date.text
-                        parentView.text_viewCount_notifications_shop.text = holder.viewCount.text
                         parentView.scroll_notification_shop.visibility = View.VISIBLE
                         parentView.recycler_notification_shop.visibility = View.GONE
                     }
 
-                    val id = holder.pusher_id
-                    val date = holder.date.text.toString()
-                    val content = holder.message.text.toString()
-                    val view = holder.viewCountNumber
-
                     isClickingCard = false
-
-                    var count = 0
-                    for (i in 0 until(position)) {
-                        if (GlobalVariables.notificationList[i].pusher_id == id)
-                            count++
-                    }
-
-                    GlobalVariables.api.clickInNotification(id, date, content, view, count)
                 }.start()
             }
         }

@@ -4,28 +4,41 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.util.Log
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.choiho.ulife.navigationUI.notifications.Notification
 import kotlinx.android.synthetic.main.activity_main.*
+import org.threeten.bp.LocalDate
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class GlobalFunctions {
 
+    private var lockLogin = false
+
     fun loginFromApi(id: String) {
-        GlobalVariables.userInfo.isReady = false
-        GlobalVariables.notificationListIsReady = false
-        GlobalVariables.subscribeListIsReady = false
+        if (!lockLogin) {
+            lockLogin = true
 
-        GlobalVariables.userInfo.readFromApi(id)
-        Thread {
-            while (!GlobalVariables.userInfo.isReady)
-                Thread.sleep(500)
+            GlobalVariables.userInfo.isReady = false
+            GlobalVariables.notificationListIsReady = false
+            GlobalVariables.subscribeListIsReady = false
 
-            readSubscribeListFromApi(id)
-            readNotificationListFromApi(GlobalVariables.userInfo.subscribed)
+            GlobalVariables.userInfo.readFromApi(id)
+            Thread {
+                while (!GlobalVariables.userInfo.isReady)
+                    Thread.sleep(500)
 
-            writeUserInfoToSQL()
-        }.start()
+                readSubscribeListFromApi(id)
+                readNotificationListFromApi(GlobalVariables.userInfo.subscribed)
+
+                writeUserInfoToSQL()
+
+                lockLogin = false
+            }.start()
+        }
     }
 
     private fun readNotificationListFromApi(subscribeList: MutableList<String>) {
@@ -33,9 +46,37 @@ class GlobalFunctions {
         Thread {
             GlobalVariables.notificationList.clear()
             GlobalVariables.notificationList.addAll(
-                GlobalVariables.api.getNotificationList(subscribeList))
+                GlobalVariables.api.getNotificationList(subscribeList, GlobalVariables.homeAreaChoose))
+            sortNotificationList()
             GlobalVariables.notificationListIsReady = true
         }.start()
+
+        GlobalVariables.officialNotificationListIsReady = false
+        Thread {
+            GlobalVariables.officialNotificationList.clear()
+            GlobalVariables.officialNotificationList.addAll(
+                GlobalVariables.api.getNotificationList(arrayListOf("ULifeOffical"), "Offical"))
+            GlobalVariables.officialNotificationListIsReady = true
+        }.start()
+    }
+
+    private fun sortNotificationList() {
+        val parser = SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
+        var date1: Date?
+        var date2: Date?
+        var temp: Notification?
+        val list = GlobalVariables.notificationList
+
+        for (i in 0 until(list.size-1))
+            for (j in 0 until(list.size-1-i)) {
+                date1 = parser.parse(list[j].date)
+                date2 = parser.parse(list[j+1].date)
+                if (date1 > date2) {
+                    temp = list[j]
+                    list[j] = list[j+1]
+                    list[j+1] = temp
+                }
+            }
     }
 
     private fun readSubscribeListFromApi(id:String) {
@@ -48,17 +89,20 @@ class GlobalFunctions {
             }
             else {
                 GlobalVariables.subscribeList.clear()
-                var countDown = GlobalVariables.userInfo.subscribed.size
                 for (i in 0 until(GlobalVariables.userInfo.subscribed.size)) {
+                    val sub = GlobalVariables.userInfo.subscribed[i]
                     Thread {
-                        GlobalVariables.subscribeList.add(
-                            GlobalVariables.api.getUserInfo(GlobalVariables.userInfo.subscribed[i]))
-                        countDown--
+                        val myUserInfo = GlobalVariables.api.getUserInfo(sub)
+                        while (!GlobalVariables.subscribeList.contains(myUserInfo)) {
+                            GlobalVariables.subscribeList.add(myUserInfo)
+                            Thread.sleep(500)
+                        }
                     }.start()
                 }
 
-                while (countDown > 0)
+                while (GlobalVariables.userInfo.subscribed.size > GlobalVariables.subscribeList.size) {
                     Thread.sleep(500)
+                }
 
                 GlobalVariables.subscribeListIsReady = true
             }
@@ -77,13 +121,12 @@ class GlobalFunctions {
     fun loginFromSQL():Boolean {
         if (!readUserInfoFromSQL())return false
 
-        // TODO cost down
         loginFromApi(GlobalVariables.userInfo.ID)
 
         return true
     }
 
-    private fun readUserInfoFromSQL():Boolean {
+    fun readUserInfoFromSQL():Boolean {
         GlobalVariables.userInfo.isReady = false
         GlobalVariables.userInfo.clear()
         GlobalVariables.studentPermissionID =
@@ -117,10 +160,53 @@ class GlobalFunctions {
         GlobalVariables.myOldNotificationList.add(message)
     }
 
+    fun deleteFromSubscribeList(subscribeID: String) {
+        GlobalVariables.subscribeListIsReady = false
+        Thread {
+            GlobalVariables.userInfo.subscribed.remove(subscribeID)
+
+            for (i in 0 until(GlobalVariables.subscribeList.size)) {
+                if (GlobalVariables.subscribeList[i].ID == subscribeID) {
+                    GlobalVariables.subscribeList.removeAt(i)
+                    break
+                }
+            }
+
+            GlobalVariables.subscribeListIsReady = true
+        }.start()
+    }
+
+    fun updateToSubscribeList(newSubscribeID: String) {
+        GlobalVariables.subscribeListIsReady = false
+        Thread {
+            GlobalVariables.userInfo.subscribed.add(newSubscribeID)
+            GlobalVariables.subscribeList.add(
+                GlobalVariables.api.getUserInfo(newSubscribeID))
+
+            GlobalVariables.subscribeListIsReady = true
+        }.start()
+    }
+
+    fun deleteFromNotificationList(subscribeID: String) {
+        GlobalVariables.notificationListIsReady = false
+        Thread {
+            val size = GlobalVariables.notificationList.size
+            for(i in 0 until(size)) {
+                val index = size-i-1
+                if (GlobalVariables.notificationList[index].pusher_id == subscribeID)
+                    GlobalVariables.notificationList.removeAt(index)
+            }
+            GlobalVariables.notificationListIsReady = true
+        }.start()
+    }
+
     fun updateNotificationList() {
         GlobalVariables.notificationListIsReady = false
         Thread {
-            val shopNotificationList = GlobalVariables.api.getNotificationList(GlobalVariables.userInfo.subscribed)
+            val shopNotificationList = GlobalVariables.api.getNotificationList(
+                GlobalVariables.userInfo.subscribed,
+                GlobalVariables.homeAreaChoose
+            )
 
             val newNotification = ArrayList<Notification>()
             for(i in 0 until(shopNotificationList.size))
@@ -129,9 +215,8 @@ class GlobalFunctions {
 
             GlobalVariables.activity.runOnUiThread {
                 GlobalVariables.notificationList.addAll(newNotification)
+                GlobalVariables.notificationListIsReady = true
             }
-
-            GlobalVariables.notificationListIsReady = true
         }.start()
 
         Thread {
@@ -161,29 +246,27 @@ class GlobalFunctions {
     }
 
     fun resetProposalList() {
+        GlobalVariables.homeProposalListIsReady = false
         if (GlobalVariables.lockRefreshHomeProposalList) return
-        Thread {
-            GlobalVariables.homeProposalList.clear()
-            if (isNetWorkConnecting()) {
-                GlobalVariables.lockRefreshHomeProposalList = true
-                GlobalVariables.homeProposalNumber = 1
-                GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(GlobalVariables.homeProposalNumber, GlobalVariables.homeAreaChoose)
-                GlobalVariables.homeCurrentPosition = 0
-                GlobalVariables.homeProposalNumber += 10
-                GlobalVariables.lockRefreshHomeProposalList = false
-            }
-        }.start()
-    }
-
-    fun navigate(actionId: Int) {
-        GlobalVariables.activity.runOnUiThread {
-            GlobalVariables.activity.nav_host_fragment.findNavController().navigate(actionId)
+        GlobalVariables.homeProposalList.clear()
+        if (isNetWorkConnecting()) {
+            GlobalVariables.lockRefreshHomeProposalList = true
+            GlobalVariables.homeProposalNumber = 1
+            GlobalVariables.homeClassChoose = ""
+            GlobalVariables.isHomeProposalEnd = false
+            GlobalVariables.homeProposalList = GlobalVariables.api.getFoodAll(GlobalVariables.homeProposalNumber, GlobalVariables.homeAreaChoose)
+            GlobalVariables.homeCurrentPosition = 0
+            GlobalVariables.homeProposalNumber += 10
+            GlobalVariables.homeProposalListIsReady = true
+            GlobalVariables.lockRefreshHomeProposalList = false
         }
     }
 
-    fun popUpTo(desId: Int) {
+    fun navigate(currentLocationId: Int, actionId: Int) {
         GlobalVariables.activity.runOnUiThread {
-            GlobalVariables.activity.nav_host_fragment.findNavController().popBackStack(desId, false)
+            if (GlobalVariables.activity.nav_host_fragment.findNavController().
+                currentDestination?.id == currentLocationId)
+                GlobalVariables.activity.nav_host_fragment.findNavController().navigate(actionId)
         }
     }
 
@@ -192,11 +275,6 @@ class GlobalFunctions {
             Toast.makeText(GlobalVariables.activity, message, Toast.LENGTH_SHORT).show()
         }
     }
-
-//    fun isNetWorkConnecting():Boolean {
-//        val connectivityManager = GlobalVariables.activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
-//        return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting() ?: false
-//    }
 
     fun isNetWorkConnecting(): Boolean {
         var result = false
@@ -229,4 +307,42 @@ class GlobalFunctions {
         return result
     }
 
+    fun refreshRandomChance() {
+        val random_price_chance = GlobalVariables.dbHelper.readDB("random_price_chance")
+
+        if (random_price_chance == "") {
+            GlobalVariables.dbHelper.writeDB(
+                "random_price_chance","3"
+            )
+            GlobalVariables.random_price_chance = 3
+            GlobalVariables.dbHelper.writeDB(
+                "random_price_chance_update_date",
+                LocalDate.now().toString()
+            )
+            GlobalVariables.activity.nav_view.setBadgeText(
+                R.id.randomPlateFragment, "NEW")
+        }
+        else {
+            val lastUpdateDateString = GlobalVariables.dbHelper.readDB(
+                "random_price_chance_update_date")
+
+            val parser = SimpleDateFormat("yyyy-MM-dd")
+            val lastUpdateDate = parser.parse(lastUpdateDateString)
+            val localDate = parser.parse(LocalDate.now().toString())
+
+            if (lastUpdateDate.day != localDate.day || lastUpdateDate.month != localDate.month) {
+                GlobalVariables.random_price_chance = 3
+                GlobalVariables.dbHelper.writeDB(
+                    "random_price_chance","3"
+                )
+                GlobalVariables.dbHelper.writeDB(
+                    "random_price_chance_update_date",
+                    LocalDate.now().toString()
+                )
+                GlobalVariables.activity.nav_view.setBadgeText(
+                    R.id.randomPlateFragment, "NEW")
+            }
+            else GlobalVariables.random_price_chance = random_price_chance.toInt()
+        }
+    }
 }

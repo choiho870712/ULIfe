@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
@@ -44,7 +44,6 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@mipmap/shop_profile_score_foreground"
-                        android:text="0"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
@@ -81,7 +80,6 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@mipmap/shop_profile_follower_foreground"
-                        android:text="0"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:textSize="20sp" />

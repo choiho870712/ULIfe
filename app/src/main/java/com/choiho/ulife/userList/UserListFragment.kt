@@ -24,12 +24,20 @@ class UserListFragment : Fragment() {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_chat_friend_list, container, false)
 
-        root.recycler_friend_list_chat.apply {
-            setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(activity)
-            adapter = CardUserListAdapter(
-                GlobalVariables.otherUserInfoList
-            )
+        if (GlobalVariables.otherUserInfoList.isEmpty()) {
+            root.text_no_subscribe_info.visibility = View.VISIBLE
+        }
+        else {
+            root.text_no_subscribe_info.visibility = View.GONE
+
+            root.recycler_friend_list_chat.apply {
+                setHasFixedSize(true)
+                layoutManager = LinearLayoutManager(activity)
+                adapter = CardUserListAdapter(
+                    GlobalVariables.otherUserInfoList,
+                    root
+                )
+            }
         }
 
         return root

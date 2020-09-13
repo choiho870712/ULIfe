@@ -40,14 +40,23 @@ class NotificationsFragment : Fragment() {
 
         if (!GlobalVariables.userInfo.isShop()) {
             root.card_notification_shop_main.setOnClickListener {
-                GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
-                    R.id.action_navigation_notifications_to_notificationsShopFragment)
+                GlobalVariables.functions.navigate(
+                    R.id.navigation_notifications,
+                    R.id.action_navigation_notifications_to_notificationsShopFragment
+                )
             }
 
 //            root.card_notification_friend_main.setOnClickListener {
 //                GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
 //                    R.id.action_navigation_notifications_to_notificationFriendFragment)
 //            }
+        }
+
+        root.card_notification_offical_main.setOnClickListener {
+            GlobalVariables.functions.navigate(
+                R.id.navigation_notifications,
+                R.id.action_navigation_notifications_to_notificationOfficialFragment
+            )
         }
     }
 

@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".discountTicket.FoodPriceFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
@@ -17,5 +18,154 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_food_price_page2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"
+            android:alpha="0.7"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/colorWhiteSmoke"
+            android:alpha="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_shop_info_food_price_page2"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true">
+
+                        <Button
+                            android:id="@+id/button_shop_info_food_price_page2"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text="店家資訊"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimaryDark"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/image_food_price_page2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/discount_ticket_foreground"
+                        android:layout_centerVertical="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_food_price_page2_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@+id/image_food_price_page2"
+                        android:layout_toStartOf="@+id/card_shop_info_food_price_page2">
+
+                        <TextView
+                            android:id="@+id/text_food_price_page2_name"
+                            android:layout_marginTop="5dp"
+                            android:text="name................................................................................"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_toEndOf="@+id/image_food_price_page2"
+                        android:layout_below="@+id/layout_food_price_page2_top"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="到期時間"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/text_food_price_page2_time"
+                            android:text="time"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_food_price_page2_content"
+                    android:text="content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@mipmap/show_ticket_foreground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出示優惠券即可使用"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:layout_margin="2dp"
+                    android:gravity="end"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_no_food_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="您目前沒有任何優惠券喔～\n可以到美食轉盤抽出優惠券！"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
 
 </FrameLayout>

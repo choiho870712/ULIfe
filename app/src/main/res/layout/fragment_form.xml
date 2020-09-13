@@ -9,25 +9,42 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
-    <RelativeLayout
-        android:id="@+id/layout_form_done"
+    <TextView
+        android:id="@+id/text_no_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="您目前沒有需要填寫的問卷喔～"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layout_form_done"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@mipmap/form_icon_foreground"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="已完成防疫問卷調查"
-            android:gravity="center"
-            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
             android:textColor="@color/colorPrimaryDark"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/layout_form_not_done"
@@ -38,9 +55,12 @@
             android:id="@+id/recycler_form"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/card_send_form"
+            android:fadingEdge="none"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_send_form"
             android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

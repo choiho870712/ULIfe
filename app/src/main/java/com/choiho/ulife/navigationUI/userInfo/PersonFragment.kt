@@ -30,11 +30,13 @@ class PersonFragment : Fragment() {
         GlobalVariables.toolBarController.openToolbarBackButton(false)
         setPersonPageButton()
         if (GlobalVariables.userInfo.isShop()) {
+//            setRandomFoodButton()
+            setFoodPriceButton()
             setSendNotificationButton()
             setComplaintButton()
         }
         else {
-            setRandomFoodButton()
+//            setRandomFoodButton()
             setFoodPriceButton()
             setStudentPremissionButton()
             setComplaintButton()
@@ -64,9 +66,11 @@ class PersonFragment : Fragment() {
     }
 
     private fun setSendNotificationButton() {
-        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.shop_notice_foreground)
-        root.text_tool_box_empty_1_1.text = "推播"
-        root.layout_tool_box_empty_1_1.setOnClickListener {
+        root.image_tool_box_empty_1_2.setImageResource(R.mipmap.shop_notice_foreground)
+        root.text_tool_box_empty_1_2.text = "推播"
+        root.text_tool_box_empty_1_2.visibility = View.VISIBLE
+        root.image_tool_box_empty_1_2.visibility = View.VISIBLE
+        root.layout_tool_box_empty_1_2.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_notificationSendFragment)
         }
@@ -75,6 +79,8 @@ class PersonFragment : Fragment() {
     private fun setRandomFoodButton() {
         root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_plate_foreground)
         root.text_tool_box_empty_1_1.text = "美食轉盤"
+        root.text_tool_box_empty_1_1.visibility = View.VISIBLE
+        root.image_tool_box_empty_1_1.visibility = View.VISIBLE
         root.layout_tool_box_empty_1_1.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_randomPlateFragment)
@@ -82,27 +88,33 @@ class PersonFragment : Fragment() {
     }
 
     private fun setFoodPriceButton() {
-        root.image_tool_box_empty_2_1.setImageResource(R.mipmap.random_food_price_foreground)
-        root.text_tool_box_empty_2_1.text = "折價券"
-        root.layout_tool_box_empty_2_1.setOnClickListener {
+        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_price_foreground)
+        root.text_tool_box_empty_1_1.text = "優惠券"
+        root.text_tool_box_empty_1_1.visibility = View.VISIBLE
+        root.image_tool_box_empty_1_1.visibility = View.VISIBLE
+        root.layout_tool_box_empty_1_1.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_foodPriceFragment)
         }
     }
 
     private fun setStudentPremissionButton() {
-        root.image_tool_box_empty_3_1.setImageResource(R.mipmap.student_permission_icon_foreground)
-        root.text_tool_box_empty_3_1.text = "學生認證"
-        root.layout_tool_box_empty_3_1.setOnClickListener {
+        root.image_tool_box_empty_1_2.setImageResource(R.mipmap.student_permission_icon_foreground)
+        root.text_tool_box_empty_1_2.text = "學生認證"
+        root.text_tool_box_empty_1_2.visibility = View.VISIBLE
+        root.image_tool_box_empty_1_2.visibility = View.VISIBLE
+        root.layout_tool_box_empty_1_2.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_studentPermissionFragment)
         }
     }
 
     private fun setFormButton() {
-        root.image_tool_box_empty_2_2.setImageResource(R.mipmap.form_icon_foreground)
-        root.text_tool_box_empty_2_2.text = "防疫問卷"
-        root.layout_tool_box_empty_2_2.setOnClickListener {
+        root.image_tool_box_empty_1_3.setImageResource(R.mipmap.form_icon_foreground)
+        root.text_tool_box_empty_1_3.text = "問卷調查"
+        root.text_tool_box_empty_1_3.visibility = View.VISIBLE
+        root.image_tool_box_empty_1_3.visibility = View.VISIBLE
+        root.layout_tool_box_empty_1_3.setOnClickListener {
             if (activity != null)
                 requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_formFragment)
         }
@@ -110,18 +122,22 @@ class PersonFragment : Fragment() {
 
     private fun setComplaintButton() {
         if (GlobalVariables.userInfo.isShop()) {
-            root.image_tool_box_empty_2_1.setImageResource(R.mipmap.view_box_foreground)
-            root.text_tool_box_empty_2_1.text = "意見箱"
-            root.layout_tool_box_empty_2_1.setOnClickListener {
+            root.image_tool_box_empty_1_3.setImageResource(R.mipmap.view_box_foreground)
+            root.text_tool_box_empty_1_3.text = "意見箱"
+            root.text_tool_box_empty_1_3.visibility = View.VISIBLE
+            root.image_tool_box_empty_1_3.visibility = View.VISIBLE
+            root.layout_tool_box_empty_1_3.setOnClickListener {
                 if (activity != null)
                     requireActivity().nav_host_fragment.findNavController().navigate(
                         R.id.action_navigation_person_to_viewBoxFragment2)
             }
         }
         else {
-            root.image_tool_box_empty_1_2.setImageResource(R.mipmap.view_box_foreground)
-            root.text_tool_box_empty_1_2.text = "意見箱"
-            root.layout_tool_box_empty_1_2.setOnClickListener {
+            root.image_tool_box_empty_2_1.setImageResource(R.mipmap.view_box_foreground)
+            root.text_tool_box_empty_2_1.text = "意見箱"
+            root.text_tool_box_empty_2_1.visibility = View.VISIBLE
+            root.image_tool_box_empty_2_1.visibility = View.VISIBLE
+            root.layout_tool_box_empty_2_1.setOnClickListener {
                 if (activity != null)
                     requireActivity().nav_host_fragment.findNavController().navigate(
                         R.id.action_navigation_person_to_viewBoxFragment2)

@@ -9,13 +9,21 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每天晚上12點重置抽獎次數"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_notification_shop_main"
@@ -24,8 +32,8 @@
             android:layout_height="wrap_content"
             app:cardElevation="2dp"
             app:cardCornerRadius="10dp"
-            android:layout_below="@+id/image_random_food_plate_leg"
-            android:layout_marginTop="-10dp">
+            android:layout_below="@+id/layout_food_plate"
+            android:layout_marginTop="-80dp">
 
             <Button
                 android:id="@+id/button_random_food"
@@ -35,8 +43,8 @@
                 android:textSize="20dp"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:text="抽美食"
-                android:padding="5dp"/>
+                android:text="轉 ！！"
+                android:padding="5dp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -68,29 +76,51 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/image_random_food_plate_leg"
+            android:id="@+id/button_goto_discount_page"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/random_food_price_foreground"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/layout_food_plate"
+            android:layout_margin="20dp"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_food_plate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/random_food_plate_leg_foreground"
-            android:layout_below="@id/image_random_food_plate_board"
-            android:layout_marginTop="-130dp"/>
+            android:layout_marginTop="20dp">
 
-        <ImageView
-            android:id="@+id/image_random_food_plate_board"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:src="@drawable/random_food_plate_board_foreground"
-            android:scaleType="centerCrop" />
+            <ImageView
+                android:id="@+id/image_random_food_plate_leg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/random_food_plate_leg_foreground"
+                android:layout_below="@id/image_random_food_plate_board"
+                android:layout_marginTop="-10dp"/>
 
-        <ImageView
-            android:id="@+id/image_random_food_plate_pointer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/random_food_plate_pointer_foreground"
-            android:layout_above="@+id/image_random_food_plate_board"
-            android:layout_marginBottom="-90dp"/>
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/image_random_food_plate_board"
+                android:layout_centerHorizontal="true"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/random_food_plate_board_foreground"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/image_random_food_plate_pointer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/random_food_plate_pointer_foreground"
+                android:layout_above="@+id/image_random_food_plate_board"
+                android:layout_marginBottom="-80dp"/>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

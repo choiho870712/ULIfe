@@ -79,7 +79,9 @@ class MakeUserInfoFragment : Fragment() {
         GlobalVariables.functions.loginFromApi(GlobalVariables.userInfo.ID)
         if (activity != null) requireActivity().runOnUiThread{
             GlobalVariables.functions.navigate(
-                R.id.action_makeUserInfoFragment_to_mobile_navigation)
+                R.id.makeUserInfoFragment,
+                R.id.action_makeUserInfoFragment_to_mobile_navigation
+            )
         }
     }
 
@@ -89,17 +91,22 @@ class MakeUserInfoFragment : Fragment() {
             GlobalVariables.imageHelper.getString(
                 image_photoshot_make_user_info.drawable.toBitmap())!!
 
-        if (GlobalVariables.api.uploadUserInfo(
+        if (userName.length < 2 || userName.length > 16)
+            GlobalVariables.functions.makeToast("暱稱長度必須在 2~16 字元之間")
+        else if (GlobalVariables.api.uploadUserInfo(
                 GlobalVariables.userInfo.ID, GlobalVariables.userInfo.iconString, userName)) {
 
             if (activity != null) requireActivity().runOnUiThread{
                 GlobalVariables.functions.navigate(
-                    R.id.action_makeUserInfoFragment_to_mobile_navigation)
+                    R.id.makeUserInfoFragment,
+                    R.id.action_makeUserInfoFragment_to_mobile_navigation
+                )
             }
 
             GlobalVariables.userInfo.name = userName
             GlobalVariables.userInfo.isReady = true
             GlobalVariables.functions.writeUserInfoToSQL()
+            GlobalVariables.functions.loginFromApi(GlobalVariables.userInfo.ID)
         }
         else GlobalVariables.functions.makeToast("上傳資料失敗")
     }

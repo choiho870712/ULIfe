@@ -31,17 +31,24 @@ class PersonInfoFragment : Fragment() {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_person_info, container, false)
 
+        GlobalVariables.activity.nav_host_fragment
+            .findNavController()
+            .addOnDestinationChangedListener { _, _, _ ->
+                GlobalVariables.toolBarController.openEditPersonButton(false)
+                GlobalVariables.toolBarController.openLogoutButton(false)
+                GlobalVariables.toolBarController.openAddFriendButton(false)
+
+                GlobalVariables.activity.nav_host_fragment
+                    .findNavController()
+                    .addOnDestinationChangedListener { _, _, _ ->
+
+                    }
+            }
+
         setUi()
         setButton()
 
         return root
-    }
-
-    override fun onStop() {
-        super.onStop()
-        GlobalVariables.toolBarController.openEditPersonButton(false)
-        GlobalVariables.toolBarController.openLogoutButton(false)
-        GlobalVariables.toolBarController.openAddFriendButton(false)
     }
 
     private fun setUi() {
@@ -131,6 +138,7 @@ class PersonInfoFragment : Fragment() {
 
                             if (activity!= null) requireActivity().runOnUiThread {
                                 GlobalVariables.functions.navigate(
+                                    R.id.personInfoFragment,
                                     R.id.action_personInfoFragment_to_chatFriendListFragment)
                             }
 

@@ -11,8 +11,9 @@ import com.choiho.ulife.R
 import com.choiho.ulife.navigationUI.userInfo.UserInfo
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.card_search_friend.view.*
+import kotlinx.android.synthetic.main.fragment_chat_friend_list.view.*
 
-class CardUserListAdapter(val myDataset: ArrayList<UserInfo>)
+class CardUserListAdapter(val myDataset: ArrayList<UserInfo>, val parentView: View)
     : RecyclerView.Adapter<CardUserListAdapter.CardHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
@@ -35,12 +36,16 @@ class CardUserListAdapter(val myDataset: ArrayList<UserInfo>)
             GlobalVariables.proposalUserInfo.copy(myDataset[position])
 
             if (myDataset[position].isShop()) {
-                activity.nav_host_fragment.findNavController().navigate(
-                    R.id.action_chatFriendListFragment_to_personShopInfoFragment)
+                GlobalVariables.functions.navigate(
+                    R.id.chatFriendListFragment,
+                    R.id.action_chatFriendListFragment_to_personShopInfoFragment
+                )
             }
             else {
-                activity.nav_host_fragment.findNavController().navigate(
-                    R.id.action_chatFriendListFragment_to_personInfoFragment)
+                GlobalVariables.functions.navigate(
+                    R.id.chatFriendListFragment,
+                    R.id.action_chatFriendListFragment_to_personInfoFragment
+                )
             }
         }
 
@@ -53,11 +58,16 @@ class CardUserListAdapter(val myDataset: ArrayList<UserInfo>)
                     GlobalVariables.taskCount++
 
                     if (GlobalVariables.api.deleteSubscribe(holder.id, GlobalVariables.userInfo.ID)) {
-                        val id = GlobalVariables.userInfo.ID
-                        GlobalVariables.functions.loginFromApi(id)
+                        GlobalVariables.functions.deleteFromSubscribeList(holder.id)
+                        GlobalVariables.functions.deleteFromNotificationList(holder.id)
                         activity.runOnUiThread {
-                            GlobalVariables.otherUserInfoList.removeAt(position)
+//                            GlobalVariables.otherUserInfoList.removeAt(position)
                             this.notifyDataSetChanged()
+
+                            if (GlobalVariables.otherUserInfoList.isEmpty())
+                                parentView.text_no_subscribe_info.visibility = View.VISIBLE
+                            else
+                                parentView.text_no_subscribe_info.visibility = View.GONE
                         }
                         GlobalVariables.functions.makeToast("已退訂")
                         GlobalVariables.taskCount--

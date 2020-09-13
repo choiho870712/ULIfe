@@ -26,6 +26,7 @@ class CreateAccountFragment : Fragment() {
         linkCreateAccountSubmitButton()
         root.text_privacy_policy_chinese.setOnClickListener {
             GlobalVariables.functions.navigate(
+                R.id.createAccountFragment,
                 R.id.action_createAccountFragment_to_privacyPolicyChineseFragment
             )
         }
@@ -54,15 +55,18 @@ class CreateAccountFragment : Fragment() {
             GlobalVariables.functions.makeToast("請詳閱隱私權條款")
         else if (!isLettersOrDigits(id))
             GlobalVariables.functions.makeToast("帳號必須為英文字母或數字")
+        else if (id.length < 6 || id.length > 16)
+            GlobalVariables.functions.makeToast("帳號長度必須在 6~16 字元之間")
         else if (password.length < 6 || password.length > 16)
-            GlobalVariables.functions.makeToast("密碼長度必須在 6~20 之間")
+            GlobalVariables.functions.makeToast("密碼長度必須在 6~16 字元之間")
         else if (password != twicePassword)
-            GlobalVariables.functions.makeToast("密碼驗證失敗")
+            GlobalVariables.functions.makeToast("輸入密碼不一致")
         else if (!GlobalVariables.api.createUser(id, password, GlobalVariables.FCM_token))
             GlobalVariables.functions.makeToast("註冊失敗")
         else {
             if (activity != null) requireActivity().runOnUiThread{
                 GlobalVariables.functions.navigate(
+                    R.id.createAccountFragment,
                     R.id.action_createAccountFragment_to_makeUserInfoFragment
                 )
             }

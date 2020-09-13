@@ -33,15 +33,15 @@ class FormFragment : Fragment() {
         if (GlobalVariables.studentPermissionID == "") {
             GlobalVariables.functions.makeToast("請先完成學生認證")
             GlobalVariables.functions.navigate(
-                R.id.action_formFragment_to_studentPermissionFragment)
+                R.id.formFragment,
+                R.id.action_formFragment_to_studentPermissionFragment
+            )
         }
         else if (GlobalVariables.isDoneStudentForm) {
             root.layout_form_done.visibility = View.VISIBLE
-            root.layout_form_not_done.visibility = View.GONE
         }
         else {
             root.layout_form_done.visibility = View.GONE
-            root.layout_form_not_done.visibility = View.VISIBLE
             createForm()
         }
 
@@ -49,37 +49,55 @@ class FormFragment : Fragment() {
     }
 
     private fun createForm() {
-        questionList = GlobalVariables.api.getForm()
+        Thread {
+            GlobalVariables.taskCount++
+            questionList = GlobalVariables.api.getForm()
+            GlobalVariables.taskCount--
 
-        myAdapter = CardFormAdapter(questionList)
-        myAdapter.init()
-        root.recycler_form.apply {
-            setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(activity)
-            adapter = myAdapter
-        }
-
-        root.button_send_form.setOnClickListener {
-            if (!lockSendFormButton) {
-                // setup dialog builder
-                val builder = AlertDialog.Builder(requireActivity())
-                builder.setTitle("是否確定送出？")
-
-                builder.setPositiveButton("是", { dialogInterface, i ->
-                    submitInfo()
-                    lockSendFormButton = false
-                })
-                builder.setNegativeButton("否", { dialogInterface, i ->
-                    lockSendFormButton = false
-                })
-
-                // create dialog and show it
-                requireActivity().runOnUiThread{
-                    val dialog = builder.create()
-                    dialog.show()
+            if (questionList.isEmpty()) {
+                if (activity != null) requireActivity().runOnUiThread {
+                    root.text_no_form.visibility = View.VISIBLE
+                    root.layout_form_not_done.visibility = View.GONE
                 }
             }
-        }
+            else {
+                if (activity != null) requireActivity().runOnUiThread {
+                    root.text_no_form.visibility = View.GONE
+                    root.layout_form_not_done.visibility = View.VISIBLE
+
+                    myAdapter = CardFormAdapter(questionList)
+                    myAdapter.init()
+                    root.recycler_form.apply {
+                        setHasFixedSize(true)
+                        layoutManager = LinearLayoutManager(activity)
+                        adapter = myAdapter
+                    }
+                }
+
+                root.button_send_form.setOnClickListener {
+                    if (!lockSendFormButton) {
+                        // setup dialog builder
+                        val builder = AlertDialog.Builder(requireActivity())
+                        builder.setTitle("是否確定送出？")
+
+                        builder.setPositiveButton("是", { dialogInterface, i ->
+                            submitInfo()
+                            lockSendFormButton = false
+                        })
+                        builder.setNegativeButton("否", { dialogInterface, i ->
+                            lockSendFormButton = false
+                        })
+
+                        // create dialog and show it
+                        requireActivity().runOnUiThread{
+                            val dialog = builder.create()
+                            dialog.show()
+                        }
+                    }
+                }
+            }
+
+        }.start()
     }
 
     private fun submitInfo() {
@@ -91,6 +109,7 @@ class FormFragment : Fragment() {
             for (i in 0 until(questionList.size)) {
                 if (questionList[i].type == "Single") {
                     var answerString = ""
+                    myAdapter.selectAnswerAdapterList[i].fillAnswer()
                     for (checkBox in myAdapter.selectAnswerAdapterList[i].checkBoxList)
                         if (checkBox.isChecked) {
                             answerString = checkBox.text.toString()

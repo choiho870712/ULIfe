@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".navigationUI.notifications.NotificationOfficialFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteSmoke"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_notification_official"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/scroll_notification_official"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"
+            android:alpha="0.7"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/colorWhiteSmoke"
+            android:alpha="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/image_notifications_official"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:src="@mipmap/creat_account_bird_foreground"/>
+
+                    <TextView
+                        android:id="@+id/text_author_notifications_official"
+                        android:text="author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start"
+                        android:textSize="20sp"
+                        android:layout_weight="100"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_date_notifications_official"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="date"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/text_message_notifications_official"
+                    android:text="@string/chat_card_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_no_official_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="目前沒有官方通知喔～"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+</FrameLayout>

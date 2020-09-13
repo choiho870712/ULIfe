@@ -9,6 +9,7 @@ import com.choiho.ulife.navigationUI.notifications.Notification
 import com.choiho.ulife.navigationUI.home.Proposal
 import com.choiho.ulife.navigationUI.home.ProposalItem
 import com.choiho.ulife.navigationUI.userInfo.UserInfo
+import com.google.android.gms.maps.model.LatLng
 import com.squareup.okhttp.*
 import org.json.JSONArray
 import org.threeten.bp.Instant
@@ -20,7 +21,9 @@ class Api {
     private val client = OkHttpClient()
     private val jsonType: MediaType = MediaType.parse("application/json; charset=utf-8")
 
-    private val urlDirectory = "https://6unoj2gvpj.execute-api.ap-southeast-1.amazonaws.com/Dev/"
+//    private val urlDirectory = "https://6unoj2gvpj.execute-api.ap-southeast-1.amazonaws.com/Dev/"
+    private val urlDirectory = "https://jk4tx1rbh8.execute-api.ap-southeast-1.amazonaws.com/Deploy/"
+
     private val urlGetNotification = urlDirectory + "notification/get-notification"
     private val urlPostNotification = urlDirectory + "notification/post-notification"
     private val urlCreateUser = urlDirectory + "user/create-user"
@@ -49,6 +52,57 @@ class Api {
     private val urlPostForm = urlDirectory + "questionnaire/post-questionnaire"
     private val urlGetRanking = urlDirectory + "ranking/get-ranking"
     private val urlClickInRanking = urlDirectory + "ranking/click-in-ranking"
+
+    fun getGoogleMapPath(from : LatLng, to : LatLng):String {
+        // make url
+        val origin = "origin=" + from.latitude + "," + from.longitude
+        val dest = "destination=" + to.latitude + "," + to.longitude
+        val sensor = "sensor=false"
+        val params = "$origin&$dest&$sensor"
+        val url = "https://maps.googleapis.com/maps/api/directions/json?$params"
+
+        // call api
+        val request = Request.Builder()
+            .url(url).get().build()
+
+        var responseStrng = ""
+        var needToCallAgain = false
+        var isSuccess = false
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(request: Request, e: IOException) {
+                responseStrng = e.message!!
+                needToCallAgain = true
+            }
+
+            @Throws(IOException::class)
+            override fun onResponse(response: Response) {
+                responseStrng = response.body().string()
+                isSuccess = true
+            }
+        })
+
+        while (!isSuccess) {
+            if (needToCallAgain) {
+                needToCallAgain = false
+                client.newCall(request).enqueue(object : Callback {
+                    override fun onFailure(request: Request, e: IOException) {
+                        responseStrng = e.message!!
+                        needToCallAgain = true
+                    }
+
+                    @Throws(IOException::class)
+                    override fun onResponse(response: Response) {
+                        responseStrng = response.body().string()
+                        isSuccess = true
+                    }
+                })
+            }
+            Thread.sleep(500)
+        }
+
+        return responseStrng
+    }
 
     fun clickInRanking(id:String, index:Int, time:Int): Boolean {
         val json = "{\"id\": \"$id\", \"index\": $index, \"time\": $time}"
@@ -99,6 +153,7 @@ class Api {
     private fun getFormJson(rawJsonString : String): ArrayList<FormItem> {
         val dataList = ArrayList<FormItem>()
         val jsonArray = JSONArray(rawJsonString)
+
         for ( i in 0 until(jsonArray.length()) ) {
             val jsonObject = jsonArray.getJSONObject(i)
 
@@ -205,15 +260,15 @@ class Api {
         return getJsonMessage(callApi(json, urlStudentPermission)) == "Login Success"
     }
 
-    fun clickInNotification(id:String, date:String, content:String, view: Int, index: Int):Boolean {
-        val fixedContent = fixLineFeed(content)
-        val json = "{\"id\": \"$id\", \"date\": \"$date\", \"content\": \"$fixedContent\", \"view\": $view, \"index\": $index}"
+    fun clickInNotification(id:String, create_time:Int, view: Int, area: String):Boolean {
+        val json = "{\"id\": \"$id\", \"create_time\": $create_time, \"view\": $view, \"area\": \"$area\"}"
         return getJsonMessage(callApi(json, urlClickInNotification)) == "No Error"
     }
 
-    fun getServerStatusCode(): Boolean {
-        val json = "{}"
-        return getJsonMessage(callApi(json, urlServerStatusCode)) == "No Error"
+    fun getServerStatusCode(id: String): String {
+        val version = GlobalVariables.activity.resources.getString(R.string.version)
+        val json = "{\"version\": \"$version\", \"platform\": \"ANDROID\", \"id\": \"$id\"}"
+        return getJsonMessage(callApi(json, urlServerStatusCode))
     }
 
     fun complaint(complained_id: String, complainant: String, timestamp: String, type: String, content: String): Boolean {
@@ -348,6 +403,7 @@ class Api {
     private fun getFoodAllJson(rawJsonString : String) : ArrayList<Proposal> {
         val dataList = ArrayList<Proposal>()
         val jsonArray = JSONArray(rawJsonString)
+
         for ( i in 0 until(jsonArray.length()) ) {
             val jsonObject = jsonArray.getJSONObject(i)
 
@@ -417,6 +473,14 @@ class Api {
                 break
 
             val pusherId = jsonObject.getString("id")
+            val name = jsonObject.getString("name")
+            val iconUrl = jsonObject.getString("icon")
+            var iconString = ""
+            if (iconUrl.length > 10) {
+                val icon = GlobalVariables.imageHelper.convertUrlToImage(iconUrl)
+                if (icon != null)
+                    iconString = GlobalVariables.imageHelper.getString(icon)!!
+            }
 
             val jsonNotificationArray = jsonObject.getJSONArray("notification")
             for (j in 0 until(jsonNotificationArray.length())) {
@@ -424,9 +488,12 @@ class Api {
                 dataList.add(
                     Notification(
                         pusherId,
+                        name,
+                        iconString,
                         jsonNotificationItem.getString("date"),
                         jsonNotificationItem.getString("content"),
-                        jsonNotificationItem.getInt("view")
+                        jsonNotificationItem.getInt("view"),
+                        jsonNotificationItem.getInt("create_time")
                     )
                 )
             }
@@ -554,8 +621,8 @@ class Api {
         return getJsonMessage(callApi(json, urlPostNotification)) == "No Error"
     }
 
-    fun getNotificationList(subscribed:MutableList<String>) : ArrayList<Notification> {
-        var json = "{\"subscribed\": ["
+    fun getNotificationList(subscribed:MutableList<String>, area:String) : ArrayList<Notification> {
+        var json = "{\"area\": \"$area\", \"subscribed\": ["
         var isFirst = true
         for (i in 0 until(subscribed.size)) {
             if (!isFirst)

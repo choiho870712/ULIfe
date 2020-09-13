@@ -35,29 +35,30 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
         }
 
         holder.cardView.setOnClickListener {
-            if (!GlobalVariables.lockRefreshHomePage) {
-                GlobalVariables.proposal = myDataSet[position]
+            GlobalVariables.proposal = myDataSet[position]
 
+            Thread {
+                if (GlobalVariables.proposalUserInfo.ID != myDataSet[position].poster_id)
+                    GlobalVariables.proposalUserInfo.isReady = false
+                GlobalVariables.proposalUserInfo.readFromApi(GlobalVariables.proposal!!.poster_id)
+            }.start()
+
+            Thread {
+                GlobalVariables.proposalUserScribeListData =
+                    GlobalVariables.api.getSubscribeList(myDataSet[position].poster_id)
+            }.start()
+
+            GlobalVariables.homeCurrentPosition = GlobalVariables.homeLayoutManager.findFirstVisibleItemPosition()
+
+            for ( i in 0 until(myDataSet[position].proposalItemList.size))
                 Thread {
-                    if (GlobalVariables.proposalUserInfo.ID != myDataSet[position].poster_id)
-                        GlobalVariables.proposalUserInfo.isReady = false
-                    GlobalVariables.proposalUserInfo.readFromApi(GlobalVariables.proposal!!.poster_id)
+                    myDataSet[position].proposalItemList[i].convertImageUrlToImageAll()
                 }.start()
 
-                Thread {
-                    GlobalVariables.proposalUserScribeListData =
-                        GlobalVariables.api.getSubscribeList(myDataSet[position].poster_id)
-                }.start()
-
-                GlobalVariables.homeCurrentPosition = GlobalVariables.homeLayoutManager.findFirstVisibleItemPosition()
-
-                for ( i in 0 until(myDataSet[position].proposalItemList.size))
-                    Thread {
-                        myDataSet[position].proposalItemList[i].convertImageUrlToImageOnlyOne()
-                    }.start()
-
-                GlobalVariables.functions.navigate(R.id.action_navigation_home_to_homePage1Fragment)
-            }
+            GlobalVariables.functions.navigate(
+                R.id.navigation_home,
+                R.id.action_navigation_home_to_homePage1Fragment
+            )
         }
     }
 

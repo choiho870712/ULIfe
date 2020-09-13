@@ -24,7 +24,8 @@ class MyFireBaseMessagingService: FirebaseMessagingService() {
     private val client = OkHttpClient()
     private val jsonType: MediaType = MediaType.parse("application/json; charset=utf-8")
     private val urlRequestSendingFCM = "https://fcm.googleapis.com/fcm/send"
-    private val serverKey = "AAAA5zsYgfw:APA91bGdwSEuQcpkVANBwJ5Kl9SrF6ut6Dt4iEp3sHG1OkT92NCjU99h6KqAnR51vB6hWzL4FxFuvl_7NVRurivrzFiyC-wWDiP0KQa3TE47JaHbm6NqAVfam2EdVEGpgMg0G-hkK3tT"
+//    private val serverKey = "AAAA5zsYgfw:APA91bGdwSEuQcpkVANBwJ5Kl9SrF6ut6Dt4iEp3sHG1OkT92NCjU99h6KqAnR51vB6hWzL4FxFuvl_7NVRurivrzFiyC-wWDiP0KQa3TE47JaHbm6NqAVfam2EdVEGpgMg0G-hkK3tT"
+    private var serverKey = "AAAA5zsYgfw:APA91bGfFdt46t8sHhn3sITYCoAUBJ44N4IHELwh0728H7ZqmVyZXM0jpY4sT5zTlJmHTnN8Q9uE75o2GpddurQdhI2DtJwJT1PCPK4_OL3JdBxmY2yILlNsiDQGqEFYwESkQ4N0qKAD"
     fun requestSendingFCM(FCM_id: String, title: String, message: String) {
         val data = FcmData()
         data.to = FCM_id

@@ -23,57 +23,78 @@
             android:layout_centerVertical="true"/>
 
         <LinearLayout
-            android:id="@+id/layout_card_food_price_top"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_toEndOf="@+id/image_card_food_price">
+            android:layout_toEndOf="@+id/image_card_food_price"
+            android:layout_toStartOf="@+id/text_use_ticket">
 
-            <TextView
-                android:id="@+id/text_food_price_name"
-                android:layout_marginTop="5dp"
-                android:singleLine="true"
-                android:text="name"
+            <LinearLayout
+                android:id="@+id/layout_card_food_price_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/image_card_food_price"
+                android:layout_toLeftOf="@+id/text_use_ticket">
 
-            <TextView
-                android:id="@+id/text_food_price_content"
-                android:text="content"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/text_food_price_name"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/text_food_price_content"
+                    android:text="content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_toEndOf="@+id/image_card_food_price"
-            android:layout_below="@+id/layout_card_food_price_top"
-            android:layout_marginBottom="5dp">
+            </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="到期時間"
-                android:textSize="15sp"/>
+                android:orientation="horizontal"
+                android:layout_toEndOf="@+id/image_card_food_price"
+                android:layout_below="@+id/layout_card_food_price_top"
+                android:layout_marginBottom="5dp">
 
-            <TextView
-                android:id="@+id/text_food_price_time"
-                android:text="time"
-                android:singleLine="true"
-                android:layout_marginStart="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="到期時間"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/text_food_price_time"
+                    android:text="time"
+                    android:singleLine="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_use_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="30dp"/>
 
     </RelativeLayout>
 

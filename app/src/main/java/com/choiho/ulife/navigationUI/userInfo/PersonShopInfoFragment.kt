@@ -6,14 +6,13 @@ import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.choiho.ulife.GlobalVariables
-
 import com.choiho.ulife.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -22,11 +21,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
-import com.google.gson.JsonArray
-import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_person_shop_info.view.*
-import java.net.URL
 
 /**
  * A simple [Fragment] subclass.
@@ -50,6 +46,21 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
     ): View? {
         root = inflater.inflate(R.layout.fragment_person_shop_info, container, false)
 
+        GlobalVariables.activity.nav_host_fragment
+            .findNavController()
+            .addOnDestinationChangedListener { _, _, _ ->
+                GlobalVariables.toolBarController.openEditPersonButton(false)
+                GlobalVariables.toolBarController.openLogoutButton(false)
+                GlobalVariables.toolBarController.openSubscribeButton(false)
+                GlobalVariables.toolBarController.openUnSubscribeButton(false)
+
+                GlobalVariables.activity.nav_host_fragment
+                    .findNavController()
+                    .addOnDestinationChangedListener { _, _, _ ->
+
+                    }
+            }
+
         Thread {
             GlobalVariables.taskCount++
             while (!GlobalVariables.proposalUserInfo.isReady)
@@ -70,14 +81,6 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
         return root
     }
 
-    override fun onStop() {
-        super.onStop()
-        GlobalVariables.toolBarController.openEditPersonButton(false)
-        GlobalVariables.toolBarController.openLogoutButton(false)
-        GlobalVariables.toolBarController.openSubscribeButton(false)
-        GlobalVariables.toolBarController.openUnSubscribeButton(false)
-    }
-
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         if (ContextCompat.checkSelfPermission(
@@ -86,17 +89,23 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
 
             mMap.isMyLocationEnabled = true
 
-//            val options = PolylineOptions()
-//            options.color(Color.RED)
-//            options.width(5f)
-//
+
             // Add a marker in Sydney and move the camera
             val sydney = LatLng(GlobalVariables.proposalUserInfo.latitude, GlobalVariables.proposalUserInfo.longitude)
             mMap.addMarker(MarkerOptions().position(sydney).title(GlobalVariables.proposalUserInfo.name)).showInfoWindow()
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16.0f))
-//
-//            val myLocation = LatLng(mMap.myLocation.latitude, mMap.myLocation.longitude)
-//            val url = getURL(sydney, myLocation)
+
+
+            mMap.setOnMyLocationChangeListener { arg0 ->
+
+                val myLocation = LatLng(arg0.latitude, arg0.longitude)
+                GlobalVariables.api.getGoogleMapPath(sydney, myLocation)
+
+                val options = PolylineOptions()
+                options.color(Color.RED)
+                options.width(5f)
+            }
+
 
 //            Thread {
 //                val result = URL(url).readText()

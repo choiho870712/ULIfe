@@ -41,7 +41,8 @@ class ToolBarController {
 
                         Thread {
                             if (GlobalVariables.api.subscribe(GlobalVariables.proposalUserInfo.ID, GlobalVariables.userInfo.ID)) {
-                                GlobalVariables.functions.loginFromApi(GlobalVariables.userInfo.ID)
+                                GlobalVariables.functions.updateToSubscribeList(GlobalVariables.proposalUserInfo.ID)
+                                GlobalVariables.functions.updateNotificationList()
                                 GlobalVariables.functions.makeToast("訂閱成功")
                                 GlobalVariables.taskCount--
                                 GlobalVariables.activity.runOnUiThread{
@@ -67,8 +68,13 @@ class ToolBarController {
                                 GlobalVariables.proposalUserInfo.ID,
                                 GlobalVariables.userInfo.ID)
                         ) {
-                            val id = GlobalVariables.userInfo.ID
-                            GlobalVariables.functions.loginFromApi(id)
+                            GlobalVariables.functions.deleteFromSubscribeList(
+                                GlobalVariables.proposalUserInfo.ID
+                            )
+                            GlobalVariables.functions.deleteFromNotificationList(
+                                GlobalVariables.proposalUserInfo.ID
+                            )
+
                             GlobalVariables.functions.makeToast("已取消訂閱")
                             GlobalVariables.activity.runOnUiThread{
                                 openSubscribeButton(true)
@@ -97,6 +103,8 @@ class ToolBarController {
                 R.id.button_event_record -> {
                     if (!isRunningEventRecord) {
                         isRunningEventRecord = true
+                        GlobalVariables.taskCount++
+
                         Thread {
                             GlobalVariables.proposal = GlobalVariables.api.getFoodItem(
                                 GlobalVariables.userInfo.ID,
@@ -117,12 +125,13 @@ class ToolBarController {
                                 }.start()
                             }
 
-                            GlobalVariables.activity.runOnUiThread {
-                                GlobalVariables.activity.nav_host_fragment.findNavController().navigate(
-                                    R.id.action_navigation_home_to_homePage1Fragment)
-                            }
+                            GlobalVariables.functions.navigate(
+                                R.id.navigation_home,
+                                R.id.action_navigation_home_to_homePage1Fragment
+                            )
 
                             isRunningEventRecord = false
+                            GlobalVariables.taskCount--
                         }.start()
                     }
                     true

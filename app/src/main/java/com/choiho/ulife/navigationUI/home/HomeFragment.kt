@@ -1,70 +1,79 @@
 package com.choiho.ulife.navigationUI.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
     private lateinit var root: View
     private var lockRefreshProposalList = false
+    private var lockCreateNewPage = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         root = inflater.inflate(R.layout.fragment_home, container, false)
 
         GlobalVariables.toolBarController.setTextColor(R.color.colorWhite)
+        setUi()
 
-        if (GlobalVariables.homeProposalList.isEmpty())
-            GlobalVariables.functions.resetProposalList()
+//        if (GlobalVariables.homeProposalList.isEmpty())
+//            GlobalVariables.functions.resetProposalList()
         createNewPage()
         linkMorePageListener()
         linkRefreshPageListener()
         createClassButton()
-        setUi()
+
         return root
     }
 
-    override fun onStop() {
-        super.onStop()
-        GlobalVariables.toolBarController.openToolbarMainButton(false)
-        GlobalVariables.toolBarController.openAddProposalButton(false)
-        GlobalVariables.toolBarController.openEventRecordButton(false)
-    }
-
     private fun createNewPage() {
-        if (!GlobalVariables.lockRefreshHomePage) {
-            GlobalVariables.lockRefreshHomePage = true
-            if (activity != null)root.swip_recycler_home.isRefreshing = true
-            GlobalVariables.homeLayoutManager = GridLayoutManager(activity, 2)
+        if (!lockCreateNewPage) {
+            lockCreateNewPage = true
 
             Thread {
-                while (GlobalVariables.homeProposalList.isEmpty())
+                while (!GlobalVariables.homeProposalListIsReady)
                     Thread.sleep(500)
 
-                GlobalVariables.homeAdapter = CardAdapter(GlobalVariables.homeProposalList)
-                if (activity != null) requireActivity().runOnUiThread {
-                    root.recycler_home.apply {
-                        setHasFixedSize(true)
-                        layoutManager = GlobalVariables.homeLayoutManager
-                        adapter = GlobalVariables.homeAdapter
+                if (GlobalVariables.homeProposalList.isEmpty()) {
+                    if (activity != null) requireActivity().runOnUiThread {
+                        root.text_no_home_proposal.visibility = View.VISIBLE
                     }
-                    GlobalVariables.homeLayoutManager.scrollToPosition(
-                        GlobalVariables.homeCurrentPosition)
                 }
+                else {
+                    if (activity != null) requireActivity().runOnUiThread {
+                        root.text_no_home_proposal.visibility = View.GONE
+                    }
 
-                if (activity != null) requireActivity().runOnUiThread {
-                    root.swip_recycler_home.isRefreshing = false
+                    GlobalVariables.homeLayoutManager = GridLayoutManager(activity, 2)
+                    GlobalVariables.homeAdapter = CardAdapter(GlobalVariables.homeProposalList)
+                    if (activity != null) requireActivity().runOnUiThread {
+                        root.recycler_home.apply {
+                            setHasFixedSize(true)
+                            layoutManager = GlobalVariables.homeLayoutManager
+                            adapter = GlobalVariables.homeAdapter
+                        }
+                        GlobalVariables.homeLayoutManager.scrollToPosition(
+                            GlobalVariables.homeCurrentPosition)
+                    }
+
+                    if (activity != null) requireActivity().runOnUiThread {
+                        root.swip_recycler_home.isRefreshing = false
+                    }
+
+                    GlobalVariables.lockRefreshHomePage = false
+                    lockCreateNewPage = false
                 }
-
-                GlobalVariables.lockRefreshHomePage = false
             }.start()
         }
     }
@@ -73,16 +82,28 @@ class HomeFragment : Fragment() {
         val visibleItemCount = GlobalVariables.homeLayoutManager.childCount
         val totalItemCount = GlobalVariables.homeLayoutManager.itemCount
         val pastVisibleItems = GlobalVariables.homeLayoutManager.findFirstVisibleItemPosition()
-        return (visibleItemCount + pastVisibleItems) >= totalItemCount
+        return (visibleItemCount + pastVisibleItems) >= totalItemCount - 20
     }
 
     private fun morePage() {
-        val moreProposal = GlobalVariables.api.getFoodAll(
-            GlobalVariables.homeProposalNumber,
-            GlobalVariables.homeAreaChoose
-        )
+        var moreProposal:ArrayList<Proposal>? = null
+        if (GlobalVariables.homeClassChoose == "") {
+            moreProposal = GlobalVariables.api.getFoodAll(
+                GlobalVariables.homeProposalNumber,
+                GlobalVariables.homeAreaChoose
+            )
+        } // if
+        else {
+            moreProposal = GlobalVariables.api.getFoodByClass(
+                GlobalVariables.homeProposalNumber,
+                GlobalVariables.homeClassChoose,
+                GlobalVariables.homeAreaChoose
+            )
+        } //
+
         GlobalVariables.homeProposalNumber += 10
         GlobalVariables.homeProposalList.addAll(moreProposal)
+        if (moreProposal.isEmpty()) GlobalVariables.isHomeProposalEnd = true
 
         if (moreProposal.isEmpty()) return
         if (activity != null) requireActivity().runOnUiThread {
@@ -95,16 +116,14 @@ class HomeFragment : Fragment() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (dy > 0 && !GlobalVariables.lockRefreshHomePage && isScrollToLastProposal()) {
-                    GlobalVariables.lockRefreshHomePage = true
-                    if (activity != null)root.swip_recycler_home.isRefreshing = true
-                    Thread {
-                        morePage()
-                        if (activity != null) requireActivity().runOnUiThread {
-                            root.swip_recycler_home.isRefreshing = false
-                        }
-
-                        GlobalVariables.lockRefreshHomePage = false
-                    }.start()
+                    if (!GlobalVariables.isHomeProposalEnd) {
+                        GlobalVariables.lockRefreshHomePage = true
+                        Log.d(">>>>>>>>>>>>>>>>>>>", "call more page")
+                        Thread {
+                            morePage()
+                            GlobalVariables.lockRefreshHomePage = false
+                        }.start()
+                    }
                 }
             }
         })
@@ -127,6 +146,7 @@ class HomeFragment : Fragment() {
 
     private fun createClassButton() {
         val classList:ArrayList<String> = ArrayList()
+        classList.add("全部")
         classList.add("早午餐")
         classList.add("飲品")
         classList.add("台式")
@@ -151,6 +171,20 @@ class HomeFragment : Fragment() {
     }
 
     private fun setUi() {
+        GlobalVariables.activity.nav_host_fragment
+            .findNavController()
+            .addOnDestinationChangedListener { _, _, _ ->
+                GlobalVariables.toolBarController.openToolbarMainButton(false)
+                GlobalVariables.toolBarController.openAddProposalButton(false)
+                GlobalVariables.toolBarController.openEventRecordButton(false)
+
+                GlobalVariables.activity.nav_host_fragment
+                    .findNavController()
+                    .addOnDestinationChangedListener { _, _, _ ->
+
+                    }
+            }
+
         GlobalVariables.toolBarController.openToolBar(true)
         GlobalVariables.toolBarController.openNavView(true)
         GlobalVariables.toolBarController.setMenuName()
@@ -159,6 +193,7 @@ class HomeFragment : Fragment() {
 
         if (GlobalVariables.userInfo.isShop()) GlobalVariables.toolBarController.openAddProposalButton(true)
         if (GlobalVariables.userInfo.isShop()) GlobalVariables.toolBarController.openEventRecordButton(true)
+
     }
 
 

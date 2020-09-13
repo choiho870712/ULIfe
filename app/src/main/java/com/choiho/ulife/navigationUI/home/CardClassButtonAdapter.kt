@@ -29,7 +29,22 @@ class CardClassButtonAdapter(val myDataset: ArrayList<String>, val homePageView:
                 GlobalVariables.lockRefreshHomePage = true
                 homePageView.swip_recycler_home.isRefreshing = true
                 Thread {
-                    GlobalVariables.homeProposalList = GlobalVariables.api.getFoodByClass(1, myDataset[position],GlobalVariables.homeAreaChoose)
+                    GlobalVariables.homeProposalNumber = 1
+                    GlobalVariables.isHomeProposalEnd = false
+
+                    if (myDataset[position] == "全部") {
+                        GlobalVariables.functions.resetProposalList()
+                    }
+                    else {
+                        GlobalVariables.homeClassChoose = myDataset[position]
+                        GlobalVariables.homeProposalList = GlobalVariables.api.getFoodByClass(
+                            GlobalVariables.homeProposalNumber,
+                            GlobalVariables.homeClassChoose,
+                            GlobalVariables.homeAreaChoose
+                        )
+                        GlobalVariables.homeProposalNumber += 10
+                    }
+
                     GlobalVariables.homeAdapter = CardAdapter(GlobalVariables.homeProposalList)
                     GlobalVariables.homeLayoutManager = GridLayoutManager(activity, 2)
 
@@ -40,6 +55,13 @@ class CardClassButtonAdapter(val myDataset: ArrayList<String>, val homePageView:
                             adapter = GlobalVariables.homeAdapter
                         }
                         homePageView.swip_recycler_home.isRefreshing = false
+
+                        if (GlobalVariables.homeProposalList.isEmpty()) {
+                            homePageView.text_no_home_proposal.visibility = View.VISIBLE
+                        }
+                        else {
+                            homePageView.text_no_home_proposal.visibility = View.GONE
+                        }
                     })
 
                     GlobalVariables.lockRefreshHomePage = false

@@ -18,7 +18,7 @@ class GlobalVariables : Application() {
     companion object {
         lateinit var activity: FragmentActivity
         lateinit var dbHelper: DBHelper
-        lateinit var FCM_token: String
+        var FCM_token: String = ""
 
         val toolBarController = ToolBarController()
         val imageHelper = ImageHelper()
@@ -33,13 +33,16 @@ class GlobalVariables : Application() {
         var homePageView: View? = null
         var homeMenuChoose = "food"
         var homeAreaChoose = "Zhongli"
+        var homeClassChoose = ""
         lateinit var homeLayoutManager: GridLayoutManager
         lateinit var homeAdapter: RecyclerView.Adapter<CardAdapter.CardHolder>
+        var homeProposalListIsReady = false
         var homeProposalList:ArrayList<Proposal> = ArrayList()
         var lockRefreshHomeProposalList = false
         var lockRefreshHomePage = false
         var homeCurrentPosition = 0
         var homeProposalNumber = 1
+        var isHomeProposalEnd = false
 
         var proposal: Proposal? = null
         var proposalItemIndex = 0
@@ -74,6 +77,11 @@ class GlobalVariables : Application() {
 
         var myOldNotificationList: ArrayList<String> = ArrayList()
         var myOldNotificationListIsReady = false
+
+        var officialNotificationListAdapter:
+                RecyclerView.Adapter<com.choiho.ulife.navigationUI.notifications.CardOfficialAdapter.CardHolder>? = null
+        var officialNotificationList: ArrayList<Notification> = ArrayList()
+        var officialNotificationListIsReady = false
 
         var taskCount = 0
 

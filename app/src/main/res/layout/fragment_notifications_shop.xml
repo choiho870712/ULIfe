@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".navigationUI.notifications.NotificationsShopFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/shop_canvas_foreground"
+        android:background="@color/colorWhiteSmoke"
         android:scaleType="centerCrop"
         android:scaleX="1.5"/>
 
@@ -18,50 +19,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ScrollView
+    <RelativeLayout
         android:id="@+id/scroll_notification_shop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone">
 
-        <RelativeLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhiteSmoke">
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"
+            android:alpha="0.7"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/image_notifications_shop"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FFFFFF"
-                android:layout_margin="10dp"
-                android:src="@mipmap/bird_salute_foreground"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/colorWhiteSmoke"
+            android:alpha="1">
 
             <LinearLayout
-                android:id="@+id/notification_left_shop"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/image_notifications_shop"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/text_author_notifications_shop"
-                    android:text="author"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp">
 
-                <TextView
-                    android:id="@+id/text_viewCount_notifications_shop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:text="觀看次數 0"
-                    android:layout_marginStart="10dp"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_notifications_shop"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:src="@mipmap/bird_salute_foreground"/>
+
+                    <TextView
+                        android:id="@+id/text_author_notifications_shop"
+                        android:text="author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start"
+                        android:textSize="20sp"
+                        android:layout_weight="100"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/text_date_notifications_shop"
@@ -76,13 +89,24 @@
                     android:text="@string/chat_card_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
                     android:layout_marginStart="10dp"/>
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-    </ScrollView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_no_shop_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
 
 </FrameLayout>

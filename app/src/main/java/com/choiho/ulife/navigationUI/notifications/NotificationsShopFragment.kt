@@ -25,28 +25,46 @@ class NotificationsShopFragment : Fragment() {
         setUi()
         setButton()
 
-        root.notification_left_shop.setOnClickListener {
+        root.scroll_notification_shop.setOnClickListener {
             if (root.scroll_notification_shop.visibility == View.VISIBLE) {
                 root.scroll_notification_shop.visibility = View.GONE
                 root.recycler_notification_shop.visibility = View.VISIBLE
             }
         }
 
+        root.image_notifications_shop.setOnClickListener {
+            GlobalVariables.functions.navigate(
+                R.id.notificationsShopFragment,
+                R.id.action_notificationsShopFragment_to_personShopInfoFragment)
+        }
+
         return root
     }
 
     private fun setUi() {
-        val recyclerView = root.findViewById<RecyclerView>(R.id.recycler_notification_shop)
-        GlobalVariables.notificationListAdapter = CardShopAdapter(GlobalVariables.notificationList, root)
-        GlobalVariables.notificationListLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, true)
-        recyclerView.apply {
-            setHasFixedSize(true)
-            layoutManager = GlobalVariables.notificationListLayoutManager
-            adapter = GlobalVariables.notificationListAdapter
+        if (GlobalVariables.notificationList.isEmpty()) {
+            if (GlobalVariables.officialNotificationList.isEmpty())
+                root.text_no_shop_notify.text = "您目前還沒有訂閱任何店家喔～"
+            else
+                root.text_no_shop_notify.text = "您目前訂閱的店家沒有任何通知喔～"
+
+            root.text_no_shop_notify.visibility = View.VISIBLE
         }
-        GlobalVariables.notificationListLayoutManager.scrollToPosition(
-            GlobalVariables.notificationListLayoutManager.itemCount-1
-        )
+        else {
+            root.text_no_shop_notify.visibility = View.GONE
+
+            val recyclerView = root.findViewById<RecyclerView>(R.id.recycler_notification_shop)
+            GlobalVariables.notificationListAdapter = CardShopAdapter(GlobalVariables.notificationList, root)
+            GlobalVariables.notificationListLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, true)
+            recyclerView.apply {
+                setHasFixedSize(true)
+                layoutManager = GlobalVariables.notificationListLayoutManager
+                adapter = GlobalVariables.notificationListAdapter
+            }
+            GlobalVariables.notificationListLayoutManager.scrollToPosition(
+                GlobalVariables.notificationListLayoutManager.itemCount-1
+            )
+        }
     }
 
     private fun setButton() {

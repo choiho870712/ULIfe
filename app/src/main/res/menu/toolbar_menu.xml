@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/button_add_proposal"
-        android:icon="@drawable/ic_add_white_24dp"
+        android:icon="@mipmap/post_event_foreground"
         android:title="@string/home_edit_title"
         android:enabled="false"
         android:visible="false"
@@ -12,7 +12,7 @@
 
     <item
         android:id="@+id/button_edit_person"
-        android:icon="@mipmap/post_event_foreground"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
         android:title="@string/person_edit_title"
         android:enabled="false"
         android:visible="false"

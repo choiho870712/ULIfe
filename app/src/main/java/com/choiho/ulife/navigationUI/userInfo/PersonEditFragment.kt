@@ -62,38 +62,44 @@ class PersonEditFragment : Fragment() {
     }
 
     private fun submitInfo() {
-        GlobalVariables.functions.makeToast("正在上傳")
         GlobalVariables.taskCount++
 
         Thread {
-            val isSuccess = GlobalVariables.api.updateUserInfo(
-                GlobalVariables.userInfo.ID,
-                root.text_username_edit_person.text.toString(),
-                GlobalVariables.userInfo.iconString,
-                mutableListOf(root.text_tag_edit_person.text.toString()),
-                root.text_content_edit_person.text.toString()
-            )
+            val userName = root.text_username_edit_person.text.toString()
 
-            if (isSuccess) {
-                GlobalVariables.userInfo.name = root.text_username_edit_person.text.toString()
-                GlobalVariables.userInfo.content = root.text_content_edit_person.text.toString()
-                GlobalVariables.userInfo.hashtag = mutableListOf(root.text_tag_edit_person.text.toString())
+            if (userName.length < 2 || userName.length > 16)
+                GlobalVariables.functions.makeToast("暱稱長度必須在 2~16 字元之間")
+            else {
+                val isSuccess = GlobalVariables.api.updateUserInfo(
+                    GlobalVariables.userInfo.ID,
+                    root.text_username_edit_person.text.toString(),
+                    GlobalVariables.userInfo.iconString,
+                    mutableListOf(root.text_tag_edit_person.text.toString()),
+                    root.text_content_edit_person.text.toString())
 
-                GlobalVariables.userInfo.updateDB("userInfo")
-                GlobalVariables.functions.makeToast("上傳成功")
+                if (isSuccess) {
+                    GlobalVariables.userInfo.name = root.text_username_edit_person.text.toString()
+                    GlobalVariables.userInfo.content = root.text_content_edit_person.text.toString()
+                    GlobalVariables.userInfo.hashtag = mutableListOf(root.text_tag_edit_person.text.toString())
 
-                if (activity!=null) {
-                    GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
+                    GlobalVariables.userInfo.updateDB("userInfo")
+                    GlobalVariables.functions.makeToast("上傳成功")
 
-                    if (GlobalVariables.userInfo.isShop())
-                        GlobalVariables.functions.navigate(
-                            R.id.action_personEditFragment_to_personShopInfoFragment)
-                    else
-                        GlobalVariables.functions.navigate(
-                            R.id.action_personEditFragment_to_personInfoFragment)
+                    if (activity!=null) {
+                        GlobalVariables.proposalUserInfo.copy(GlobalVariables.userInfo)
+
+                        if (GlobalVariables.userInfo.isShop())
+                            GlobalVariables.functions.navigate(
+                                R.id.personEditFragment,
+                                R.id.action_personEditFragment_to_personShopInfoFragment)
+                        else
+                            GlobalVariables.functions.navigate(
+                                R.id.personEditFragment,
+                                R.id.action_personEditFragment_to_personInfoFragment)
+                    }
                 }
+                else GlobalVariables.functions.makeToast("上傳失敗")
             }
-            else GlobalVariables.functions.makeToast("上傳失敗")
 
             GlobalVariables.taskCount--
         }.start()

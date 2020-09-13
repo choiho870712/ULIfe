@@ -96,7 +96,7 @@ class HomeEditFragment : Fragment() {
             val image = root.image_edit_home_proposalImage.drawable.toBitmap()
             val area = GlobalVariables.homeAreaChoose
 
-//            var downCount = GlobalVariables.userInfo.permission.size
+            var downCount = GlobalVariables.userInfo.permission.size
             for (i in 0 until(GlobalVariables.userInfo.permission.size)) {
                 Thread {
                     GlobalVariables.api.postFoodItem(
@@ -107,12 +107,12 @@ class HomeEditFragment : Fragment() {
                         area
                     )
 
-//                    downCount--
+                    downCount--
                 }.start()
             }
 
-//            while (downCount > 0) continue
-            Thread.sleep(5000)
+            while (downCount > 0)
+                Thread.sleep(500)
 
             GlobalVariables.functions.makeToast("上傳文章成功")
             GlobalVariables.functions.resetProposalList()
@@ -129,6 +129,7 @@ class HomeEditFragment : Fragment() {
                     GlobalVariables.subscribeList
 
                 GlobalVariables.functions.navigate(
+                    R.id.homeEditFragment,
                     R.id.action_homeEditFragment_to_homePage1Fragment)
 
                 while (!GlobalVariables.proposal!!.proposalItemList[0].isDoneImageLoadingOnlyOne())

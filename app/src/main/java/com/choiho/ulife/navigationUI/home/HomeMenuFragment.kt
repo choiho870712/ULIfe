@@ -21,29 +21,53 @@ class HomeMenuFragment : Fragment() {
 
         root.button_main_menu_choose_food.setOnClickListener {
             GlobalVariables.homeMenuChoose = "food"
-            GlobalVariables.homePageView = null
             GlobalVariables.functions.navigate(
                 R.id.homeMenuFragment,
                 R.id.action_homeMenuFragment_to_navigation_home
             )
+
+            if (!GlobalVariables.lockRefreshHomePage) {
+                GlobalVariables.lockRefreshHomePage = true
+                Thread {
+                    GlobalVariables.taskCount++
+                    GlobalVariables.functions.resetProposalList()
+                    GlobalVariables.taskCount--
+                }.start()
+            }
         }
 
         root.button_main_menu_choose_game.setOnClickListener {
             GlobalVariables.homeMenuChoose = "game"
-            GlobalVariables.homePageView = null
             GlobalVariables.functions.navigate(
                 R.id.homeMenuFragment,
                 R.id.action_homeMenuFragment_to_navigation_home
             )
+
+            if (!GlobalVariables.lockRefreshHomePage) {
+                GlobalVariables.lockRefreshHomePage = true
+                Thread {
+                    GlobalVariables.taskCount++
+                    GlobalVariables.functions.resetProposalList()
+                    GlobalVariables.taskCount--
+                }.start()
+            }
         }
 
         root.button_main_menu_choose_event.setOnClickListener {
             GlobalVariables.homeMenuChoose = "event"
-            GlobalVariables.homePageView = null
             GlobalVariables.functions.navigate(
                 R.id.homeMenuFragment,
                 R.id.action_homeMenuFragment_to_navigation_home
             )
+
+            if (!GlobalVariables.lockRefreshHomePage) {
+                GlobalVariables.lockRefreshHomePage = true
+                Thread {
+                    GlobalVariables.taskCount++
+                    GlobalVariables.functions.resetProposalList()
+                    GlobalVariables.taskCount--
+                }.start()
+            }
         }
 
         return root

@@ -1841,6 +1841,7 @@ id layout_food_price_page2
 id layout_food_price_page2_top
 id layout_form_done
 id layout_form_not_done
+id layout_login_status
 id layout_student_permission
 id layout_student_permission_done
 id layout_tool_box_empty_1_1

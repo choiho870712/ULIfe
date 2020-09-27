@@ -33,7 +33,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_centerInParent="true"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
@@ -73,12 +73,11 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/image_food_price_page2"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
-                        android:src="@mipmap/discount_ticket_foreground"
                         android:layout_centerVertical="true"/>
 
                     <LinearLayout
@@ -86,13 +85,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:layout_marginTop="10dp"
                         android:layout_toEndOf="@+id/image_food_price_page2"
                         android:layout_toStartOf="@+id/card_shop_info_food_price_page2">
 
                         <TextView
                             android:id="@+id/text_food_price_page2_name"
                             android:layout_marginTop="5dp"
-                            android:text="name................................................................................"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
@@ -136,20 +135,40 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"/>
 
-                <ImageView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/show_ticket_foreground"/>
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="出示優惠券即可使用"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"
-                    android:layout_margin="2dp"
-                    android:gravity="end"
-                    android:layout_gravity="end"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:src="@mipmap/show_ticket_foreground"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出示優惠券即可使用"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        android:gravity="end"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:id="@+id/text_ticket_count_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="60"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/round_button"
+                        android:gravity="center"
+                        android:layout_margin="15dp"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
 
             </LinearLayout>
 

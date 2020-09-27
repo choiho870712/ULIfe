@@ -221,38 +221,10 @@ class MainActivity : AppCompatActivity() {
         toolbar.setupWithNavController(navController, AppBarConfiguration(navController.graph))
         toolbar.inflateMenu(R.menu.toolbar_menu)
         nav_view.setupWithNavController(navController)
-
-
-//        fragmentManager.beginTransaction().apply {
-//            add(R.id.nav_host_fragment, homeFragment, "homeFragment")
-//            add(R.id.nav_host_fragment, notificationsFragment,"notificationsFragment").hide(notificationsFragment)
-//            add(R.id.nav_host_fragment, personFragment, "personFragment").hide(personFragment)
-//        }.commit()
-//
-//        nav_view.setOnNavigationItemSelectedListener { menuItem ->
-//            when (menuItem.itemId) {
-//                R.id.navigation_home -> {
-//                    fragmentManager.beginTransaction().hide(activeFragment).show(homeFragment).commit()
-//                    activeFragment = homeFragment
-//                    true
-//                }
-//                R.id.navigation_notifications -> {
-//                    fragmentManager.beginTransaction().hide(activeFragment).show(notificationsFragment).commit()
-//                    activeFragment = notificationsFragment
-//                    true
-//                }
-//                R.id.navigation_person -> {
-//                    fragmentManager.beginTransaction().hide(activeFragment).show(personFragment).commit()
-//                    activeFragment = personFragment
-//                    true
-//                }
-//                else -> false
-//            }
-//        }
     }
 
     private fun setButtons() {
-//         linkMainPageToolbarButton()
+         linkMainPageToolbarButton()
     }
 
     private fun linkMainPageToolbarButton() {
@@ -278,25 +250,37 @@ class MainActivity : AppCompatActivity() {
         Thread {
             var isReconnect = false
             while (true) {
+//                if (!GlobalVariables.functions.isNetWorkConnecting()) {
+//                    isReconnect = true
+//                    runOnUiThread {
+//                        GlobalVariables.activity.nav_host_fragment.
+//                        findNavController().navigate(R.id.login_navigation)
+//                        GlobalVariables.activity.nav_host_fragment.
+//                        findNavController().setGraph(R.navigation.login_navigation)
+//                    }
+//                }
+//                else if (isReconnect) {
+//                    // always reset proposal list when reconnect to wifi
+//                    GlobalVariables.functions.resetProposalList()
+//                    runOnUiThread {
+//                        GlobalVariables.activity.nav_host_fragment.
+//                        findNavController().navigate(R.id.login_navigation)
+//                        GlobalVariables.activity.nav_host_fragment.
+//                        findNavController().setGraph(R.navigation.login_navigation)
+//                    }
+//                    isReconnect = false
+//                }
+
                 if (!GlobalVariables.functions.isNetWorkConnecting()) {
-                    isReconnect = true
                     runOnUiThread {
-                        GlobalVariables.activity.nav_host_fragment.
-                        findNavController().navigate(R.id.login_navigation)
-                        GlobalVariables.activity.nav_host_fragment.
-                        findNavController().setGraph(R.navigation.login_navigation)
+                        text_login_status.text = "請確認網路"
+                        layout_login_status.visibility = View.VISIBLE
                     }
                 }
-                else if (isReconnect) {
-                    // always reset proposal list when reconnect to wifi
-                    GlobalVariables.functions.resetProposalList()
+                else {
                     runOnUiThread {
-                        GlobalVariables.activity.nav_host_fragment.
-                        findNavController().navigate(R.id.login_navigation)
-                        GlobalVariables.activity.nav_host_fragment.
-                        findNavController().setGraph(R.navigation.login_navigation)
+                        layout_login_status.visibility = View.GONE
                     }
-                    isReconnect = false
                 }
                 Thread.sleep(5000)
             }

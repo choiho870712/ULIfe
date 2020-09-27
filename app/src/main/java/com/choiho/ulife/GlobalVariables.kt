@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.choiho.ulife.discountTicket.DistountTicket
+import com.choiho.ulife.discountTicket.FoodPriceFragment
 import com.choiho.ulife.firebase.MyFireBaseMessagingService
 import com.choiho.ulife.navigationUI.notifications.Notification
 import com.choiho.ulife.navigationUI.home.Proposal
@@ -30,7 +32,6 @@ class GlobalVariables : Application() {
         var studentPermissionID = ""
         var isDoneStudentForm = false
 
-        var homePageView: View? = null
         var homeMenuChoose = "food"
         var homeAreaChoose = "Zhongli"
         var homeClassChoose = ""
@@ -88,5 +89,11 @@ class GlobalVariables : Application() {
         var random_price_chance = 3
 
         var report_shop_id = ""
+
+
+        var foodPriceSelect: DistountTicket = DistountTicket("","","","",0,0)
+        var isFoodPriceSelected = false
+
+        lateinit var countDownTimer: FoodPriceFragment.MyCountDownTimer
     }
 }

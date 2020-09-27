@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.card_food_price.view.*
 import kotlinx.android.synthetic.main.fragment_food_price.view.*
 import org.threeten.bp.Instant
@@ -40,13 +41,54 @@ class CardFoodPriceAdapter(val myDataset: ArrayList<DistountTicket>, val parentV
         holder.lastTime.text = formatter.format(parser.parse(triggerTime.toString()))
 
         holder.cardView.setOnClickListener {
-            parentView.text_food_price_page2_name.text = holder.name.text
-            parentView.text_food_price_page2_content.text = holder.content.text
-            parentView.text_food_price_page2_time.text = holder.lastTime.text
-            parentView.layout_food_price_page2.visibility = View.VISIBLE
-            if (GlobalVariables.proposalUserInfo.ID != myDataset[position].id) {
-                GlobalVariables.proposalUserInfo.ID = myDataset[position].id
-                GlobalVariables.proposalUserInfo.isReady = false
+            // setup dialog builder
+            val builder = android.app.AlertDialog.Builder(GlobalVariables.activity)
+            builder.setTitle("是否使用優惠券？")
+
+            builder.setPositiveButton("是", { dialogInterface, i ->
+                GlobalVariables.foodPriceSelect = myDataset[position]
+                GlobalVariables.isFoodPriceSelected = true
+
+                parentView.text_food_price_page2_name.text = holder.name.text
+                parentView.text_food_price_page2_content.text = holder.content.text
+                parentView.text_food_price_page2_time.text = holder.lastTime.text
+                if (GlobalVariables.proposalUserInfo.ID != myDataset[position].id) {
+                    GlobalVariables.proposalUserInfo.ID = myDataset[position].id
+                    GlobalVariables.proposalUserInfo.isReady = false
+                }
+                Thread {
+                    GlobalVariables.taskCount++
+                    GlobalVariables.proposalUserInfo.readFromApi(GlobalVariables.proposalUserInfo.ID)
+                    while (!GlobalVariables.proposalUserInfo.isReady)
+                        Thread.sleep(100)
+
+                    GlobalVariables.activity.runOnUiThread {
+                        val icon = GlobalVariables.proposalUserInfo.getIconBitmap()
+                        if (icon != null)
+                            parentView.image_food_price_page2.setImageBitmap(icon)
+
+                        GlobalVariables.countDownTimer =
+                            FoodPriceFragment.MyCountDownTimer(
+                                60000,
+                                1000,
+                                GlobalVariables.activity.text_count_down
+                            )
+
+                        parentView.layout_food_price_page2.visibility = View.VISIBLE
+                        parentView.layout_food_price_page2.animate().alpha(1.0f)
+                        GlobalVariables.countDownTimer.start()
+                        GlobalVariables.taskCount--
+                    }
+                }.start()
+            })
+            builder.setNegativeButton("否", { dialogInterface, i ->
+
+            })
+
+            // create dialog and show it
+            GlobalVariables.activity.runOnUiThread{
+                val dialog = builder.create()
+                dialog.show()
             }
         }
     }

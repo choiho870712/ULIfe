@@ -14,6 +14,9 @@
         android:background="@color/colorWhiteSmoke"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="15sp"/>
 
 </androidx.cardview.widget.CardView>

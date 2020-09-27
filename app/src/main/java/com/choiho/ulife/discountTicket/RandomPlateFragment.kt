@@ -94,7 +94,6 @@ class RandomPlateFragment : Fragment() {
         iv = root.image_random_food_plate_board
         buttonRandomFood.setOnClickListener {
             if (!lockRandomFoodButton) {
-                lockRandomFoodButton = true
 
                 if (GlobalVariables.random_price_chance <= 0) {
                     GlobalVariables.functions.makeToast("每日只限抽3次")
@@ -105,10 +104,11 @@ class RandomPlateFragment : Fragment() {
                     builder.setTitle("是否確定抽獎？")
 
                     builder.setPositiveButton("是", { dialogInterface, i ->
+                        lockRandomFoodButton = true
                         randomFoodTask()
                     })
                     builder.setNegativeButton("否", { dialogInterface, i ->
-                        lockRandomFoodButton = false
+
                     })
 
                     // create dialog and show it

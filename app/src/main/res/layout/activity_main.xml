@@ -93,4 +93,28 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/layout_login_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_login_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="系統維修中" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
 </RelativeLayout>

@@ -27,8 +27,6 @@ class HomeFragment : Fragment() {
         GlobalVariables.toolBarController.setTextColor(R.color.colorWhite)
         setUi()
 
-//        if (GlobalVariables.homeProposalList.isEmpty())
-//            GlobalVariables.functions.resetProposalList()
         createNewPage()
         linkMorePageListener()
         linkRefreshPageListener()

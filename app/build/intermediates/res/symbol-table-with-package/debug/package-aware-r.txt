@@ -1520,6 +1520,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable price_big_xxx
 drawable price_m
+drawable round_button
 drawable show_ticket_background
 drawable test_custom_background
 drawable tool_box_square_text_box
@@ -1841,6 +1842,7 @@ id layout_food_price_page2
 id layout_food_price_page2_top
 id layout_form_done
 id layout_form_not_done
+id layout_login_status
 id layout_student_permission
 id layout_student_permission_done
 id layout_tool_box_empty_1_1
@@ -2038,6 +2040,7 @@ id text_author_notifications_official
 id text_author_notifications_shop
 id text_content_edit_person
 id text_content_home_page1
+id text_count_down
 id text_date_card_notifications
 id text_date_edit_home
 id text_date_home_page1
@@ -2084,6 +2087,7 @@ id text_tag_edit_person
 id text_tag_home_page1
 id text_tag_information_person_section1
 id text_tag_shopFragment
+id text_ticket_count_down
 id text_title_card_home
 id text_title_home_page1
 id text_tool_box_empty_1_1

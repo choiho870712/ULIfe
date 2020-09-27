@@ -206,15 +206,17 @@ class ToolBarController {
                 "food" -> {
                     GlobalVariables.activity.toolbar.text_toolbar_main.text = "美食"
                     GlobalVariables.activity.image_toolbar_main.setImageResource(R.drawable.chicken_m)
+                    GlobalVariables.activity.nav_view.menu.findItem(R.id.navigation_home).title = "美食"
                 }
                 "game" -> {
                     GlobalVariables.activity.toolbar.text_toolbar_main.text = "玩樂"
                     GlobalVariables.activity.image_toolbar_main.setImageResource(R.drawable.disco_ball_m)
+                    GlobalVariables.activity.nav_view.menu.findItem(R.id.navigation_home).title = "玩樂"
                 }
                 "event" -> {
                     GlobalVariables.activity.toolbar.text_toolbar_main.text = "校園活動"
                     GlobalVariables.activity.image_toolbar_main.setImageResource(R.drawable.price_m)
-
+                    GlobalVariables.activity.nav_view.menu.findItem(R.id.navigation_home).title = "校園活動"
                 }
                 else -> {
                     GlobalVariables.activity.toolbar.text_toolbar_main.text = "錯誤"

@@ -56,14 +56,6 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/button_search_friend"
-        android:icon="@mipmap/search_friend_foreground"
-        android:title="搜尋好友"
-        android:enabled="false"
-        android:visible="false"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/button_logout"
         android:title="登出"
         android:visible="false"
@@ -72,7 +64,6 @@
 
     <item
         android:id="@+id/button_goToShopInfo"
-        android:icon="@mipmap/notification_shop_foreground"
         android:title="店家資訊"
         android:visible="false"
         android:enabled="false"

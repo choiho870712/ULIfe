@@ -33,7 +33,7 @@
             app:cardElevation="2dp"
             app:cardCornerRadius="10dp"
             android:layout_below="@+id/layout_food_plate"
-            android:layout_marginTop="-80dp">
+            android:layout_marginTop="30dp">
 
             <Button
                 android:id="@+id/button_random_food"
@@ -94,12 +94,12 @@
             <ImageView
                 android:id="@+id/image_random_food_plate_leg"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:layout_centerHorizontal="true"
-                android:src="@mipmap/random_food_plate_leg_foreground"
+                android:src="@drawable/ic_random_food_plate_leg"
                 android:layout_below="@id/image_random_food_plate_board"
-                android:layout_marginTop="-10dp"/>
+                android:layout_marginTop="-30dp"/>
 
             <ImageView
                 android:layout_marginTop="50dp"
@@ -107,18 +107,17 @@
                 android:layout_centerHorizontal="true"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
-                android:src="@mipmap/random_food_plate_board_foreground"
-                android:scaleType="centerCrop" />
+                android:src="@drawable/ic_random_food_plate_board" />
 
             <ImageView
                 android:id="@+id/image_random_food_plate_pointer"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:layout_centerHorizontal="true"
-                android:src="@mipmap/random_food_plate_pointer_foreground"
+                android:src="@drawable/ic_random_food_plate_pointer"
                 android:layout_above="@+id/image_random_food_plate_board"
-                android:layout_marginBottom="-80dp"/>
+                android:layout_marginBottom="-90dp"/>
 
         </RelativeLayout>
 

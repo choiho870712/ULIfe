@@ -64,7 +64,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@mipmap/bird_salute_foreground"
+                    android:src="@drawable/ic_salute_bird"
                     android:layout_weight="1" />
 
                 <LinearLayout
@@ -79,7 +79,7 @@
                         android:id="@+id/text_followerCount_shopFragment"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@mipmap/shop_profile_follower_foreground"
+                        android:background="@drawable/ic_shop_profile_follower"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:textSize="20sp" />

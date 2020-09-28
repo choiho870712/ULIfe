@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
-import com.google.android.play.core.appupdate.testing.FakeAppUpdateManager
 import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.ActivityResult
 import com.google.android.play.core.install.model.AppUpdateType
@@ -35,12 +34,6 @@ import me.leolin.shortcutbadger.ShortcutBadger
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController:NavController
-
-//    private val homeFragment = HomeFragment()
-//    private val notificationsFragment = NotificationsFragment()
-//    private val personFragment = PersonFragment()
-//    private val fragmentManager = supportFragmentManager
-//    private var activeFragment: Fragment = homeFragment
 
     companion object {
         private const val PERMISSION_REQUEST_ACCESS_FINE_LOCATION = 100
@@ -85,6 +78,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 
     private val listener: InstallStateUpdatedListener? = InstallStateUpdatedListener { installState ->
         if (installState.installStatus() == InstallStatus.DOWNLOADED) {
@@ -248,28 +243,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun createWifiConnectionChecker() {
         Thread {
-            var isReconnect = false
             while (true) {
-//                if (!GlobalVariables.functions.isNetWorkConnecting()) {
-//                    isReconnect = true
-//                    runOnUiThread {
-//                        GlobalVariables.activity.nav_host_fragment.
-//                        findNavController().navigate(R.id.login_navigation)
-//                        GlobalVariables.activity.nav_host_fragment.
-//                        findNavController().setGraph(R.navigation.login_navigation)
-//                    }
-//                }
-//                else if (isReconnect) {
-//                    // always reset proposal list when reconnect to wifi
-//                    GlobalVariables.functions.resetProposalList()
-//                    runOnUiThread {
-//                        GlobalVariables.activity.nav_host_fragment.
-//                        findNavController().navigate(R.id.login_navigation)
-//                        GlobalVariables.activity.nav_host_fragment.
-//                        findNavController().setGraph(R.navigation.login_navigation)
-//                    }
-//                    isReconnect = false
-//                }
 
                 if (!GlobalVariables.functions.isNetWorkConnecting()) {
                     runOnUiThread {

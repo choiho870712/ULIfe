@@ -25,7 +25,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/creat_account_bird_foreground" />
+            android:src="@drawable/ic_create_account_bird" />
 
         <androidx.cardview.widget.CardView
             android:layout_marginTop="30dp"

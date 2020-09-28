@@ -22,7 +22,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:src="@mipmap/creat_account_bird_foreground"
+            android:src="@drawable/ic_create_account_bird"
             android:layout_centerVertical="true"/>
 
         <LinearLayout

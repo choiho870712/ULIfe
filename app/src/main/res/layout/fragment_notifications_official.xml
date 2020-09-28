@@ -58,7 +58,7 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
-                        android:src="@mipmap/creat_account_bird_foreground"/>
+                        android:src="@drawable/ic_create_account_bird"/>
 
                     <TextView
                         android:id="@+id/text_author_notifications_official"

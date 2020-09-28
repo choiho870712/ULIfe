@@ -105,6 +105,7 @@ class RandomPlateFragment : Fragment() {
 
                     builder.setPositiveButton("是", { dialogInterface, i ->
                         lockRandomFoodButton = true
+                        iv.startAnimation(am)
                         randomFoodTask()
                     })
                     builder.setNegativeButton("否", { dialogInterface, i ->
@@ -124,7 +125,6 @@ class RandomPlateFragment : Fragment() {
     }
 
     private fun randomFoodTask() {
-        iv.startAnimation(am)
         var isDoneGettingPrice = false
         var finalPrice: DistountItem? = null
 

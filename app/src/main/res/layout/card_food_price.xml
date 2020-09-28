@@ -19,7 +19,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:src="@mipmap/discount_ticket_foreground"
+            android:src="@drawable/ic_discount_ticket"
             android:layout_centerVertical="true"/>
 
         <LinearLayout

@@ -980,6 +980,10 @@
         "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/drawable/ic_notification_main.xml"
     },
     {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/debug/layout_fragment_form_list.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/fragment_form_list.xml"
+    },
+    {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/debug/color_mtrl_chip_surface_color.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/color/mtrl_chip_surface_color.xml"
     },
@@ -2150,6 +2154,10 @@
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
         "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/3596e10dc039265577792a6858f2236d/material-1.1.0/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/debug/layout_card_form_list.xml.flat",
+        "source": "/home/chou/AndroidStudioProjects/startUpBoard/app/src/main/res/layout/card_form_list.xml"
     },
     {
         "merged": "/home/chou/AndroidStudioProjects/startUpBoard/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",

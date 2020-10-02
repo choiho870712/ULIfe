@@ -5,6 +5,7 @@ import android.util.Log
 import com.choiho.ulife.discountTicket.DistountItem
 import com.choiho.ulife.discountTicket.DistountTicket
 import com.choiho.ulife.form.FormItem
+import com.choiho.ulife.form.FormListItem
 import com.choiho.ulife.navigationUI.notifications.Notification
 import com.choiho.ulife.navigationUI.home.Proposal
 import com.choiho.ulife.navigationUI.home.ProposalItem
@@ -22,7 +23,7 @@ class Api {
     private val jsonType: MediaType = MediaType.parse("application/json; charset=utf-8")
 
 //    private val urlDirectory = "https://6unoj2gvpj.execute-api.ap-southeast-1.amazonaws.com/Dev/"
-    private val urlDirectory = "https://jk4tx1rbh8.execute-api.ap-southeast-1.amazonaws.com/Deploy/"
+    private val urlDirectory = "https://jk4tx1rbh8.execute-api.ap-southeast-1.amazonaws.com/Deploy_1/"
 
     private val urlGetNotification = urlDirectory + "notification/get-notification"
     private val urlPostNotification = urlDirectory + "notification/post-notification"
@@ -50,6 +51,7 @@ class Api {
     private val urlGetDiscountTicket = urlDirectory + "zhongli/discount/get-discount-ticket"
     private val urlGetForm = urlDirectory + "questionnaire/get-questionnaire"
     private val urlPostForm = urlDirectory + "questionnaire/post-questionnaire"
+    private val urlGetFormList = urlDirectory + "questionnaire/get-questionnaire-list"
     private val urlGetRanking = urlDirectory + "ranking/get-ranking"
     private val urlClickInRanking = urlDirectory + "ranking/click-in-ranking"
 
@@ -125,7 +127,7 @@ class Api {
         return getRakingJson(callApi(json, urlGetRanking))
     }
 
-    fun postForm(id:String, student_id:String, ans:ArrayList<String>): Int {
+    fun postForm(id:String, student_id:String, ans:ArrayList<String>, prefix:String): Int {
         var json = "{\"id\": \"$id\", \"student_id\": \"$student_id\""
         json += ", \"ans\": [ "
         var isFirst = true
@@ -139,7 +141,7 @@ class Api {
                 json += "\"$ansItem\""
         }
         json += "]"
-        json += "}"
+        json += ", \"prefix\":\"$prefix\"}"
 
         val msg = getJsonMessage(callApi(json, urlPostForm))
         if (msg == "No Error" )
@@ -148,6 +150,32 @@ class Api {
             return 2
         else
             return 0
+    }
+
+    private fun getFormListJson(rawJsonString : String): ArrayList<FormListItem> {
+        val dataList = ArrayList<FormListItem>()
+        val jsonArray = JSONArray(rawJsonString)
+
+        for ( i in 0 until(jsonArray.length()) ) {
+            val jsonObject = jsonArray.getJSONObject(i)
+
+            if(jsonObject.has("message"))
+                break
+
+            dataList.add(
+                FormListItem(
+                    jsonObject.getString("tilte"),
+                    jsonObject.getString("end_time"),
+                    jsonObject.getString("prefix")
+                )
+            )
+        }
+        return dataList
+    }
+
+    fun getFormList(): ArrayList<FormListItem> {
+        val json = "{}"
+        return getFormListJson(callApi(json, urlGetFormList))
     }
 
     private fun getFormJson(rawJsonString : String): ArrayList<FormItem> {
@@ -176,8 +204,8 @@ class Api {
         return dataList
     }
 
-    fun getForm(): ArrayList<FormItem> {
-        val json = "{}"
+    fun getForm(prefix:String): ArrayList<FormItem> {
+        val json = "{\"prefix\":\"$prefix\"}"
         return getFormJson(callApi(json, urlGetForm))
     }
 

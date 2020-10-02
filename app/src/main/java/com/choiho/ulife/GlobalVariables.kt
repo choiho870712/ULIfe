@@ -30,7 +30,6 @@ class GlobalVariables : Application() {
 
         var userInfo = UserInfo("", "", "", "", "", "", mutableListOf(), 0.0, 0.0, mutableListOf(), mutableListOf())
         var studentPermissionID = ""
-        var isDoneStudentForm = false
 
         var homeMenuChoose = "food"
         var homeAreaChoose = "Zhongli"
@@ -95,5 +94,8 @@ class GlobalVariables : Application() {
         var isFoodPriceSelected = false
 
         lateinit var countDownTimer: FoodPriceFragment.MyCountDownTimer
+
+        var formPrefix = ""
+        var formTitle = ""
     }
 }

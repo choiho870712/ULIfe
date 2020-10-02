@@ -1596,7 +1596,8 @@ id action_createAccountFragment_to_privacyPolicyChineseFragment
 id action_createAccountFragment_to_privacyPolicyEnglishFragment
 id action_divider
 id action_foodPriceFragment_to_personShopInfoFragment
-id action_formFragment_to_studentPermissionFragment
+id action_formListFragment_to_formFragment
+id action_formListFragment_to_studentPermissionFragment
 id action_homeEditFragment_to_homePage1Fragment
 id action_homeMenuFragment_to_navigation_home
 id action_homePage1Fragment_to_personShopInfoFragment
@@ -1618,7 +1619,7 @@ id action_navigation_notifications_to_notificationFriendFragment
 id action_navigation_notifications_to_notificationOfficialFragment
 id action_navigation_notifications_to_notificationsShopFragment
 id action_navigation_person_to_foodPriceFragment
-id action_navigation_person_to_formFragment
+id action_navigation_person_to_formListFragment
 id action_navigation_person_to_notificationSendFragment
 id action_navigation_person_to_personInfoFragment
 id action_navigation_person_to_personSearchFriendFragment
@@ -1640,7 +1641,6 @@ id action_personSearchFriendFragment_to_personShopInfoFragment
 id action_personShopInfoFragment_to_chatFriendListFragment
 id action_personShopInfoFragment_to_personEditFragment
 id action_randomPlateFragment_to_foodPriceFragment
-id action_studentPermissionFragment_to_formFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1789,6 +1789,7 @@ id fixed
 id foodPriceFragment
 id forever
 id formFragment
+id formListFragment
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -1808,6 +1809,7 @@ id icon_only
 id ifRoom
 id image
 id image_card_food_price
+id image_card_form
 id image_card_notifications
 id image_card_search_friend
 id image_edit_home_proposalImage
@@ -1958,6 +1960,7 @@ id recycler_answer_select_form
 id recycler_class_button
 id recycler_food_price
 id recycler_form
+id recycler_form_list
 id recycler_friend_list_chat
 id recycler_home
 id recycler_notification_friend
@@ -2063,6 +2066,9 @@ id text_food_price_page2_content
 id text_food_price_page2_name
 id text_food_price_page2_time
 id text_food_price_time
+id text_form_done
+id text_form_time
+id text_form_title
 id text_friendCount_information_person_section1
 id text_input_end_icon
 id text_input_start_icon
@@ -2208,6 +2214,7 @@ layout activity_main
 layout card_class_button
 layout card_food_price
 layout card_form
+layout card_form_list
 layout card_form_select_answer
 layout card_home
 layout card_notifications
@@ -2235,6 +2242,7 @@ layout fragment_chat_friend_list
 layout fragment_create_account
 layout fragment_food_price
 layout fragment_form
+layout fragment_form_list
 layout fragment_home
 layout fragment_home_edit
 layout fragment_home_menu

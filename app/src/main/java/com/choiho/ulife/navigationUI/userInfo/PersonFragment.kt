@@ -115,8 +115,10 @@ class PersonFragment : Fragment() {
         root.text_tool_box_empty_1_3.visibility = View.VISIBLE
         root.image_tool_box_empty_1_3.visibility = View.VISIBLE
         root.layout_tool_box_empty_1_3.setOnClickListener {
-            if (activity != null)
-                requireActivity().nav_host_fragment.findNavController().navigate(R.id.action_navigation_person_to_formFragment)
+            GlobalVariables.functions.navigate(
+                R.id.navigation_person,
+                R.id.action_navigation_person_to_formListFragment
+            )
         }
     }
 

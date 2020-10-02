@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.choiho.ulife.GlobalVariables
 import com.choiho.ulife.R
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_form.view.*
 
 /**
@@ -29,16 +30,13 @@ class FormFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_form, container, false)
+        if (activity != null)
+            requireActivity().toolbar.setTitle(GlobalVariables.formTitle)
 
-        if (GlobalVariables.studentPermissionID == "") {
-            GlobalVariables.functions.makeToast("請先完成學生認證")
-            GlobalVariables.functions.navigate(
-                R.id.formFragment,
-                R.id.action_formFragment_to_studentPermissionFragment
-            )
-        }
-        else if (GlobalVariables.isDoneStudentForm) {
+        val markFormDone = "markFormDone_" + GlobalVariables.formPrefix
+        if (GlobalVariables.dbHelper.readDB(markFormDone) != "") {
             root.layout_form_done.visibility = View.VISIBLE
+            root.layout_form_not_done.visibility = View.GONE
         }
         else {
             root.layout_form_done.visibility = View.GONE
@@ -51,7 +49,7 @@ class FormFragment : Fragment() {
     private fun createForm() {
         Thread {
             GlobalVariables.taskCount++
-            questionList = GlobalVariables.api.getForm()
+            questionList = GlobalVariables.api.getForm(GlobalVariables.formPrefix)
             GlobalVariables.taskCount--
 
             if (questionList.isEmpty()) {
@@ -162,12 +160,13 @@ class FormFragment : Fragment() {
                 val isSuccess = GlobalVariables.api.postForm(
                     GlobalVariables.userInfo.ID,
                     GlobalVariables.studentPermissionID,
-                    answerList
+                    answerList,
+                    GlobalVariables.formPrefix
                 )
 
                 if (isSuccess > 0) {
-                    GlobalVariables.isDoneStudentForm = true
-                    GlobalVariables.dbHelper.writeDB("isDoneStudentForm", "true")
+                    val markFormDone = "markFormDone_" + GlobalVariables.formPrefix
+                    GlobalVariables.dbHelper.writeDB(markFormDone, "true")
                     GlobalVariables.functions.makeToast("已送出問卷")
 
                     if (activity!=null) requireActivity().runOnUiThread {
@@ -176,7 +175,6 @@ class FormFragment : Fragment() {
                     }
                 }
                 else {
-                    GlobalVariables.isDoneStudentForm = false
                     GlobalVariables.functions.makeToast("送出問卷失敗")
                 }
             }

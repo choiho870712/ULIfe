@@ -74,11 +74,11 @@
             android:id="@+id/action_navigation_person_to_studentPermissionFragment"
             app:destination="@id/studentPermissionFragment" />
         <action
-            android:id="@+id/action_navigation_person_to_formFragment"
-            app:destination="@id/formFragment" />
-        <action
             android:id="@+id/action_navigation_person_to_viewBoxFragment2"
             app:destination="@id/viewBoxFragment" />
+        <action
+            android:id="@+id/action_navigation_person_to_formListFragment"
+            app:destination="@id/formListFragment" />
     </fragment>
     <fragment
         android:id="@+id/homePage1Fragment"
@@ -243,22 +243,12 @@
         android:id="@+id/studentPermissionFragment"
         android:name="com.choiho.ulife.studentPermission.StudentPermissionFragment"
         android:label="學生身份認證"
-        tools:layout="@layout/fragment_student_permission" >
-        <action
-            android:id="@+id/action_studentPermissionFragment_to_formFragment"
-            app:destination="@id/formFragment"
-            app:popUpTo="@+id/navigation_person" />
-    </fragment>
+        tools:layout="@layout/fragment_student_permission" />
     <fragment
         android:id="@+id/formFragment"
         android:name="com.choiho.ulife.form.FormFragment"
         android:label="中原大學防疫問卷"
-        tools:layout="@layout/fragment_form" >
-        <action
-            android:id="@+id/action_formFragment_to_studentPermissionFragment"
-            app:destination="@id/studentPermissionFragment"
-            app:popUpTo="@+id/navigation_person" />
-    </fragment>
+        tools:layout="@layout/fragment_form" />
     <fragment
         android:id="@+id/viewBoxFragment"
         android:name="com.choiho.ulife.complaint.ViewBoxFragment"
@@ -277,5 +267,17 @@
         <action
             android:id="@+id/action_notificationOfficialFragment_to_personShopInfoFragment"
             app:destination="@id/personShopInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formListFragment"
+        android:name="com.choiho.ulife.form.FormListFragment"
+        android:label="問卷清單"
+        tools:layout="@layout/fragment_form_list">
+        <action
+            android:id="@+id/action_formListFragment_to_studentPermissionFragment"
+            app:destination="@id/studentPermissionFragment" />
+        <action
+            android:id="@+id/action_formListFragment_to_formFragment"
+            app:destination="@id/formFragment" />
     </fragment>
 </navigation>

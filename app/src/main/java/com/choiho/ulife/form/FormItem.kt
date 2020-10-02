@@ -5,3 +5,9 @@ data class FormItem(
     var type: String = "",
     var answer: ArrayList<String> = arrayListOf()
 )
+
+data class FormListItem(
+    var tilte: String = "",
+    var end_time: String = "",
+    var prefix: String = ""
+)

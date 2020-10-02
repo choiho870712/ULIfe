@@ -118,10 +118,10 @@ class CardOfficialAdapter(val myDataset: ArrayList<Notification>, val parentView
                 isClickingCard = true
                 Thread {
                     GlobalVariables.api.clickInNotification(
-                        GlobalVariables.userInfo.ID,
+                        "ULifeOffical",
                         holder.create_time,
                         holder.viewCountNumber,
-                        GlobalVariables.homeAreaChoose
+                        "Offical"
                     )
                 }.start()
 

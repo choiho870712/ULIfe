@@ -80,32 +80,32 @@ public final class R {
 
         public static final int action_container = 0x7f080035;
         public static final int action_divider = 0x7f08003a;
-        public static final int action_image = 0x7f080042;
+        public static final int action_image = 0x7f080043;
         public static final int action_text = 0x7f080069;
         public static final int actions = 0x7f08006a;
         public static final int async = 0x7f080072;
         public static final int blocking = 0x7f080076;
         public static final int chronometer = 0x7f0800bd;
         public static final int forever = 0x7f0800fb;
-        public static final int icon = 0x7f08010a;
-        public static final int icon_group = 0x7f08010b;
-        public static final int info = 0x7f08012f;
-        public static final int italic = 0x7f080131;
-        public static final int line1 = 0x7f080146;
-        public static final int line3 = 0x7f080147;
-        public static final int normal = 0x7f08017c;
-        public static final int notification_background = 0x7f080180;
-        public static final int notification_main_column = 0x7f080184;
-        public static final int notification_main_column_container = 0x7f080185;
-        public static final int right_icon = 0x7f0801b0;
-        public static final int right_side = 0x7f0801b1;
-        public static final int tag_transition_group = 0x7f0801ec;
-        public static final int tag_unhandled_key_event_manager = 0x7f0801ed;
-        public static final int tag_unhandled_key_listeners = 0x7f0801ee;
-        public static final int text = 0x7f0801f2;
-        public static final int text2 = 0x7f0801f3;
-        public static final int time = 0x7f080244;
-        public static final int title = 0x7f080245;
+        public static final int icon = 0x7f08010b;
+        public static final int icon_group = 0x7f08010c;
+        public static final int info = 0x7f080131;
+        public static final int italic = 0x7f080133;
+        public static final int line1 = 0x7f080148;
+        public static final int line3 = 0x7f080149;
+        public static final int normal = 0x7f08017e;
+        public static final int notification_background = 0x7f080182;
+        public static final int notification_main_column = 0x7f080186;
+        public static final int notification_main_column_container = 0x7f080187;
+        public static final int right_icon = 0x7f0801b3;
+        public static final int right_side = 0x7f0801b4;
+        public static final int tag_transition_group = 0x7f0801ef;
+        public static final int tag_unhandled_key_event_manager = 0x7f0801f0;
+        public static final int tag_unhandled_key_listeners = 0x7f0801f1;
+        public static final int text = 0x7f0801f5;
+        public static final int text2 = 0x7f0801f6;
+        public static final int time = 0x7f08024a;
+        public static final int title = 0x7f08024b;
     }
     public static final class integer {
         private integer() {}
@@ -115,12 +115,12 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int notification_action = 0x7f0b006e;
-        public static final int notification_action_tombstone = 0x7f0b006f;
-        public static final int notification_template_custom_big = 0x7f0b0076;
-        public static final int notification_template_icon_group = 0x7f0b0077;
-        public static final int notification_template_part_chronometer = 0x7f0b007b;
-        public static final int notification_template_part_time = 0x7f0b007c;
+        public static final int notification_action = 0x7f0b0070;
+        public static final int notification_action_tombstone = 0x7f0b0071;
+        public static final int notification_template_custom_big = 0x7f0b0078;
+        public static final int notification_template_icon_group = 0x7f0b0079;
+        public static final int notification_template_part_chronometer = 0x7f0b007d;
+        public static final int notification_template_part_time = 0x7f0b007e;
     }
     public static final class string {
         private string() {}

@@ -131,8 +131,6 @@ class GlobalFunctions {
         GlobalVariables.userInfo.clear()
         GlobalVariables.studentPermissionID =
             GlobalVariables.dbHelper.readDB("studentPermissionID")
-        GlobalVariables.isDoneStudentForm =
-            GlobalVariables.dbHelper.readDB("isDoneStudentForm") == "true"
         readMyOldNotificationFromSQL()
         return GlobalVariables.userInfo.readDB("userInfo")
     }

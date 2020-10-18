@@ -38,23 +38,6 @@
                     }
                 },
                 {
-                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/8f4c1388971172c9322095eb0309db28/jetified-firebase-messaging-20.2.3/res/values-it/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "99",
-                        "endOffsets": "306"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5510",
-                        "endColumns": "103",
-                        "endOffsets": "5609"
-                    }
-                },
-                {
                     "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a791e53c6c2c1ba0384209376a68757/appcompat-1.1.0/res/values-it/values-it.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
@@ -72,7 +55,24 @@
                     }
                 },
                 {
-                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/84497fc4807e10c9aca5c80ff525c686/jetified-play-services-basement-17.0.0/res/values-it/values.xml",
+                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/585d70c9597c26de3e98ee274336e4ab/jetified-firebase-messaging-20.2.3/res/values-it/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "99",
+                        "endOffsets": "306"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5510",
+                        "endColumns": "103",
+                        "endOffsets": "5609"
+                    }
+                },
+                {
+                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a5cb43e4079e388f3bce0286fdf205d/jetified-play-services-basement-17.0.0/res/values-it/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

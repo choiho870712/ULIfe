@@ -140,9 +140,9 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="150dp"
-                        android:src="@mipmap/show_ticket_foreground"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/ic_show_ticket"
                         android:layout_centerInParent="true"/>
 
                     <TextView

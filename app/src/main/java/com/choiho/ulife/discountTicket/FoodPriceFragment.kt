@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,7 +35,11 @@ class FoodPriceFragment : Fragment() {
 
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_food_price, container, false)
-        recyclerView = root.findViewById<RecyclerView>(R.id.recycler_food_price)
+
+        requireActivity().window.setFlags(
+            WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+
+        recyclerView = root.findViewById(R.id.recycler_food_price)
 
         if (GlobalVariables.isFoodPriceSelected) {
             val title = "【" + GlobalVariables.foodPriceSelect.name + "】"

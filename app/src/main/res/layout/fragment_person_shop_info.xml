@@ -43,7 +43,7 @@
                         android:id="@+id/text_score_shopFragment"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@mipmap/shop_profile_score_foreground"
+                        android:background="@drawable/ic_shop_profile_score"
                         android:gravity="center"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
@@ -202,7 +202,7 @@
                             android:id="@+id/button_score_star_1"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:background="@drawable/ic_shop_profile_score"
                             android:alpha="1"/>
 
                         <TextView
@@ -228,7 +228,7 @@
                             android:id="@+id/button_score_star_2"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:background="@drawable/ic_shop_profile_score"
                             android:alpha="0.1"/>
 
                         <TextView
@@ -254,7 +254,7 @@
                             android:id="@+id/button_score_star_3"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:background="@drawable/ic_shop_profile_score"
                             android:alpha="0.1"/>
 
                         <TextView
@@ -280,7 +280,7 @@
                             android:id="@+id/button_score_star_4"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:background="@drawable/ic_shop_profile_score"
                             android:alpha="0.1"/>
 
                         <TextView
@@ -306,7 +306,7 @@
                             android:id="@+id/button_score_star_5"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@mipmap/shop_profile_score_foreground"
+                            android:background="@drawable/ic_shop_profile_score"
                             android:alpha="0.1"/>
 
                         <TextView

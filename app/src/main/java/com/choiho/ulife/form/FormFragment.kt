@@ -106,14 +106,17 @@ class FormFragment : Fragment() {
             val answerList:ArrayList<String> = arrayListOf()
             for (i in 0 until(questionList.size)) {
                 if (questionList[i].type == "Single") {
-                    var answerString = ""
+                    var answerString = "["
                     myAdapter.selectAnswerAdapterList[i].fillAnswer()
                     for (checkBox in myAdapter.selectAnswerAdapterList[i].checkBoxList)
                         if (checkBox.isChecked) {
-                            answerString = checkBox.text.toString()
+                            answerString += "\""
+                            answerString += checkBox.text.toString()
+                            answerString += "\""
                             break
                         }
 
+                    answerString += "]"
                     answerList.add(answerString)
                 }
                 else if (questionList[i].type == "Multiple") {
@@ -132,7 +135,7 @@ class FormFragment : Fragment() {
                     answerList.add(answerString)
                 }
                 else {
-                    answerList.add(myAdapter.answerList[i])
+                    answerList.add("[\""+myAdapter.answerList[i]+"\"]")
                 }
             }
 

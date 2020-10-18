@@ -66,7 +66,7 @@ class PersonFragment : Fragment() {
     }
 
     private fun setSendNotificationButton() {
-        root.image_tool_box_empty_1_2.setImageResource(R.mipmap.shop_notice_foreground)
+        root.image_tool_box_empty_1_2.setImageResource(R.drawable.ic_shopnotice)
         root.text_tool_box_empty_1_2.text = "推播"
         root.text_tool_box_empty_1_2.visibility = View.VISIBLE
         root.image_tool_box_empty_1_2.visibility = View.VISIBLE
@@ -77,7 +77,7 @@ class PersonFragment : Fragment() {
     }
 
     private fun setRandomFoodButton() {
-        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_plate_foreground)
+        root.image_tool_box_empty_1_1.setImageResource(R.drawable.ic_random_food_plate)
         root.text_tool_box_empty_1_1.text = "美食轉盤"
         root.text_tool_box_empty_1_1.visibility = View.VISIBLE
         root.image_tool_box_empty_1_1.visibility = View.VISIBLE
@@ -88,7 +88,7 @@ class PersonFragment : Fragment() {
     }
 
     private fun setFoodPriceButton() {
-        root.image_tool_box_empty_1_1.setImageResource(R.mipmap.random_food_price_foreground)
+        root.image_tool_box_empty_1_1.setImageResource(R.drawable.ic_random_food_price)
         root.text_tool_box_empty_1_1.text = "優惠券"
         root.text_tool_box_empty_1_1.visibility = View.VISIBLE
         root.image_tool_box_empty_1_1.visibility = View.VISIBLE
@@ -99,7 +99,7 @@ class PersonFragment : Fragment() {
     }
 
     private fun setStudentPremissionButton() {
-        root.image_tool_box_empty_1_2.setImageResource(R.mipmap.student_permission_icon_foreground)
+        root.image_tool_box_empty_1_2.setImageResource(R.drawable.ic_student_permission_icon)
         root.text_tool_box_empty_1_2.text = "學生認證"
         root.text_tool_box_empty_1_2.visibility = View.VISIBLE
         root.image_tool_box_empty_1_2.visibility = View.VISIBLE
@@ -110,7 +110,7 @@ class PersonFragment : Fragment() {
     }
 
     private fun setFormButton() {
-        root.image_tool_box_empty_1_3.setImageResource(R.mipmap.form_icon_foreground)
+        root.image_tool_box_empty_1_3.setImageResource(R.drawable.ic_questionaaire)
         root.text_tool_box_empty_1_3.text = "問卷調查"
         root.text_tool_box_empty_1_3.visibility = View.VISIBLE
         root.image_tool_box_empty_1_3.visibility = View.VISIBLE
@@ -124,7 +124,7 @@ class PersonFragment : Fragment() {
 
     private fun setComplaintButton() {
         if (GlobalVariables.userInfo.isShop()) {
-            root.image_tool_box_empty_1_3.setImageResource(R.mipmap.view_box_foreground)
+            root.image_tool_box_empty_1_3.setImageResource(R.drawable.ic_view_box)
             root.text_tool_box_empty_1_3.text = "意見箱"
             root.text_tool_box_empty_1_3.visibility = View.VISIBLE
             root.image_tool_box_empty_1_3.visibility = View.VISIBLE
@@ -135,7 +135,7 @@ class PersonFragment : Fragment() {
             }
         }
         else {
-            root.image_tool_box_empty_2_1.setImageResource(R.mipmap.view_box_foreground)
+            root.image_tool_box_empty_2_1.setImageResource(R.drawable.ic_view_box)
             root.text_tool_box_empty_2_1.text = "意見箱"
             root.text_tool_box_empty_2_1.visibility = View.VISIBLE
             root.image_tool_box_empty_2_1.visibility = View.VISIBLE

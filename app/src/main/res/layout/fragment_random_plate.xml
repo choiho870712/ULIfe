@@ -79,7 +79,7 @@
             android:id="@+id/button_goto_discount_page"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@mipmap/random_food_price_foreground"
+            android:src="@drawable/ic_random_food_price"
             android:layout_alignParentEnd="true"
             android:layout_alignBottom="@+id/layout_food_plate"
             android:layout_margin="20dp"
@@ -111,8 +111,8 @@
 
             <ImageView
                 android:id="@+id/image_random_food_plate_pointer"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="160dp"
                 android:scaleType="centerCrop"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/ic_random_food_plate_pointer"

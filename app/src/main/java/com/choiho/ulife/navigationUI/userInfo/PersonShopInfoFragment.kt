@@ -96,15 +96,15 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16.0f))
 
 
-            mMap.setOnMyLocationChangeListener { arg0 ->
-
-                val myLocation = LatLng(arg0.latitude, arg0.longitude)
-                GlobalVariables.api.getGoogleMapPath(sydney, myLocation)
-
-                val options = PolylineOptions()
-                options.color(Color.RED)
-                options.width(5f)
-            }
+//            mMap.setOnMyLocationChangeListener { arg0 ->
+//
+//                val myLocation = LatLng(arg0.latitude, arg0.longitude)
+//                GlobalVariables.api.getGoogleMapPath(sydney, myLocation)
+//
+//                val options = PolylineOptions()
+//                options.color(Color.RED)
+//                options.width(5f)
+//            }
 
 
 //            Thread {

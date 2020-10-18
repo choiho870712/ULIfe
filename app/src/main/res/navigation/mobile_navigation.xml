@@ -275,7 +275,8 @@
         tools:layout="@layout/fragment_form_list">
         <action
             android:id="@+id/action_formListFragment_to_studentPermissionFragment"
-            app:destination="@id/studentPermissionFragment" />
+            app:destination="@id/studentPermissionFragment"
+            app:popUpTo="@+id/navigation_person" />
         <action
             android:id="@+id/action_formListFragment_to_formFragment"
             app:destination="@id/formFragment" />

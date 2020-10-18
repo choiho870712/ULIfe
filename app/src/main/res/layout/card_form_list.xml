@@ -19,7 +19,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:src="@mipmap/form_icon_foreground"
+            android:src="@drawable/ic_questionaaire"
             android:layout_centerVertical="true"/>
 
         <LinearLayout
@@ -32,7 +32,6 @@
             <TextView
                 android:id="@+id/text_form_title"
                 android:layout_marginTop="5dp"
-                android:singleLine="true"
                 android:text="title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="結束時間"
-                    android:textSize="15sp"/>
+                    android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/text_form_time"
@@ -58,7 +57,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"/>
+                    android:textSize="12sp"/>
 
             </LinearLayout>
 

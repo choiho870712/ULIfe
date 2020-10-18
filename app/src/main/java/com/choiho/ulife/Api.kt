@@ -134,11 +134,7 @@ class Api {
         for (ansItem in ans) {
             if ( !isFirst ) json += ", "
             else isFirst = false
-
-            if (ansItem.get(0) == '[')
-                json += ansItem
-            else
-                json += "\"$ansItem\""
+            json += ansItem
         }
         json += "]"
         json += ", \"prefix\":\"$prefix\"}"

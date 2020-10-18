@@ -270,7 +270,7 @@ class GlobalFunctions {
 
     fun makeToast(message: String) {
         GlobalVariables.activity.runOnUiThread {
-            Toast.makeText(GlobalVariables.activity, message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(GlobalVariables.activity, message, Toast.LENGTH_LONG).show()
         }
     }
 

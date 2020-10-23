@@ -23,7 +23,8 @@
         android:id="@+id/layout_food_price_page2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:alpha="0">
 
         <ImageView
             android:layout_width="match_parent"

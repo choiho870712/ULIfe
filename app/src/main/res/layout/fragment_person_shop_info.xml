@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".navigationUI.userInfo.PersonShopInfoFragment">
+    tools:context=".navigationUI.home.PersonShopInfoFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -96,63 +96,45 @@
 
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_proposal_item"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/text_selfIntroduction_shopFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/person_page1_self_introduction"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
-                    <TextView
-                        android:id="@+id/text_selfIntroduction_shopFragment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/person_page1_self_introduction"
-                        android:textSize="15sp"
-                        android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/text_tag_shopFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/person_page1_tag"
+                    android:textSize="10sp"/>
 
-                    <TextView
-                        android:id="@+id/text_tag_shopFragment"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="@string/person_page1_tag"
-                        android:textSize="10sp"/>
+            </LinearLayout>
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_shopFragment"
+                android:apiKey="AIzaSyDgBKoExNIkROG45k5BhjRZnwo4aXsStBs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
-
-                <com.google.android.gms.maps.MapView
-                    android:id="@+id/map_shopFragment"
-                    android:apiKey="AIzaSyDgBKoExNIkROG45k5BhjRZnwo4aXsStBs"
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"/>
-
-            </androidx.cardview.widget.CardView>
+                android:layout_height="500dp"/>
 
         </LinearLayout>
 
@@ -377,6 +359,27 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_proposal_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"
+            android:alpha="0.7"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_proposal_page"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 

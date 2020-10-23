@@ -3,13 +3,11 @@ package com.choiho.ulife.navigationUI.home
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.location.LocationManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -24,7 +22,6 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home_page1.view.*
-import kotlinx.android.synthetic.main.fragment_report.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -98,10 +95,11 @@ class HomePage1Fragment : Fragment(), OnMapReadyCallback {
             }.start()
 
             setInfo()
-            GlobalVariables.proposalItemAdapter = CardProposalItemAdapter(
-                GlobalVariables.proposal!!.proposalItemList,
-                root
-            )
+            GlobalVariables.proposalItemAdapter =
+                CardProposalItemAdapter(
+                    GlobalVariables.proposal!!.proposalItemList,
+                    root
+                )
             root.recycler_proposal_item.apply {
                 setHasFixedSize(true)
                 layoutManager = GridLayoutManager(activity, 3)

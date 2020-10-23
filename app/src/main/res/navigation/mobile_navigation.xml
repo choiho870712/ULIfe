@@ -23,6 +23,9 @@
             android:id="@+id/action_navigation_home_to_homeMenuFragment"
             app:destination="@id/homeMenuFragment"
             app:popUpTo="@+id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_personShopInfoFragment"
+            app:destination="@id/personShopInfoFragment" />
     </fragment>
 
     <fragment
@@ -180,7 +183,7 @@
     </fragment>
     <fragment
         android:id="@+id/personShopInfoFragment"
-        android:name="com.choiho.ulife.navigationUI.userInfo.PersonShopInfoFragment"
+        android:name="com.choiho.ulife.navigationUI.home.PersonShopInfoFragment"
         android:label=""
         tools:layout="@layout/fragment_person_shop_info" >
         <action

@@ -20,14 +20,15 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
 
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
         holder.author.text = myDataSet[position].name
-        holder.title.text = myDataSet[position].proposalItemList[0].title
+//        holder.title.text = myDataSet[position].proposalItemList[0].title
         holder.tag.text = myDataSet[position].proposalItemList[0].getHashTagString()
 
         if (myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne())
             holder.image.setImageBitmap(myDataSet[position].proposalItemList[0].imageList[0])
         else {
             Thread {
-                while (!myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne()) continue
+                while (!myDataSet[position].proposalItemList[0].isDoneImageLoadingOnlyOne())
+                    continue
                 GlobalVariables.activity.runOnUiThread {
                     holder.image.setImageBitmap(myDataSet[position].proposalItemList[0].imageList[0])
                 }
@@ -57,7 +58,7 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
 
             GlobalVariables.functions.navigate(
                 R.id.navigation_home,
-                R.id.action_navigation_home_to_homePage1Fragment
+                R.id.action_navigation_home_to_personShopInfoFragment
             )
         }
     }
@@ -66,7 +67,7 @@ class CardAdapter(private val myDataSet: ArrayList<Proposal>)
     class CardHolder(card: View) : RecyclerView.ViewHolder(card) {
         val cardView = card
         val author = card.text_author_card_home
-        val title = card.text_title_card_home
+//        val title = card.text_title_card_home
         val tag = card.text_tag_card_home
         val image = card.image_food_card_home
     }

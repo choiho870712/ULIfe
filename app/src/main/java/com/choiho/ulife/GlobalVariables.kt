@@ -1,7 +1,6 @@
 package com.choiho.ulife
 
 import android.app.Application
-import android.view.View
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,7 +13,7 @@ import com.choiho.ulife.navigationUI.home.Proposal
 import com.choiho.ulife.navigationUI.userInfo.UserInfo
 import com.choiho.ulife.navigationUI.home.CardAdapter
 import com.choiho.ulife.navigationUI.home.CardProposalItemAdapter
-import org.threeten.bp.LocalDate
+import com.choiho.ulife.navigationUI.home.CardProposalPageAdapter
 
 class GlobalVariables : Application() {
     companion object {
@@ -47,6 +46,8 @@ class GlobalVariables : Application() {
         var proposal: Proposal? = null
         var proposalItemIndex = 0
         lateinit var proposalItemAdapter: RecyclerView.Adapter<CardProposalItemAdapter.CardHolder>
+        lateinit var proposalPageAdapter: RecyclerView.Adapter<CardProposalPageAdapter.CardHolder>
+        lateinit var proposalPageLayoutManager: GridLayoutManager
         var proposalUserInfo: UserInfo =
             UserInfo(
                 "",

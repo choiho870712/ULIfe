@@ -1617,6 +1617,7 @@ id action_mode_close_button
 id action_navigation_home_to_homeEditFragment
 id action_navigation_home_to_homeMenuFragment
 id action_navigation_home_to_homePage1Fragment
+id action_navigation_home_to_personShopInfoFragment
 id action_navigation_notifications_to_notificationFriendFragment
 id action_navigation_notifications_to_notificationOfficialFragment
 id action_navigation_notifications_to_notificationsShopFragment
@@ -1829,6 +1830,7 @@ id image_photoshot_information_person_section1
 id image_photoshot_make_user_info
 id image_proposal
 id image_proposal_item
+id image_proposal_page
 id image_random_food_plate_board
 id image_random_food_plate_leg
 id image_random_food_plate_pointer
@@ -1859,6 +1861,7 @@ id layout_form_done
 id layout_form_not_done
 id layout_login_status
 id layout_main
+id layout_proposal_page
 id layout_student_permission
 id layout_student_permission_done
 id layout_tool_box_empty_1_1
@@ -1972,6 +1975,7 @@ id recycler_notification_friend
 id recycler_notification_official
 id recycler_notification_shop
 id recycler_proposal_item
+id recycler_proposal_page
 id recycler_search_friend_person
 id recycler_sended_notification
 id reportFragment
@@ -2108,7 +2112,6 @@ id text_tag_home_page1
 id text_tag_information_person_section1
 id text_tag_shopFragment
 id text_ticket_count_down
-id text_title_card_home
 id text_title_home_page1
 id text_tool_box_empty_1_1
 id text_tool_box_empty_1_2
@@ -2227,6 +2230,7 @@ layout card_home
 layout card_notifications
 layout card_notifications_official
 layout card_proposal_item
+layout card_proposal_page
 layout card_search_friend
 layout card_sended_notification
 layout custom_dialog

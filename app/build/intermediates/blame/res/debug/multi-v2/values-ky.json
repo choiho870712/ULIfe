@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/585d70c9597c26de3e98ee274336e4ab/jetified-firebase-messaging-20.2.3/res/values-ky/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "100",
-                        "endOffsets": "307"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5520",
-                        "endColumns": "104",
-                        "endOffsets": "5620"
-                    }
-                },
-                {
                     "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/2a5cb43e4079e388f3bce0286fdf205d/jetified-play-services-basement-17.0.0/res/values-ky/values.xml",
                     "from": {
                         "startLines": "4",
@@ -86,6 +69,23 @@
                         "startOffsets": "5934",
                         "endColumns": "100",
                         "endOffsets": "6030"
+                    }
+                },
+                {
+                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/4167a5cda0f426682b111bcf7a8f4dc3/jetified-firebase-messaging-20.3.0/res/values-ky/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "100",
+                        "endOffsets": "307"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5520",
+                        "endColumns": "104",
+                        "endOffsets": "5620"
                     }
                 },
                 {

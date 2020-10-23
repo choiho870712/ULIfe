@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/4167a5cda0f426682b111bcf7a8f4dc3/jetified-firebase-messaging-20.3.0/res/values-uz/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "101",
+                        "endOffsets": "308"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5506",
+                        "endColumns": "105",
+                        "endOffsets": "5607"
+                    }
+                },
+                {
                     "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/4d878a4b65f987a3940b8a1476d81571/navigation-ui-2.3.0-rc01/res/values-uz/values-uz.xml",
                     "from": {
                         "startLines": "2,3",
@@ -86,23 +103,6 @@
                         "startOffsets": "3931",
                         "endColumns": "208",
                         "endOffsets": "4135"
-                    }
-                },
-                {
-                    "source": "/home/chou/.gradle/caches/transforms-2/files-2.1/585d70c9597c26de3e98ee274336e4ab/jetified-firebase-messaging-20.2.3/res/values-uz/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "101",
-                        "endOffsets": "308"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5506",
-                        "endColumns": "105",
-                        "endOffsets": "5607"
                     }
                 }
             ]

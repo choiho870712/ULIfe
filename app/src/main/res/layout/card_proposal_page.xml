@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="50dp"
     android:layout_marginBottom="50dp"
     android:layout_marginStart="50dp"
     android:layout_marginEnd="50dp"
@@ -11,20 +11,70 @@
     app:cardElevation="1dp"
     app:cardCornerRadius="10dp">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_margin="15dp"
-        app:cardElevation="0dp"
-        app:cardCornerRadius="10dp">
+        android:background="@color/colorWhiteSmoke">
 
-        <ImageView
-            android:id="@+id/image_proposal_page"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal" />
+            android:layout_height="wrap_content">
 
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/image_proposal_page"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp">
+
+            <TextView
+                android:id="@+id/text_proposal_page_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/text_proposal_page_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/text_proposal_page_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/text_proposal_page_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tag"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

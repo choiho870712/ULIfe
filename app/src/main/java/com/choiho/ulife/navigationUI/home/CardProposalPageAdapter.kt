@@ -29,12 +29,22 @@ class CardProposalPageAdapter(val myDataset: MutableList<ProposalItem>, val prop
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
         holder.index = position
 
+        val parser = SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS")
+        val formatter = SimpleDateFormat("MM/dd HH:mm")
+
+        holder.content.text = myDataset[holder.index].content
+        holder.date.text =
+            formatter.format(parser.parse(myDataset[holder.index].date))
+        holder.title.text = myDataset[holder.index].title
+        holder.tag.text = myDataset[holder.index].getHashTagString()
+
         Thread {
-            while (!myDataset[holder.index].isDoneImageLoadingOnlyOne())
+            while (!myDataset[holder.index].isDoneImageLoadingAll())
                 Thread.sleep(500)
 
             GlobalVariables.activity.runOnUiThread {
-                holder.image.setImageBitmap(myDataset[holder.index].imageList[0])
+                holder.image.setImageBitmap(
+                    myDataset[holder.index].imageList[myDataset[holder.index].imageList.size-1])
             }
         }.start()
 
@@ -93,6 +103,10 @@ class CardProposalPageAdapter(val myDataset: MutableList<ProposalItem>, val prop
     class CardHolder(card: View) : RecyclerView.ViewHolder(card) {
         val cardView = card
         val image = card.image_proposal_page
+        val title = card.text_proposal_page_title
+        val date = card.text_proposal_page_date
+        val content = card.text_proposal_page_content
+        val tag = card.text_proposal_page_tag
         var index = 0
     }
 

@@ -75,6 +75,23 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
                 myMapView.getMapAsync(this)
                 myMapView.onCreate(arguments)
 
+                root.recycler_shop_discount.apply {
+                    setHasFixedSize(true)
+                    layoutManager = GridLayoutManager(
+                        activity, 1, GridLayoutManager.HORIZONTAL, false)
+                    adapter = CardShopDiscountAdapter(mutableListOf("9折", "消費滿200送雞塊"), root)
+                }
+
+                root.layout_shop_discount.setOnClickListener {
+                    root.layout_shop_discount.animate().alpha(0.0f)
+                    Thread {
+                        Thread.sleep(250)
+                        GlobalVariables.activity.runOnUiThread {
+                            root.layout_shop_discount.visibility = View.GONE
+                        }
+                    }.start()
+                }
+
                 GlobalVariables.proposalItemAdapter =
                     CardProposalItemAdapter(
                         GlobalVariables.proposal!!.proposalItemList,
@@ -101,6 +118,16 @@ class PersonShopInfoFragment : Fragment(), OnMapReadyCallback {
                 }
                 val snapHelper = LinearSnapHelper()
                 snapHelper.attachToRecyclerView(root.recycler_proposal_page)
+
+                root.recycler_proposal_page.setOnClickListener {
+                    root.layout_proposal_page.animate().alpha(0.0f)
+                    Thread {
+                        Thread.sleep(250)
+                        GlobalVariables.activity.runOnUiThread {
+                            root.layout_proposal_page.visibility = View.GONE
+                        }
+                    }.start()
+                }
             }
 
             GlobalVariables.taskCount--

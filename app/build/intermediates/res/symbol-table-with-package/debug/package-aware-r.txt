@@ -1710,8 +1710,10 @@ id button_toolbar_class_selector
 id button_toolbar_main
 id button_unsubscribe
 id button_update_user_info_submit
+id button_use_discount
 id cancel_action
 id cancel_button
+id card_button_use_discount
 id card_friend_left
 id card_notification_offical_main
 id card_notification_shop_main
@@ -1831,6 +1833,7 @@ id image_photoshot_make_user_info
 id image_proposal
 id image_proposal_item
 id image_proposal_page
+id image_proposal_page_background
 id image_random_food_plate_board
 id image_random_food_plate_leg
 id image_random_food_plate_pointer
@@ -1845,6 +1848,7 @@ id image_tool_box_empty_3_2
 id image_tool_box_empty_3_3
 id image_toolbar_class_selector
 id image_toolbar_main
+id image_use_discount_stamp
 id image_userIcon_home_page1
 id image_userIcon_shopFragment
 id info
@@ -1862,6 +1866,7 @@ id layout_form_not_done
 id layout_login_status
 id layout_main
 id layout_proposal_page
+id layout_shop_discount
 id layout_student_permission
 id layout_student_permission_done
 id layout_tool_box_empty_1_1
@@ -1978,6 +1983,7 @@ id recycler_proposal_item
 id recycler_proposal_page
 id recycler_search_friend_person
 id recycler_sended_notification
+id recycler_shop_discount
 id reportFragment
 id right
 id right_icon
@@ -2093,6 +2099,10 @@ id text_no_official_notify
 id text_no_shop_notify
 id text_no_subscribe_info
 id text_privacy_policy_chinese
+id text_proposal_page_content
+id text_proposal_page_date
+id text_proposal_page_tag
+id text_proposal_page_title
 id text_question_form
 id text_random_price_count_left
 id text_score_shopFragment
@@ -2104,6 +2114,8 @@ id text_score_star_5
 id text_selfIntroduction_information_person_section1
 id text_selfIntroduction_shopFragment
 id text_sended_notification_card
+id text_shop_discount
+id text_shop_discount_page
 id text_student_permission_ID
 id text_student_permission_school
 id text_tag_card_home
@@ -2233,6 +2245,7 @@ layout card_proposal_item
 layout card_proposal_page
 layout card_search_friend
 layout card_sended_notification
+layout card_shop_discount
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

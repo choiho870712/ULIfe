@@ -96,6 +96,24 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="店家特約"
+                android:layout_marginStart="12dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_shop_discount"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="精美貼文"
+                android:layout_marginStart="12dp"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_proposal_item"
                 android:orientation="vertical"
@@ -370,6 +388,7 @@
         android:visibility="gone">
 
         <ImageView
+            android:id="@+id/image_proposal_page_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@color/colorWhite"
@@ -382,5 +401,68 @@
             android:layout_height="match_parent" />
 
     </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_shop_discount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/colorWhiteSmoke"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:alpha="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_shop_discount_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="text"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_use_discount_stamp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/ic_salute_bird"
+                android:visibility="gone"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_button_use_discount"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <Button
+                    android:id="@+id/button_use_discount"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:text="使用"
+                    android:gravity="center"
+                    android:background="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>
